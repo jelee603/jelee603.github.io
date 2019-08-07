@@ -12,11 +12,17 @@ categories: install update
 
 
 ```
-// 설치와 사이트 생성
+// 번들 설치
 gem install jekyll bundler
+// 사이트 생성
 jekyll new my-awesome-site 
 cd my-awesome-site 
 
 // jekyll 실행 (window)
-my-awesome-site $jekyll serve 
+my-awesome-site $jekyll serve --watch
+
+// jekyll 실행 (mac)
+bundle exec jekyll serve --watch
+
+console.log('aa')
 ```
