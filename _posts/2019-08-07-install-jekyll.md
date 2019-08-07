@@ -3,6 +3,7 @@ layout: post
 title:  "Jekyll 을 이용한 github 블로그 생성하기"
 date:   2019-08-07
 categories: install update
+background: '/img/bg-index.jpg'
 ---
 #### 환경설정하기 
 
