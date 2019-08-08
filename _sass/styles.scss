@@ -8,7 +8,7 @@
 @import "../assets/css/syntax.css";
 
 /* Style Blog Font */
-h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure {
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure, table {
   margin-bottom: 15px;
   font-family: 'Nanum Gothic, sans-serif';
   //font-family: 'Lora, "Times New Roman", serif';
@@ -24,5 +24,5 @@ p a {
 }
 
 .post-subtitle {
-  font-size: 17px;
+  font-size: 16px;
 }

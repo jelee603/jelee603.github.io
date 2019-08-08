@@ -7,11 +7,10 @@ background: '/img/bg-index.jpg'
 ---
 
 #### 환경설정하기
-Jekyll은 깃 허브 페이지에서 기본으로 제공하는 정적 사이트 생성기이다. 
-markdown(*.md) 파일을 생성하면 웹페이지로 서비스를 할 수 있다.
-윈도우 환경에서는 Ruby를 설치 해야한다.
+Jekyll은 markdown(*.md) 파일을 생성하면 웹페이지로 서비스를 할 수 있는 정적 사이트 생성기이다.
 
-윈도우는 RubyInstaller for Windows 를 설치하는데 (Devkit 가 포함된 버전)으로 설치하면 된다.
+Ruby를 환경에서 동작하기 때문에 윈도우에도 Ruby를 설치 해야한다.
+RubyInstaller for Windows 를 설치하는데 (Devkit 가 포함된 버전)으로 설치하면 된다.
 Ruby+Devkit 2.5.5-1 (x64) 로 설치를 진행했다.
 
 [Ruby Installer](https://rubyinstaller.org/downloads/)
@@ -90,7 +89,7 @@ h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure {
 마크다운 문서에 소스코드가 저렇게 안 이쁘다니.. 다시 스타일을 찾기 시작했다.
 
 [OneDarkTheme](https://github.com/eungbean/Atom-OneDarkTheme-4-Jekyll) 에 `syntax-one-dark.css` 을 가져왔다. 
-assets/css/syntax.css 에 파일을 추가했고, 파일을 import 해서 사용했다. 
+assets/css/syntax.css 에 스타일을 적용하고, import 해서 사용했다. 
   
 ``` js
 // _sass/styles.scss
