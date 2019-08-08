@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Jekyll 을 이용한 github 블로그 생성하기"
+title:  "Jekyll을 이용한 github 블로그 생성하기"
 date:   2019-08-07
 categories: install update
 background: '/img/bg-index.jpg'
@@ -22,8 +22,9 @@ Ruby+Devkit 2.5.5-1 (x64) 로 설치를 진행했다.
 [Jekyll 공식사이트(한글 번역)](https://jekyllrb-ko.github.io/docs/windows/)
 
 ``` js
-// 번들 설치
+// jekyll 설치
 gem install jekyll bundler
+
 // 사이트 생성
 jekyll new my-awesome-site 
 cd my-awesome-site 
@@ -34,6 +35,8 @@ my-awesome-site $jekyll serve --watch
 // jekyll 실행 (mac)
 bundle exec jekyll serve --watch
 ```
+![post-2019-08-07-2](/img/post-2019-08-07-2.png){: width="100%" height="100%"}
+
 ---
 #### 글 작성하기
 마크다운 파일명과 상단 텍스트는 규칙대로 만들어주고 저장을 하게 되면 home 에 리스트가 나타난다.   
@@ -44,11 +47,14 @@ _post/yyyy-mm-dd-title.md
 #### 테마 적용하기
 제공하는 테마 중에서 댓글도 없고, 심플한 디자인인 'jekyll-theme-clean-blog' 가 이 테마를 적용해보았다.
 ``` js
+// install 
+gem "jekyll-theme-clean-blog"
+
 // _config.yml
 theme: jekyll-theme-clean-blog
 ``` 
 새로 적용하면 아주 이쁘게 잘 보이는데.. 영문일 때 폰트만 이뻐서.. 한글 폰트는 다른걸 사용하고 싶어졌다.
-![screenshot](/img/post-2019-08-07-1.png){: width="100%" height="100%"}
+![post-2019-08-07-1](/img/post-2019-08-07-1.png){: width="100%" height="100%"}
 
 ---
 #### 폰트 적용하기
