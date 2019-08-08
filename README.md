@@ -3,15 +3,8 @@
 [Ruby Installer](https://rubyinstaller.org/downloads/)
 
 
-### Run (Window)
+### Run (Mac, Window)
 ```
-jekyll serve --watch
-```
-
-
-### Run (Mac)
-```
-gem install jekyll bundler
 bundle install
 bundle exec jekyll serve --watch
 ```

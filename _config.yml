@@ -26,7 +26,6 @@ github_username:  jelee603
 
 # Build settings
 markdown: kramdown
-hightlighter: rouge
 theme: jekyll-theme-clean-blog
 plugins:
   - jekyll-feed
