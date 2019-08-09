@@ -1,7 +1,7 @@
-// Sorting: Bubble Sort
+// [Solved] Sorting: Bubble Sort
 function countSwaps(n, a) {
     let count = 0
-    const min = Math.min.apply(null, a)
+    // const min = Math.min.apply(null, a)
 
     for (let loop = 0; loop < n; loop++) {
         for (let idx = a.length, len = 0; len < idx; idx--) {
