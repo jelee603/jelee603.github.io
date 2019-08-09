@@ -60,7 +60,7 @@ theme: jekyll-theme-clean-blog
 Jekyll의 수많은 테마는 변경없이 사용할 수 있도록 제공되지만.. 
 블로그 테마를 변경하고 싶지 않고.. 커스텀하게 적용할 방법을 찾게 될 수 밖에 없는거 같다.
 
-그래서 [Clean Blog Jekyll](https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll) 사이트에서 소스를 받아 분석을 시작했다.
+그래서 [Clean Blog Jekyll][CleanBlog] 사이트에서 소스를 받아 분석을 시작했다.
 
 우선 스타일 관련부분을 모두 가져와서 내 프로젝트에 그대로 덮어씌우고, 빌드를 했더니 _site 에 로컬 파일들이 들어갔다.
 
@@ -88,7 +88,7 @@ h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure {
 폰트를 넣고 보니.. 코드 블럭이 이쁘지가 않았다.
 마크다운 문서에 소스코드가 저렇게 안 이쁘다니.. 다시 스타일을 찾기 시작했다.
 
-[OneDarkTheme](https://github.com/eungbean/Atom-OneDarkTheme-4-Jekyll) 에 `syntax-one-dark.css` 을 가져왔다. 
+[OneDarkTheme][OneDarkTheme]에 `syntax-one-dark.css` 을 가져왔다. 
 assets/css/syntax.css 에 스타일을 적용하고, import 해서 사용했다. 
   
 ``` js
@@ -100,10 +100,23 @@ assets/css/syntax.css 에 스타일을 적용하고, import 해서 사용했다.
 테마 요소의 다른 부분은 건드리지 않았고, 스타일만 앞으로 계속 커스텀하게 바꿔봐야겠다.
 
 #### Git Repository 블로그 적용하기 
-Repository 에 등록하면 프로젝트 명(git_id.github.io) 로 등록을 하면 바로 깃허브에서 확인을 할 수 있다.
+Repository에 등록하면 프로젝트 명(git_id.github.io) 로 등록을 하면 바로 깃허브에서 확인을 할 수 있다.
 기본 jekyll 만 설치하면 바로 확인이 가능하다고 하는데.. 
-공식으로 지정된 테마만 등록이 가능한지 커스텀 테마의 경우엔 404 ERROR 가 발생했다. 
+공식으로 지정된 테마만 등록이 가능하다고.. 커스텀 테마의 경우엔 404 ERROR 가 발생했다. 
 
+결국엔 필요한 파일의 일부가 아니라 전부를 내 프로젝트에 추가했다.
+그리고 시작된 jekyll 공부.. 
+
+jekyll 에서 사용되는 문법은 Ruby로 작성된 Liquid 템플릿 언어이다.<br/>
+[goodGid][goodGid] 님의 블로그가 정리되어있고, 이 언어를 사용해서 html을 만들고 
+layout 탬플릿 파일이 동적 파일들(*.md)을 로드해서 정적파일로 변환해준다.    
+
+
+
+[CleanBlog]: https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll
+[OneDarkTheme]: https://github.com/eungbean/Atom-OneDarkTheme-4-Jekyll
+[goodGid]: https://goodgid.github.io/What-is-Liquid-Grammer/
+ 
 
   
  
