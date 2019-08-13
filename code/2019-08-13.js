@@ -2,7 +2,7 @@
  * Mark and Toys
  * 
  * n, k가 있으며, n은 갯수 k는 가격이다.
- * priecs 배열이 주어지면 k 값만큼의 물건을 최대한 많이 사서 그 갯수를 리턴한다.
+ * prices 배열이 주어지면 k 값만큼의 물건을 최대한 많이 사서 그 갯수를 출력한다.
  */
 
  function maximumToys(prices, k) {
