@@ -1,7 +1,7 @@
 /**
  * Minimum Swaps 2
  *
- * swap 해서 오름차순으로 정렬하는데 최소 swap 횟수를 센다.
+ * swap 해서 오름차순으로 정렬하는데 최소 swap 횟수를 출력한다.
  */
 
 function minimumSwaps(arr) {
