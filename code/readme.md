@@ -11,6 +11,8 @@
 - 2019-08-07 : Sorting: Bubble Sort
 - 2019-08-13 : Mark and Toys
 
-#### Dictionaries
+#### Dictionaries and Hashmaps
 - 2019-08-11 : Two Strings
 - 2019-08-14 : Sherlock and Anagrams (확인필요)
+- 2019-08-15 : Sherlock and Anagrams (풀이)
+- 2019-08-16 : Ransom Note
