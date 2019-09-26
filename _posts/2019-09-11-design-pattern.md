@@ -52,9 +52,3 @@ Object.setPrototyupeOf()
 
 [참고] YOU DON'T KNOW JS - this 와 객체 프로토타입, 비동기와 성능
 [infoscis]: https://infoscis.github.io/2018/01/25/ecmascript-6-expanded-object-functionality/
-
-##### (2019.09.11) WebStorm 작업환경 세팅
-Theme: Darcula
-Font: Consolas
-Size: 13
-Line spacing: 1.2
