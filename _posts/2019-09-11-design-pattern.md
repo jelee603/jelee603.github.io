@@ -45,10 +45,14 @@ btn1.setup()
 어떤 함수가 call(), apply(), bind() 메서드에 접근할 수 있는 건 함수 자신도 객체고 함수 객체 역시 `Function.prototype`에 
 [[Prototype]]이 연결되어 위임 가능한 메서드가 있어 가능한 것이다. 
 [infoscis][infoscis]님 블로그에 예제가 잘 나와있다.
+
 ``` js
 // ES6 [[Prototype]] 에 저장된 값을 변경한다.
 Object.setPrototyupeOf()
+
 ```
 
-[참고] YOU DON'T KNOW JS - this 와 객체 프로토타입, 비동기와 성능
 [infoscis]: https://infoscis.github.io/2018/01/25/ecmascript-6-expanded-object-functionality/
+#### Reference
+- YOU DON'T KNOW JS - this 와 객체 프로토타입, 비동기와 성능
+
