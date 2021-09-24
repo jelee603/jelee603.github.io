@@ -60,9 +60,10 @@ pagination_dir: page
 include: null
 exclude: null
 ignore: null
-Plugins: hexo-deployer-git
+Plugins:
+  - hexo-deployer-git
 theme: hueman
 deploy:
   type: git
-  repo: https://github.com/jelee603/jelee603.github.io.git
+  repo: https://github.com/jelee603/jelee603.github.io
   branch: main
