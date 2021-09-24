@@ -5,7 +5,8 @@ keywords: null
 author: John Doe
 language: en
 timezone: ''
-url: http://example.com
+url: https://jelee603.github.io
+baseurl: /jelee603.github.io
 permalink: ':year/:month/:day/:title/'
 permalink_defaults: null
 pretty_urls:
