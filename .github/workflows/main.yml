@@ -36,5 +36,4 @@ jobs:
           npm install
       - name: Hexo deploy
         run: |
-          hexo clean
-          hexo d
+          npm deploy
