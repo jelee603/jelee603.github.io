@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    
+
+    
+    <title>Javascript Event 이야기 | Hexo</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="" />
+    
+    <meta name="description" content="이벤트 리스너를 등록해서 사용할 때, removeEventListener 가 필요할까?전체 화면에서 히든 페이지가 필요해져서 window 객체에 keyup 이벤트를 등록하는 방법으로 문제를 해결한 경우가 있는데,이 이벤트를 제거해줄 필요가 있는지에 대해서 고민이 되었다.    이벤트 리스너의 this 는 어떻게 인지할까?this 를 잘 바꿔줄 때, 필요한">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Javascript Event 이야기">
+<meta property="og:url" content="http://example.com/2019/08/22/2019/2019-08-22-event/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="이벤트 리스너를 등록해서 사용할 때, removeEventListener 가 필요할까?전체 화면에서 히든 페이지가 필요해져서 window 객체에 keyup 이벤트를 등록하는 방법으로 문제를 해결한 경우가 있는데,이 이벤트를 제거해줄 필요가 있는지에 대해서 고민이 되었다.    이벤트 리스너의 this 는 어떻게 인지할까?this 를 잘 바꿔줄 때, 필요한">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2019-08-21T15:00:00.000Z">
+<meta property="article:modified_time" content="2021-09-24T02:43:53.998Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+    
+
+    
+        <link rel="alternate" href="/" title="Hexo" type="application/atom+xml" />
+    
+
+    
+
+    
+<link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/libs/titillium-web/styles.css">
+
+    
+<link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+<script src="/libs/jquery/3.5.0/jquery.min.js"></script>
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+
+    
+    
+    
+    
+
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                    <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/css/">css</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/http/">http</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/javascript/">javascript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/setting/">setting</a></li></ul>
+                                
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/javascript/">javascript</a>
+    </h1>
+</div>
+
+                        <div class="main-body-content">
+                            <article id="post-2019/2019-08-22-event" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Javascript Event 이야기
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2019/08/22/2019/2019-08-22-event/" class="article-date">
+       <time datetime="2019-08-21T15:00:00.000Z" itemprop="datePublished">2019-08-22</time>
+    </a>
+  </div>
+
+
+<div class="article-date">
+  <i class="fa fa-calendar-plus-o"></i>
+  <a href="/2019/08/22/2019/2019-08-22-event/" class="article-date">
+     <time datetime="2021-09-24T02:43:53.998Z" itemprop="dateModified">2021-09-24</time>
+  </a>
+</div>
+
+
+                
+
+                
+                
+
+                
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+
+            
+
+            
+
+            <h4 id="이벤트-리스너를-등록해서-사용할-때-removeEventListener-가-필요할까"><a href="#이벤트-리스너를-등록해서-사용할-때-removeEventListener-가-필요할까" class="headerlink" title="이벤트 리스너를 등록해서 사용할 때, removeEventListener 가 필요할까?"></a>이벤트 리스너를 등록해서 사용할 때, <code>removeEventListener</code> 가 필요할까?</h4><p>전체 화면에서 히든 페이지가 필요해져서 window 객체에 keyup 이벤트를 등록하는 방법으로 문제를 해결한 경우가 있는데,<br>이 이벤트를 제거해줄 필요가 있는지에 대해서 고민이 되었다.   </p>
+<h4 id="이벤트-리스너의-this-는-어떻게-인지할까"><a href="#이벤트-리스너의-this-는-어떻게-인지할까" class="headerlink" title="이벤트 리스너의 this 는 어떻게 인지할까?"></a>이벤트 리스너의 this 는 어떻게 인지할까?</h4><p>this 를 잘 바꿔줄 때, 필요한 메서드가 call, apply, bind 이다. </p>
+<p><a target="_blank" rel="noopener" href="https://mygumi.tistory.com/332">mygumi</a>님과 <a target="_blank" rel="noopener" href="https://www.zerocho.com/category/JavaScript/post/57433645a48729787807c3fd">zerocho</a>님의 글이 도움이 되었다.<br>call, apply 는 함수를 호출하는 거고, 인자를 넘기고 반환값을 돌려받는 창구가 있을때 주로 사용한다.<br>call 은 파라미터 중 첫번째 인자를, 내부에서 사용할 this 로 만들어준다.<br>apply 도 마찬가지이고, 대신에 파라미터를 배열로 넘긴다.<br>bind 는 this 만 바꾸고 호출하지는 않는다. 원본 함수를 호출하도록 하드 코딩된 새로운 함수를 생성한다.<br>이건 다른말로 콜백 형식을 만들어줄 수 있다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>) </span>&#123; </span><br><span class="line">    <span class="built_in">this</span>.name = <span class="built_in">this</span>.name || <span class="string">&quot;default&quot;</span>; <span class="built_in">this</span>.authority = <span class="string">&quot;guest&quot;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.name + <span class="string">&quot; is &quot;</span> + <span class="built_in">this</span>.authority; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// call 은 새 함수로 만들어서 호출한다.</span></span><br><span class="line">Person.call(&#123;<span class="attr">name</span>: <span class="string">&quot;bill&quot;</span>&#125;); <span class="comment">// &quot;bill is guest&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 1. bind 는 this을 교체해준다.</span></span><br><span class="line"><span class="keyword">const</span> userInfo = Person.bind(&#123;<span class="attr">name</span>: <span class="string">&quot;test&quot;</span>&#125;);  <span class="comment">// undefined</span></span><br><span class="line"><span class="comment">// 2. 함수를 호출한다.</span></span><br><span class="line">userInfo(); <span class="comment">// &quot;test is guest&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// call 은 새 함수로 만들어서 호출한다.</span></span><br><span class="line"><span class="keyword">const</span> userInfo3 = Person.call(&#123;<span class="attr">name</span>: <span class="string">&quot;test3&quot;</span>&#125;);  <span class="comment">// undefined</span></span><br><span class="line">userInfo3; <span class="comment">// &quot;test3 is guest&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="클로저는-어떻게-사용할까"><a href="#클로저는-어떻게-사용할까" class="headerlink" title="클로저는 어떻게 사용할까?"></a>클로저는 어떻게 사용할까?</h4><p>생명주기가 끝난 함수의 변수를 외부 함수에서 호출하는 걸 일컬어 클로저라 한다.<br>클래스로 만든 내부 이벤트를 외부에서 제어를 하려고 고민을 하다가 클로저를 응용할 수 있겠다 싶었다.<br>위에 bind 는 스코프만 바뀌는 거고, call 은 원본 함수를 호출할 수 있는 새 함수로 만들어준다.   </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">funcA</span>(<span class="params">value1, value2</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">`value: <span class="subst">$&#123;value1&#125;</span> <span class="subst">$&#123;value2&#125;</span>`</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">funcB = <span class="function">() =&gt;</span> funcA.call(<span class="built_in">this</span>, <span class="number">2</span>, <span class="number">3</span>) </span><br><span class="line">funcB() <span class="comment">// value: 2 3</span></span><br></pre></td></tr></table></figure>
+
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://example.com/2019/08/22/2019/2019-08-22-event/" data-id="cktxrqrnv000f6t8z2nol3oay" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "John Doe"
+        },
+        "headline": "Javascript Event 이야기",
+        "image": "http://example.com",
+        "keywords": "",
+        "genre": "javascript",
+        "datePublished": "2019-08-22",
+        "dateCreated": "2019-08-22",
+        "dateModified": "2021-09-24",
+        "url": "http://example.com/2019/08/22/2019/2019-08-22-event/",
+        "description": "이벤트 리스너를 등록해서 사용할 때, removeEventListener 가 필요할까?전체 화면에서 히든 페이지가 필요해져서 window 객체에 keyup 이벤트를 등록하는 방법으로 문제를 해결한 경우가 있는데,이 이벤트를 제거해줄 필요가 있는지에 대해서 고민이 되었다.   
+이벤트 리스너의 this 는 어떻게 인지할까?this 를 잘 바꿔줄 때, 필요한 ",
+        "wordCount": 358
+    }
+</script>
+
+</article>
+
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="twitter" href="/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-twitter"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook" href="/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-facebook"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="stack-overflow" href="/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-stack-overflow"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/ppoffice/hexo-theme-hueman" target="_blank" rel="noopener">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="weibo" href="/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-weibo"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2019/08/28/2019/2019-08-28-promise/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            Javascript Promise 이야기
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2019/08/21/2019/2019-08-21-object/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Javascript Object 이야기</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2021/09/13/2021/good-image/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/thumnail/study.png)" alt="good-image" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2021/09/13/2021/good-image/" class="title">good-image</a></p>
+                            <p class="item-date"><time datetime="2021-09-13T03:59:37.000Z" itemprop="datePublished">2021-09-13</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2020/02/25/2020/2020-02-25-vuejs/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/javascript/">javascript</a></p>
+                            <p class="item-title"><a href="/2020/02/25/2020/2020-02-25-vuejs/" class="title">Vue.js 이벤트 전달</a></p>
+                            <p class="item-date"><time datetime="2020-02-24T15:00:00.000Z" itemprop="datePublished">2020-02-25</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2020/02/13/2020/2020-02-13-css/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/javascript/">javascript</a></p>
+                            <p class="item-title"><a href="/2020/02/13/2020/2020-02-13-css/" class="title">CSS 선택자</a></p>
+                            <p class="item-date"><time datetime="2020-02-12T15:00:00.000Z" itemprop="datePublished">2020-02-13</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2020/02/04/2020/2020-02-04-javascript/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/javascript/">javascript</a></p>
+                            <p class="item-title"><a href="/2020/02/04/2020/2020-02-04-javascript/" class="title">ES6 문법</a></p>
+                            <p class="item-date"><time datetime="2020-02-03T15:00:00.000Z" itemprop="datePublished">2020-02-04</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2020/01/22/2020/2020-01-22-scss/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/javascript/">javascript</a></p>
+                            <p class="item-title"><a href="/2020/01/22/2020/2020-01-22-scss/" class="title">SaaS 알아가기</a></p>
+                            <p class="item-date"><time datetime="2020-01-21T15:00:00.000Z" itemprop="datePublished">2020-01-22</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/css/">css</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/http/">http</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a><span class="category-list-count">20</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/setting/">setting</a><span class="category-list-count">3</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">September 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a><span class="archive-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+
+            
+                
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2021 John Doe</p>
+                
+                <p>Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="https://github.com/ppoffice" target="_blank">PPOffice</a></p>
+                
+            </div>
+            <div class="footer-plugins">
+              
+    
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+    </div>
+    
+    
+    <script>
+    var disqus_shortname = 'hexo-theme-hueman';
+    
+    
+    var disqus_url = 'http://example.com/2019/08/22/2019/2019-08-22-event/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+
+    
+        
+<script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-share.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-video.min.js"></script>
+
+    
+    
+        
+<script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+
+    
+    
+
+    
+    
+    
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+</body>
+</html>
