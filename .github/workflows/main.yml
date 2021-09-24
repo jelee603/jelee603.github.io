@@ -28,5 +28,6 @@ jobs:
         with:
           node-version: '14'
           cache: 'npm'
-      - run: npm install
-      - run: npm deploy
+      - run: npm run install
+      - run: npm run clean
+      - run: npm run deploy
