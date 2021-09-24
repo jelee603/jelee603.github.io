@@ -103,4 +103,6 @@ theme: hueman
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  type: git
+  repo: https://github.com/jelee603/jelee603.github.io.git
+  branch: main
