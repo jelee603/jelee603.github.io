@@ -61,7 +61,6 @@ exclude: null
 ignore: null
 Plugins: hexo-deployer-git
 theme: hueman
-remote_theme: themes/hueman
 deploy:
   type: git
   repo: https://github.com/jelee603/jelee603.github.io.git
