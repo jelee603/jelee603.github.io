@@ -65,5 +65,5 @@ plugins:
 theme: hueman
 deploy:
   type: git
-  repo: git@github.com:jelee603/jelee603.github.io.git
+  repo: https://github.com/jelee603/jelee603.github.io
   branch: main
