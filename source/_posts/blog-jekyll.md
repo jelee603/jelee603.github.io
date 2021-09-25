@@ -7,6 +7,8 @@ comments: false
 thumbnail: '/images/thumnail/blog-jekyll.png'
 ---
 
+![blog](/images/thumnail/blog-jekyll.png)
+
 #### 환경설정하기
 
 Jekyll은 markdown(\*.md) 파일을 생성하면 웹페이지로 서비스를 할 수 있는 정적 사이트 생성기이다.

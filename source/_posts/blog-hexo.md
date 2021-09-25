@@ -7,6 +7,8 @@ comments: false
 thumbnail: '/images/thumnail/blog-hexo.png'
 ---
 
+![blog](/images/thumnail/blog-hexo.png)
+
 > hexo 프레임워크를 이용해 블로그를 작성하고, github에 자동 deploy 까지
 
 1. install
