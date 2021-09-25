@@ -32,6 +32,7 @@ jobs:
         run: |
           git config --global user.email "jelee603@gmail.com"
           git config --global user.name "jelee603"
+          sed -i "s/__GITHUB_TOKEN__/${{ secrets.HEXO_DEPLOY_TOKEN }}/" _config.yml
           npm install hexo-cli -g
           npm install
       - name: Hexo deploy
