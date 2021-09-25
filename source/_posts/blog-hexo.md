@@ -2,7 +2,7 @@
 layout: post
 title: 'Hexo Blog 만들기'
 date: 2021-09-24
-categories: git
+categories: setting
 comments: false
 thumbnail: '/images/thumnail/blog-hexo.png'
 ---

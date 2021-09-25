@@ -2,7 +2,7 @@
 layout: post
 title: 'Git 이야기'
 date: 2019-08-08
-categories: setting
+categories: git
 comments: false
 background: '/img/bg-index.jpg'
 ---
