@@ -31,13 +31,9 @@ jobs:
       - name: Before install
         run: npm i -g hexo
       - name: Before script
-        env:
+        with:
           GITHUB_TOKEN: ${{ secrets.HEXO_DEPLOY_TOKEN  }}
         run: |
-          mkdir -p ~/.ssh/
-          echo "$ACTION_DEPLOY_KEY" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan github.com >> ~/.ssh/known_hosts
           git config --global user.email "jelee603@gmail.com"
           git config --global user.name "jelee603"
           sed -i "s/__GITHUB_TOKEN__/${GITHUB_TOKEN}/" _config.yml
