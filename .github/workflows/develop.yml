@@ -31,7 +31,7 @@ jobs:
       - name: Before install
         run: npm i -g hexo
       - name: Before script
-        with:
+        env:
           GITHUB_TOKEN: ${{ secrets.HEXO_DEPLOY_TOKEN  }}
         run: |
           git config --global user.email "jelee603@gmail.com"
