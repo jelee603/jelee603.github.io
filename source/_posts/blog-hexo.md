@@ -35,10 +35,11 @@ HEXO_DEPLOY_TOKEN 이름으로 토큰을 등록한다.
 **Account Settings > Developer settings > Personal access tokens**
 
 기간을 설정하면, 새로운 토큰을 발급하는데 이 발급된 토큰을 등록해준다.
-주기적으로 Actions 토큰을 업데이트 해준다.
 
 ![token1](/images/blog-hexo/token1.png)
 ![token2](/images/blog-hexo/token2.png)
+
+\***\*주기적으로 Actions 토큰을 업데이트 해준다.** <br/> \***\*Mac 에서는 cmd + space > keychain 접근에서 github.com 은 모두 삭제해준 후에 IDE에서 토큰을 재등록해준다.**
 
 3. github deploy 등록하기
 
