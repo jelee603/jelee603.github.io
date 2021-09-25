@@ -4,7 +4,7 @@ title: 'Jekyll을 이용한 github 블로그 생성하기'
 date: 2019-08-07
 categories: setting
 comments: false
-background: '/img/bg-index.jpg'
+thumbnail: '/images/thumnail/blog-jekyll.png'
 ---
 
 #### 환경설정하기
