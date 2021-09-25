@@ -71,9 +71,6 @@ develop 디렉토리에 push 되었을 때, deploy 할 수 있게 만든다.
           git config --global user.email [user_email]
           git config --global user.name [user_name]]
           sed -i "s/__GITHUB_TOKEN__/${GITHUB_TOKEN}/" _config.yml
-      - name: Theme install
-        run: |
-          git submodule update --init --remote --recursive
       - name: NPM install
         run: |
           npm install
