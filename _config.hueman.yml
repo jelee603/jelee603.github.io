@@ -15,7 +15,7 @@ customize:
   highlight: androidstudio
   sidebar: left # sidebar position, options: left, right
   thumbnail: true # enable posts thumbnail, options: true, false
-  favicon: # path to favicon
+  favicon: images/favicon/favicon.ico # path to favicon
   social_links: # for more icons, please see http://fontawesome.io/icons/#brand
     # twitter: /
     # facebook: /
@@ -23,17 +23,18 @@ customize:
     github: https://github.com/jelee603
     # weibo: /
     # rss: /
+  max_width: 1300px
 
 # Widgets
 widgets:
   - catalog
   - recent_posts
-  - category
+  # - category
   - archive
-  - tag
-  - tagcloud
-  - links
-#    - google_adsense
+  # - tag
+  # - tagcloud
+  # - links
+  # - google_adsense
 
 # Search
 search:
@@ -119,7 +120,7 @@ miscellaneous:
     fb_app_id:
     fb_admins:
     twitter_id:
-  links:
-    Hexo: http://hexo.io
+  # links:
+  #   Hexo: http://hexo.io
 
 poweredby: true
