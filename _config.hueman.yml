@@ -23,7 +23,7 @@ customize:
     github: https://github.com/jelee603
     # weibo: /
     # rss: /
-  max_width: 1300px
+  max_width: 1200px
 
 # Widgets
 widgets:
