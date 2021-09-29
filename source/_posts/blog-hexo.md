@@ -112,5 +112,16 @@ branch: main
 hexo new [layout] <title>
 ```
 
-[hexo] : https://hexo.io/ko/docs/writing.html <br/>
-[markdown] : https://gist.github.com/ninanung/73addc0263b34da5f021d2f02a356b7f
+4-1. hexo 문법
+https://hexo.io/ko/docs/writing.html [hexo]
+
+4-2. 마크다운 문법
+
+1. https://www.w3schools.io/file/markdown-cheatsheet
+2. https://ko.wikipedia.org/wiki/%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4#%EB%AC%B8%EB%B2%95
+
+4-3. 하이퍼링크
+알파벳은 반드시 소문자만 가능
+띄어쓰기는 -(하이픈)으로 구분
+
+출처: https://young-cow.tistory.com/21 [어린소]
