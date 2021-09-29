@@ -27,18 +27,20 @@ comments: false
 - 원시레퍼 타입, 참조 타입
 - 변수/스코프/메모리
   ㄴ 클로저, 재귀
-- 객체 생성 `프론트엔드 개발자를 위한 자바스크립트 프로그래밍`
+- 객체 지향 `프론트엔드 개발자를 위한 자바스크립트 프로그래밍` [(Exmaple)](https://github.com/jelee603/study/tree/main/pattern)
   ㄴ 팩터리 패턴
   ㄴ 생성자 패턴
   ㄴ 프로토타입 패턴
   ㄴ 동적 생성자
   ㄴ 기생 생성자
   ㄴ 방탄 생성자
+
 - EcmaScript 6
   ㄴ proxy, map, set
   ㄴ 구조체, 배열
   ㄴ 스트릭트 모드
   ㄴ 배열 메서드: map, filter, forEach, every, some
+- TypeScript
 
 ### 브라우저
 
