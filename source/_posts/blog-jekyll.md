@@ -135,3 +135,7 @@ layout 탬플릿 파일이 동적 파일들(\*.md)을 로드해서 정적파일�
 [cleanblog]: https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll
 [onedarktheme]: https://github.com/eungbean/Atom-OneDarkTheme-4-Jekyll
 [goodgid]: https://goodgid.github.io/What-is-Liquid-Grammer/
+
+#### git auto build jekyll 무시하기
+
+.nojekyll 빈 파일을 root 에 생성한다.
