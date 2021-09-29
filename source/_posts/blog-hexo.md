@@ -38,8 +38,10 @@ HEXO_DEPLOY_TOKEN 이름으로 토큰을 등록한다.
 
 기간을 설정하면, 새로운 토큰을 발급하는데 이 발급된 토큰을 등록해준다.
 
-![token1](/images/blog-hexo/token1.png)
-![token2](/images/blog-hexo/token2.png)
+![token1](./blog-hexo/token1.png)
+![token2](./blog-hexo/token2.png)
+
+참고: https://hyeo-noo.tistory.com/184
 
 \***\*주기적으로 Actions 토큰을 업데이트 해준다.** <br/> \***\*Mac 에서는 cmd + space > keychain 접근에서 github.com 은 모두 삭제해준 후에 IDE에서 토큰을 재등록해준다.**
 
@@ -84,6 +86,8 @@ develop 디렉토리에 push 되었을 때, deploy 할 수 있게 만든다.
           hexo deploy
 ```
 
+참고: https://blog.hodory.dev/2019/08/23/deploy-hexo-blog-with-github-actions/
+
 Actions 실행되는 스크립트는 config 파일의 deploy 변수를 제대로 걸어주지 못하면, 아래와 같은 오류를 만나게 된다.
 
 > **fatal: could not read Password for 'https://jelee603@github.com': No such device or address
@@ -101,3 +105,14 @@ branch: main
 ```
 
 위와 같이 작성하고, push 를 하게 되면, build 가 시작되고 정상적으로 완료되면, 블로그에 반영이 된다!
+
+4. hexo 글쓰기
+
+```
+hexo new [layout] <title>
+```
+
+[hexo] : https://hexo.io/ko/docs/writing.html <br/>
+[markdown] : https://gist.github.com/ninanung/73addc0263b34da5f021d2f02a356b7f
+<br/>
+상대경로 이미지 첨부 방법: https://github.com/liolok/hexo-asset-link

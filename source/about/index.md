@@ -72,7 +72,7 @@ comments: false
 
 ---
 
-- [poiemn](https://poiemaweb.com/css3-syntax)
+- [poiem](https://poiemaweb.com/css3-syntax)
 
 ### 이벤트
 
