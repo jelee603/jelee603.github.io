@@ -7,6 +7,8 @@ comments: false
 background: '/img/bg-index.jpg'
 ---
 
+> Node Pacakge Manager 로 노드기반 패키지들이 NPM 저장소에 저장되어 있다. 
+
 #### NPM 설정
 
 ```
@@ -54,13 +56,15 @@ $ npm view <package-name> version</package-name>
 $ npm install -D --save xxx
 
 // dependencies 설치
-$ npm install --save xxx
+$ npm install xxx
 ```
 
 #### 패키지 모듈 삭제 방법
 
 ```js
 $ rm -rf node_modules/
+// or
+$ npm uninstall [패키지명]
 ```
 
 #### 특정 버전으로 받는 방법
