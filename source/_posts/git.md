@@ -34,8 +34,10 @@ gitignore 파일을 만들고 추후에 파일들을 삭제하고 싶을땐, 항
 **Git Ignore**
 
 ```html
-// .gitignore 파일에 제외할 폴더 추가 // .idea/ 폴더 추가 git rm -r --cached .
-git add . git commit -m 'ignore 수정'
+// .gitignore 파일에 제외할 폴더 추가 ex) .idea/ 
+git rm -r --cached .
+git add . 
+git commit -m 'ignore 수정'
 ```
 
 **Git Rebase**
