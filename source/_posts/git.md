@@ -16,14 +16,14 @@ Git은 만들고 나면 크게 문제가 없고, 충돌나지 않으면 별 문�
 ```html
 // git clone 할때, 레포가 없다하면.. 주소를 변경해주자..
 https://깃ID@github.com/레포주소 git clone XXX git init git add README.md git
-commit -m 'first commit' git push origin master
+commit -m 'first commit' git push origin main
 ```
 
 **Git Branch**
 
 ```html
 git checkout -b develop(브랜치명) git add . git commit -m 'xxx' git push origin
-develop // hotfix git checkout master git checkout -b hotfix/YYYYMMDD
+develop // hotfix git checkout main git checkout -b hotfix/YYYYMMDD
 ```
 
 ![post-2019-08-08-1](/img/post-2019-08-08-1.png){: width="100%" height="100%"}

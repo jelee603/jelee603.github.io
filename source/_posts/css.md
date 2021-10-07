@@ -63,6 +63,18 @@ Flex 는 `align-items`를 사용하면 컨텐츠를 정렬할 수 있다.
 }
 ```
 
+#### 반응형 레이아웃
+
+```html
+@media only screen and (max-height: 1080px) { body { backgroud: 'red' } }
+```
+
+웹브라우저의 높이 해상도가 1080px 이하 일때, 클래스의 스타일을 변경해준다.
+
+[webdir]: https://webdir.tistory.com/339
+[opentutorials]: https://opentutorials.org/module/484/4150
+[gird]: https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-rows
+
 #### CSS 선택자
 
 [webdir][webdir] 님의 블로그를 보면, 잘 정리되어있는데 보통은 class 선택자로 오버라이드해서 사용하고 있다.
@@ -89,20 +101,6 @@ div + p {
 }
 ```
 
-#### 반응형 레이아웃
-
-```html
-@media only screen and (max-height: 1080px) { body { backgroud: 'red' } }
-```
-
-웹브라우저의 높이 해상도가 1080px 이하 일때, 클래스의 스타일을 변경해준다.
-
-[webdir]: https://webdir.tistory.com/339
-[opentutorials]: https://opentutorials.org/module/484/4150
-[gird]: https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-rows
-
-#### CSS 선택자
-
 마지막 라인 없애는 방법, `last-child` 선택자를 이용하자.
 
 ```css
@@ -111,5 +109,22 @@ div + p {
 }
 .menu li:last-child {
   border: none;
+}
+```
+
+첫번째 스탸일 변경 방법 `first-child` 선택자를 이용하자.
+
+```
+<article>
+  <p>First paragraph...</p>
+  <p>Lorem ipsum...</p>
+  <p>Dolor sit amet...</p>
+  <p>Consectetur adipisicing...</p>
+</article>
+```
+
+```
+p:first-child {
+  font-size: 1.5em;
 }
 ```

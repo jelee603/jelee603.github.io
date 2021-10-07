@@ -7,6 +7,12 @@ comments: false
 background: '/img/bg-index.jpg'
 ---
 
+#### NPM 설정
+
+```
+npm init -y  // 패키지까지 모두 설치하는 방법
+```
+
 #### NPM 에 새로 추가된 기능을 사용해보자
 
 NPM v6 에서 모듈의 취약점을 검사해주는 기능이 추가되었다. <br>

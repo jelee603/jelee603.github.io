@@ -110,6 +110,7 @@ branch: main
 
 ```
 hexo new [layout] <title>
+ex) hexo new _posts start
 ```
 
 4-1. hexo 문법
