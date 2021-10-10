@@ -36,10 +36,12 @@ comments: false
   ㄴ [방탄 생성자](#방탄-생성자)
 
 - EcmaScript 6
+  ㄴ [Destructuring](#Destructuring)
+  ㄴ [Async & Await](#Async-&-Await)
   ㄴ proxy, map, set
   ㄴ 구조체, 배열
   ㄴ 스트릭트 모드
-  ㄴ 배열 메서드: map, filter, forEach, every, some
+  ㄴ 배열 메서드: [reduce](#reduce), map, filter, forEach, every, some
 - [TypeScript](#TypeScript)
 - [Babel](#Babel)
 
@@ -197,7 +199,32 @@ ex) 네이티브 참조 타입이 프로토타입 패턴으로 구현되어있�
 TDD 란, 테스트가 설계를 '주도'하게 하는데 있어, 기능과 성능처럼 겉으로 드러나는 품질 속성을 검증하는 활동을 하는 것을 말합니다.
 
 이 중에서 가장 작은 기능을 테스트 하는 것을 단위 테스트라 합니다.
- 
+
+#### Destructuring
+객체와 배열의 구조를 분해해서 객체의 속성을 바로 꺼내서 쓸 수 있는 방식입니다.
+자바스크립트 차원에서 편하고 쉽게 접근할 수 있습니다.
+```
+var {a, b, c} = obj;
+```
+
+#### Async & Await
+
+비동기처리 문법, 자바스크립트의 콜백 문제를 Promise 가 해결하고 Promise 의 문제를 해결한 것이 Async & Await 입니다.
+
+```
+async function fetchData() {
+  await getList();
+}
+```
+함수 앞에 async 를 걸어주고, 비동기 처리를 한 promise 객체를 반환하는 부분에 await 를 걸어준다. 
+
+#### 배열 메서드
+##### reduce [(링크)](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
+배열의 각각의 아이템들을 순회하면서 이전 연산 값을 누적하면서 계속 연산해서 값을 추출하는 함수
+연산은 콜백
+acc: 누적치, current: 순회하는 아이템
+
+
 #### TypeScript
 
 맵드 타입
