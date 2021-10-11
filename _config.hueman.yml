@@ -13,7 +13,7 @@ customize:
     url: images/logo-header.png
   theme_color: '#db7093'
   highlight: androidstudio
-  sidebar: left # sidebar position, options: left, right
+  sidebar: right # sidebar position, options: left, right
   thumbnail: true # enable posts thumbnail, options: true, false
   favicon: images/favicon/favicon.ico # path to favicon
   social_links: # for more icons, please see http://fontawesome.io/icons/#brand

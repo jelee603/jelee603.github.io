@@ -1,8 +1,10 @@
 ---
 layout: _posts
-title: react
+title: React
 date: 2021-10-03 18:38:26
 tags:
+comments: false
+thumbnail: '/images/thumnail/react.png'
 ---
 
 조건부 렌더링

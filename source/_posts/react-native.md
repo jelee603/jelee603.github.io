@@ -1,9 +1,10 @@
 ---
 layout: source/_posts
-title: react-native
+title: React Native
 date: 2021-09-29 10:15:57
 comments: false
 tags:
+thumbnail: '/images/thumnail/react-native.png'
 ---
 
 > <b>Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports. <br/>
