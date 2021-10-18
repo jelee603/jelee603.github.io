@@ -72,3 +72,22 @@ $ npm uninstall [패키지명]
 ```js
 $ npm insatll -D babel-core@^7.0.0-0
 ```
+
+#### node 업데이트
+[Node](https://nodejs.org/en/) 에서 pkg 다운받으면, 그 후로 업데이트 방법은 아래와 같이 stable 안정화버전으로 업데이트한다. 
+
+```
+$npm install -g n
+$npm cache clean -f
+$sudo n stable
+```
+
+NVM 다양한 버전의 노드를 설치할 수 있도록 해주는 관리자 툴이다.
+현재 노드버전을 확인하고, nvm 에 [major](https://semver.org/) version 만 적으면 그 버전의 최신버전을 설치할 수 있다.
+
+```
+nvm install v14
+nvm list
+nvm use v14.18.1
+``` 
+
