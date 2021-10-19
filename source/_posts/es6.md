@@ -4,8 +4,9 @@ title: 'ES6 문법'
 date: 2020-02-04
 categories: javascript
 comments: false
-background: '/img/bg-post-11.jpg'
+thumbnail: '/images/thumnail/es6.png'
 ---
+![image](/images/thumnail/es6.png)
 
 #### 1.import/export
 

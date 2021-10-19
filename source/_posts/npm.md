@@ -1,11 +1,12 @@
 ---
 layout: post
-title: 'NPM 이야기'
+title: 'NPM'
 date: 2019-08-09
 categories: setting
 comments: false
-background: '/img/bg-index.jpg'
+thumbnail: '/images/thumnail/npm.png'
 ---
+![image](/images/thumnail/npm.png)
 
 > Node Pacakge Manager 로 노드기반 패키지들이 NPM 저장소에 저장되어 있다. 
 
