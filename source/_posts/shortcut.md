@@ -4,8 +4,9 @@ title: 'VSCode 단축키 모음'
 date: 2020-01-09
 categories: javascript
 comments: false
-background: '/img/bg-post-11.jpg'
+thumbnail: '/images/thumnail/vscode.png'
 ---
+![image](/images/thumnail/vscode.png)
 
 IDE 에서 사용할만한 단축키를 모아두자.
 
