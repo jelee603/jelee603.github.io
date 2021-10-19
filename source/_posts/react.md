@@ -39,3 +39,7 @@ const todoItems = todos.map((todo, index) =>
 
 참고:
 https://ko.reactjs.org/docs/lists-and-keys.html
+
+
+#### append dynamic component 
+https://stackoverflow.com/questions/51404335/append-a-react-component-in-another-on-button-click

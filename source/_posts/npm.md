@@ -49,7 +49,7 @@ found 0 vulnerabilities
 $ npm view <package-name> version</package-name>
 ```
 
-#### package json 경로 지정 방법
+#### package json 경로 지정 방법:
 
 ```js
 // devDependencies 설치
@@ -59,7 +59,7 @@ $ npm install -D --save xxx
 $ npm install xxx
 ```
 
-#### 패키지 모듈 삭제 방법
+#### 패키지 모듈 삭제 방법:
 
 ```js
 $ rm -rf node_modules/
@@ -67,13 +67,13 @@ $ rm -rf node_modules/
 $ npm uninstall [패키지명]
 ```
 
-#### 특정 버전으로 받는 방법
+#### 특정 버전으로 받는 방법:
 
 ```js
 $ npm insatll -D babel-core@^7.0.0-0
 ```
 
-#### node 업데이트
+#### Node 모듈 업데이트 방법:
 [Node](https://nodejs.org/en/) 에서 pkg 다운받으면, 그 후로 업데이트 방법은 아래와 같이 stable 안정화버전으로 업데이트한다. 
 
 ```
@@ -82,12 +82,18 @@ $npm cache clean -f
 $sudo n stable
 ```
 
-NVM 다양한 버전의 노드를 설치할 수 있도록 해주는 관리자 툴이다.
-현재 노드버전을 확인하고, nvm 에 [major](https://semver.org/) version 만 적으면 그 버전의 최신버전을 설치할 수 있다.
+#### NVM 사용 방법:
+[NVM](https://github.com/nvm-sh/nvm#installing-and-updating) 다양한 버전의 노드를 설치할 수 있도록 해주는 관리자 툴이다.
+현재 노드버전을 확인하고, [major version](https://semver.org/) 을 쓰면, 그 메이저 버전의 최신을 설치할 수 있다.
 
 ```
 nvm install v14
 nvm list
 nvm use v14.18.1
 ``` 
+
+#### 전역에 설치된 모듈을 확인하는 방법: 
+```
+npm list -g --depth 0
+```
 
