@@ -2,7 +2,8 @@
 layout: post
 title: 'Load Image File'
 date: 2019-10-10
-categories: javascript
+categories:
+- JavaScript
 comments: false
 background: '/img/bg-post-08.jpg'
 ---

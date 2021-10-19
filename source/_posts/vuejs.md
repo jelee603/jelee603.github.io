@@ -2,7 +2,9 @@
 layout: post
 title:  "Vue 이야기"
 date:   2019-08-14
-categories: javascript
+categories:
+- Framework
+- Vue
 comments: false
 background: '/img/bg-index.jpg'
 ---

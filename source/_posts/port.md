@@ -2,7 +2,8 @@
 layout: _posts
 title: Port
 date: 2021-10-10 23:31:07
-categories: setting
+categories: 
+- Network
 tags:
 comments: false
 thumbnail: '/images/thumnail/port.png'

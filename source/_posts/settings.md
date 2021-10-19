@@ -2,7 +2,8 @@
 layout: post
 title: '개발환경 세팅하기'
 date: 2019-09-26
-categories: javascript
+categories: 
+- Setting
 comments: false
 background: '/img/bg-post-08.jpg'
 ---

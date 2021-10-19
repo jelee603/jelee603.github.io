@@ -2,7 +2,8 @@
 layout: post
 title: 'ES6 문법'
 date: 2020-02-04
-categories: javascript
+categories: 
+- JavaScript
 comments: false
 thumbnail: '/images/thumnail/es6.png'
 ---
@@ -40,4 +41,15 @@ console.log(result); // {a:2, b:3, c: {d:4}}
 
 const result2 = { ...source, ...target, c: { ...source.c, ...target.c } };
 console.log(result2); // {a: 2, b: 3, c: {d: 4, d2: 1}}
+```
+#### 최대값, 최소값
+
+ES6 문법의 Spread 연산자를 사용할 수 있게 되면서 최대값과 최소값을 간편하게 계산할 수 있게 되었다.
+Spread 연산자(...)는 배열을 여러개의 인자 값이나 (키-값)객체로 확장할 수 있다.
+
+```js
+const test = [190, 10, 16, 20, 60, 30, 40, 20, 60, 15, 50, 22, 8];
+
+console.log(Math.max(...test)); // 190
+console.log(Math.min(...test)); // 8
 ```

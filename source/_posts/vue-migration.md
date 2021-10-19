@@ -2,6 +2,9 @@
 layout: _posts
 title: vue-migration
 date: 2021-10-17 15:24:38
+categories:
+- Framework
+- Vue
 comments: false
 tags:
 ---

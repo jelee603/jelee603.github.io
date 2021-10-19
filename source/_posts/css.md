@@ -2,7 +2,9 @@
 layout: post
 title: 'CSS 이야기'
 date: 2019-08-16
-categories: css
+categories:
+- Web
+- HTML/CSS
 comments: false
 background: '/img/bg-index.jpg'
 ---

@@ -2,7 +2,9 @@
 layout: post
 title: 'Browser 이야기'
 date: 2019-08-19
-categories: http
+categories:
+- Web
+- Browser
 comments: false
 background: '/img/bg-index.jpg'
 ---

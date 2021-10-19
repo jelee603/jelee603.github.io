@@ -2,7 +2,9 @@
 layout: post
 title: 'SaaS 알아가기'
 date: 2020-01-22
-categories: javascript
+categories: 
+- Web
+- HTML/CSS
 comments: false
 background: '/img/bg-post-11.jpg'
 ---

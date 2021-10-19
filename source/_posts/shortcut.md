@@ -2,7 +2,8 @@
 layout: post
 title: 'VSCode 단축키 모음'
 date: 2020-01-09
-categories: javascript
+categories:
+- Setting
 comments: false
 thumbnail: '/images/thumnail/vscode.png'
 ---

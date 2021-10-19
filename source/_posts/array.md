@@ -2,7 +2,8 @@
 layout: post
 title: 'Javascript Array 이야기'
 date: 2019-08-18
-categories: javascript
+categories: 
+- JavaScript
 comments: false
 background: '/img/bg-index.jpg'
 ---

@@ -2,7 +2,9 @@
 layout: post
 title: 'Local & Session Storage'
 date: 2019-11-01
-categories: javascript
+categories:
+- Web
+- Browser
 comments: false
 background: '/img/bg-post-11.jpg'
 ---

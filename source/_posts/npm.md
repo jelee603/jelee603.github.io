@@ -2,7 +2,9 @@
 layout: post
 title: 'NPM'
 date: 2019-08-09
-categories: setting
+categories: 
+- Node
+- NPM
 comments: false
 thumbnail: '/images/thumnail/npm.png'
 ---

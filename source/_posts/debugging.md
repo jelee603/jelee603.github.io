@@ -1,8 +1,10 @@
 ---
 layout: post
-title: 'Javascript Debugging 이야기'
+title: 'Browser Debugging 이야기'
 date: 2019-09-10
-categories: javascript
+categories:
+- Web
+- Browser
 comments: false
 background: '/img/bg-post-08.jpg'
 ---

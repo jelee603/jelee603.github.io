@@ -2,7 +2,8 @@
 layout: post
 title: 'Javascript Promise 이야기'
 date: 2019-08-28
-categories: javascript
+categories: 
+- JavaScript
 comments: false
 background: '/img/bg-post-08.jpg'
 ---

@@ -2,7 +2,8 @@
 layout: post
 title: 'Javascript 디자인패턴 이야기'
 date: 2019-09-11
-categories: javascript
+categories:
+- JavaScript
 comments: false
 background: '/img/bg-post-08.jpg'
 ---
