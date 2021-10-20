@@ -8,7 +8,7 @@ comments: false
 thumbnail: '/images/thumnail/blog-jekyll.png'
 ---
 
-![blog](/images/thumnail/blog-jekyll.png)
+<img src='/images/thumnail/blog-jekyll.png' width='300'>
 
 #### 환경설정하기
 

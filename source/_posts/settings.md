@@ -5,7 +5,7 @@ date: 2019-09-26
 categories: 
 - Setting
 comments: false
-background: '/img/bg-post-08.jpg'
+thumbnail: '/images/thumnail/settings.png'
 ---
 
 #### 작업환경 세팅하기
