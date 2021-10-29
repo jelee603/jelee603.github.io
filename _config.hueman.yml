@@ -1,9 +1,11 @@
 # Menus
 menu:
-  Home: /
+  # Home: /
   # Delete this row if you don't want categories in your header nav bar
+  Note: /note
   Categories:
-  About: /about
+  # About: /about
+  
 
 # Customize
 customize:
