@@ -4,9 +4,8 @@ title: Port
 date: 2021-10-10 23:31:07
 categories: 
 - Network
-tags:
-comments: false
 thumbnail: '/images/thumnail/port.png'
+comments: false
 ---
 #### 점유중인 Port 종료하는 방법:
 

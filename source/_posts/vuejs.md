@@ -4,8 +4,8 @@ title:  "Vue 이야기"
 date:   2019-08-14
 categories:
 - JavaScript
+thumbnail: /images/thumnail/vue-js.png
 comments: false
-background: '/img/bg-index.jpg'
 ---
 
 MVC 패턴이 도입되면서 Controller 에서 데이터 작업들에 대한 역할 분담을 해왔고,

@@ -4,8 +4,8 @@ title:  "Javascript Event 이야기"
 date:   2019-08-22
 categories:
 - JavaScript
+thumbnail: /images/thumnail/event.png
 comments: false
-background: '/img/bg-post-08.jpg'
 ---
 
 #### 이벤트 리스너를 등록해서 사용할 때, `removeEventListener` 가 필요할까?

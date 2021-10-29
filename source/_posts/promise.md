@@ -4,8 +4,8 @@ title: 'Javascript Promise 이야기'
 date: 2019-08-28
 categories: 
 - JavaScript
+thumbnail: '/images/thumnail/promise.png'
 comments: false
-background: '/img/bg-post-08.jpg'
 ---
 
 #### 비동기 통신에서 Promise 는 어떻게 쓸까?

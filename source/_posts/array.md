@@ -4,8 +4,8 @@ title: 'Javascript Array 이야기'
 date: 2019-08-18
 categories: 
 - JavaScript
+thumbnail: '/images/thumnail/array.png'
 comments: false
-background: '/img/bg-index.jpg'
 ---
 
 #### Split, Join 의 사용법

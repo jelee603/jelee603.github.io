@@ -4,8 +4,8 @@ title: Vue Migration 적용기
 date: 2021-10-17 15:24:38
 categories:
 - JavaScript
+thumbnail: '/images/thumnail/vue-migration.png'
 comments: false
-tags:
 ---
 
 > ```

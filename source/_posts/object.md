@@ -4,8 +4,8 @@ title: 'Javascript Object 이야기'
 date: 2019-08-21
 categories: 
 - JavaScript
+thumbnail: '/images/thumnail/object.png'
 comments: false
-background: '/img/bg-index.jpg'
 ---
 
 object 를 string 으로 바꾸는 방법은 `JSON.stringify()`를 사용한다.
