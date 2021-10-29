@@ -3,8 +3,7 @@ layout: post
 title: 'Browser Debugging 이야기'
 date: 2019-09-10
 categories:
-- Web
-- Browser
+- HTML/CSS
 comments: false
 background: '/img/bg-post-08.jpg'
 ---

@@ -3,8 +3,7 @@ layout: _posts
 title: React
 date: 2021-10-03 18:38:26
 categories:
-- Framework
-- React
+- JavaScript
 tags:
 comments: false
 thumbnail: '/images/thumnail/react.png'

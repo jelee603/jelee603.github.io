@@ -3,8 +3,7 @@ layout: post
 title:  "Graphql 적용기"
 date:   2019-10-16
 categories: 
-- Node
-- GraphQL
+- Setting
 comments: false
 thumbnail: '/images/thumnail/graphql.png'
 ---

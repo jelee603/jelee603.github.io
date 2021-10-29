@@ -3,8 +3,7 @@ layout: post
 title: 'Vuejs 테스트 적용기'
 date: 2019-10-17
 categories: 
-- Framework
-- Vue
+- JavaScript
 comments: false
 background: '/img/bg-post-08.jpg'
 ---

@@ -2,8 +2,7 @@
 title: Yarn
 date: 2021-10-17 15:31:01
 categories: 
-- Node
-- Yarn
+- Setting
 tags:
 thumbnail: '/images/thumnail/yarn.png'
 comments: false

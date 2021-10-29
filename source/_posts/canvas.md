@@ -3,8 +3,7 @@ layout: post
 title: 'Canvas로 그래프 그리기'
 date: 2019-06-10
 categories:
-- Web
-- Graphic
+- HTML/CSS
 comments: false
 background: '/img/bg-index.jpg'
 ---

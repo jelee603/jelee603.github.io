@@ -4,8 +4,7 @@ title: React Native
 date: 2021-09-29 10:15:57
 comments: false
 categories:
-- Framework
-- React Native
+- JavaScript
 tags:
 thumbnail: '/images/thumnail/react-native.png'
 ---
