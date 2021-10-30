@@ -8,11 +8,13 @@ thumbnail: '/images/thumnail/vue-migration.png'
 comments: false
 ---
 
-> ```
-> 웹팩 설정하기
+### 1. 웹팩 설정하기 
+
 > sh: webpack-dev-server: command not found
-> ```
-> npm install webpack-dev-server -g
+
+``` js
+$ npm install webpack-dev-server -g
+```
 
 
 [vue3](https://v3.vuejs.org/guide/migration/migration-build.html#preparations)
