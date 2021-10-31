@@ -10,9 +10,9 @@ thumbnail: '/images/thumnail/blog-hexo.png'
 
 ![blog](/images/thumnail/blog-hexo.png)
 
-> hexo 프레임워크를 이용해 블로그를 작성하고, github에 자동 deploy 까지
+##### Hexo 프레임워크를 이용해 블로그를 작성하고, github에 자동 deploy 까지
 
-1. install
+## 1. 설치하기
 
 ```
 npm install hexo-cli -g
@@ -22,7 +22,7 @@ npm run server
 https://hexo.io/
 https://github.com/ppoffice/hexo-theme-hueman
 
-2. github 연동하기
+## 2. github 연동하기
 
 **Project > Settigns > GitHub Pages**
 Branch: main
@@ -46,7 +46,7 @@ HEXO_DEPLOY_TOKEN 이름으로 토큰을 등록한다.
 
 \***\*주기적으로 Actions 토큰을 업데이트 해준다.** <br/> \***\*Mac 에서는 cmd + space > keychain 접근에서 github.com 은 모두 삭제해준 후에 IDE에서 토큰을 재등록해준다.**
 
-3. github deploy 등록하기
+## 3. github deploy 등록하기
 
 **Project > Actions**
 workflow 를 자동으로 생성할 수 있게 많이 제공하지만, 일단 'and set up a workflow yourself' 를 클릭해서 개별 스크립트를 작성해준다.
@@ -91,30 +91,28 @@ develop 디렉토리에 push 되었을 때, deploy 할 수 있게 만든다.
 
 Actions 실행되는 스크립트는 config 파일의 deploy 변수를 제대로 걸어주지 못하면, 아래와 같은 오류를 만나게 된다.
 
-> **fatal: could not read Password for 'https://jelee603@github.com': No such device or address
-> FATAL**
-
-위에서 토큰을 제대로 등록해주고, 아래와 같이 변수를 추가해준다.
-
-```
-// _config.yml
-
-deploy:
-type: git
-repo: https://__GITHUB_TOKEN__@github.com/[user_name]/[user_name].github.io.git
-branch: main
-```
+> fatal: could not read Password for 'https://jelee603@github.com': No such device or address
+>
+> 해결 방법: 
+> 등록된 토큰을 확인하고, 아래와 같이 변수를 추가해준다.
+> ```js
+> // _config.yml
+> deploy:
+> type: git
+> repo: https://__GITHUB_TOKEN__@github.com/[user_name]/[user_name].github.io.git
+> branch: main
+> ```
 
 위와 같이 작성하고, push 를 하게 되면, build 가 시작되고 정상적으로 완료되면, 블로그에 반영이 된다!
 
-4. hexo 글쓰기
+## 4. hexo 글쓰기
 
 ```
 hexo new [layout] <title>
 ex) hexo new _posts start
 ```
 
-4-1. hexo 문법
+4-1. Hexo 문법
 https://hexo.io/ko/docs/writing.html [hexo]
 
 4-2. 마크다운 문법

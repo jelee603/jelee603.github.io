@@ -27,8 +27,6 @@ git checkout -b develop(브랜치명) git add . git commit -m 'xxx' git push ori
 develop // hotfix git checkout main git checkout -b hotfix/YYYYMMDD
 ```
 
-![post-2019-08-08-1](/img/post-2019-08-08-1.png){: width="100%" height="100%"}
-
 gitignore 파일을 만들고 추후에 파일들을 삭제하고 싶을땐, 항상 캐시문제로 stage 에 올라간 파일을 삭제하기가 어려웠다.
 [hopeless][hopeless-blog] 블로그에서 보면 제외할 폴더나 파일을 cached 된걸 삭제해줘야한다고 한다.
 
@@ -62,8 +60,6 @@ Terminal: git merge --continue :qa // 2. 수동 해결 방법 // HEAD ~ === 영�
 원본이므로 수정하고, 다시 commit 해준다. git add . git commit -m 'confilct
 resolved'
 ```
-
-![post-2019-08-08-2](/img/post-2019-08-08-2.png){: width="100%" height="100%"}
 
 **Git Cherry Pick**
 

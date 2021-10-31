@@ -41,8 +41,6 @@ my-awesome-site $jekyll serve --watch
 bundle exec jekyll serve --watch
 ```
 
-![post-2019-08-07-2](/img/post-2019-08-07-2.png){: width="100%" height="100%"}
-
 ---
 
 #### 글 작성하기
@@ -68,7 +66,6 @@ theme: jekyll-theme-clean-blog
 ```
 
 새로 적용하면 아주 이쁘게 잘 보이는데.. 영문일 때 폰트만 이뻐서.. 한글 폰트는 다른걸 사용하고 싶어졌다.
-![post-2019-08-07-1](/img/post-2019-08-07-1.png){: width="100%" height="100%"}
 
 ---
 

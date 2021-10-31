@@ -11,10 +11,11 @@ comments: false
 ### 1. 웹팩 설정하기 
 
 > sh: webpack-dev-server: command not found
-
-``` js
-$ npm install webpack-dev-server -g
-```
+> 
+> 해결 방법:
+> ``` js
+> $ npm install webpack-dev-server -g
+> ```
 
 
 [vue3](https://v3.vuejs.org/guide/migration/migration-build.html#preparations)

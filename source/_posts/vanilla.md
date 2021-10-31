@@ -31,9 +31,12 @@ css 스크립트를 작성합니다.
 파일을 여러개 로드를 하려다보면, 모듈 파일을 읽어오지 못합니다. 사용하던 방법대로 `import` 와 `export default` 를 하려면, script type 을 변경해줍니다. 
 
 > Uncaught SyntaxError: Cannot use import statement outside a module
+>
+> 해결 방법: 
+> ```js
+> <body>
+>    <script type="module" src="[file].js" />
+> </body>
+> ```
 
-```js
-<body>
-    <script type="module" src="[file].js" />
-</body>
-```
+[webpack](https://webpack.js.org/guides/getting-started) 을 설정해줍니다. 
