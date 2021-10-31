@@ -42,7 +42,7 @@ css 스크립트를 작성합니다.
 [webpack](https://webpack.js.org/guides/getting-started) 설정을 해줍니다. 
 웹팩은 여러개의 자바스크립트 파일을 압축해주는 번들러입니다.
 
-### project 구조
+#### project 구조
 ```js
 webpack-demo
  |- /dist
