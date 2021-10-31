@@ -1,11 +1,11 @@
 ---
 layout: post
-title: 'SaaS 알아가기'
+title: 'Sass(SCSS) 알아가기'
 date: 2020-01-22
 categories: 
 - HTML/CSS
 comments: false
-background: '/img/bg-post-11.jpg'
+thumbnail: '/images/thumnail/sass.png'
 ---
 
 ### 1. &부모 요소 참조, $변수 사용
