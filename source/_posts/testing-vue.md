@@ -5,12 +5,12 @@ date: 2019-10-17
 categories: 
 - JavaScript
 comments: false
-background: '/img/bg-post-08.jpg'
+thumbnail: '/images/thumnail/testing-vue.png'
 ---
 
 vue-cli 3.x 를 받게되면 자동으로 test 를 할 수 있는 환경이 구축되는데 프로젝트가 그렇게 쉽게 올라가는 건 아니니
 기존 프로젝트를 위한 2.x 에 테스트 작업환경을 추가를 해보았다. 일단은 가장 많이 사용하는 jest 로 해보았다.
-[Vue Test Util] [Vue Test Util] 을 참고하고 [joshua1988] [joshua1988]님 블로그르 참고하면서 현재 스펙에 맞는 버전으로 설치해보았다.
+[Vue Test Util] [Vue Test Util] 을 참고하고 [joshua1988](https://joshua1988.github.io/vue-camp/testing/getting-started.html#%EB%B7%B0-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%BD%94%EB%93%9C-%EC%98%88%EC%8B%9C)님 블로그르 참고하면서 현재 스펙에 맞는 버전으로 설치해보았다.
 
 유틸 라이브러리 설치
 
@@ -78,4 +78,3 @@ import HelloWorld from '../src/components/HelloWorld.vue';
 ```
 
 [vue test util]: https://vue-test-utils.vuejs.org/guides/testing-single-file-components-with-jest.html
-[joshua1988]: https://joshua1988.github.io/vue-camp/testing/getting-started.html#%EB%B7%B0-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%BD%94%EB%93%9C-%EC%98%88%EC%8B%9C
