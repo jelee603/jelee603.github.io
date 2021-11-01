@@ -5,7 +5,7 @@ date: 2019-08-16
 categories:
 - HTML/CSS
 comments: false
-background: '/img/bg-index.jpg'
+thumbnail: '/images/thumnail/css.png'
 ---
 
 #### Grid 사용할 때, 중첩된 그리드는 어떻게 나눌까?

@@ -5,7 +5,7 @@ date: 2019-08-19
 categories:
 - HTML/CSS
 comments: false
-background: '/img/bg-index.jpg'
+thumbnail: '/images/thumnail/browser.png'
 ---
 
 #### CORS 란?
@@ -47,3 +47,10 @@ HTTP/1.1부터는 Keep-alive 를 지원하게 되면서 문서가 다운로드�
 일정 시간동안 연결을 유지하며 재연결 과정없이 데이터를 유지하게 된다.
 
 [andrew park]: https://medium.com/@pks2974/website%EB%8A%94-%EC%96%B4%EB%96%BB%EA%B2%8C-%EB%B3%B4%EC%97%AC%EC%A7%80%EA%B2%8C%EB%90%98%EB%8A%94-%EA%B1%B8%EA%B9%8C-1-108009d4bdb
+
+
+#### 크롬 브라우저 성능측정 
+
+[FPS meter](https://developer.chrome.com/docs/devtools/evaluate-performance) 로 확인해볼 수 있다.
+
+크롬 개발자 도구 - Console 탭의 더보기 - Rendering - FPS meter 체크를 하면 확인할 수 있다.
