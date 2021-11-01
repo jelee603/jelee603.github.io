@@ -1,5 +1,5 @@
 ---
-title: typescript
+title: TypeScript 스터디
 date: 2021-11-01 14:27:36
 categories: 
 - JavaScript
