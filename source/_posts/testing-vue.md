@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Vuejs2.x 테스트 적용기'
+title: 'Vue.js 2.x 테스트 적용기'
 date: 2019-10-17
 categories: 
 - JavaScript

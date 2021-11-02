@@ -1,6 +1,6 @@
 ---
 layout: _posts
-title: Vue Migration 적용기
+title: Vue.js 2.x Migration 적용기
 date: 2021-10-17 15:24:38
 categories:
 - JavaScript
