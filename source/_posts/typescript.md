@@ -7,5 +7,5 @@ comments: false
 thumbnail: '/images/thumnail/typescript.png'
 ---
 
-타입스크립트의 문법에 대해서 알아보겠습니다. 
+[타입스크립트 핸드북](https://typescript-kr.github.io)을 이용해서 문법과 타입스트립트에 대해 알아보자. 
 
