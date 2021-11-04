@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Hexo Blog 만들기'
+title: 'Hexo를 이용한 github 블로그 생성하기'
 date: 2021-09-24
 categories:
 - Lab

@@ -117,6 +117,7 @@ assets/css/syntax.css 에 스타일을 적용하고, import 해서 사용했다.
 
 테마 요소의 다른 부분은 건드리지 않았고, 스타일만 앞으로 계속 커스텀하게 바꿔봐야겠다.
 
+---
 #### Git Repository 블로그 적용하기
 
 Repository에 등록하면 프로젝트 명(git_id.github.io) 로 등록을 하면 바로 깃허브에서 확인을 할 수 있다.
@@ -134,6 +135,7 @@ layout 탬플릿 파일이 동적 파일들(\*.md)을 로드해서 정적파일�
 [onedarktheme]: https://github.com/eungbean/Atom-OneDarkTheme-4-Jekyll
 [goodgid]: https://goodgid.github.io/What-is-Liquid-Grammer/
 
+---
 #### git auto build jekyll 무시하기
 
 .nojekyll 빈 파일을 root 에 생성한다.

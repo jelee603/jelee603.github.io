@@ -5,7 +5,7 @@ date: 2019-11-01
 categories:
 - HTML/CSS
 comments: false
-background: '/img/bg-post-11.jpg'
+thumbnail: '/images/thumnail/storage.png'
 ---
 
 #### 로컬과 세션 스토리지의 차이점?

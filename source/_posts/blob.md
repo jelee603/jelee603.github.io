@@ -5,10 +5,10 @@ date: 2019-10-10
 categories:
 - JavaScript
 comments: false
-background: '/img/bg-post-08.jpg'
+thumbnail: '/images/thumnail/blob.png'
 ---
 
-#### 서버에서 온 base64 로 인코딩되어 온 이미지 파일을 그대로 보내줄 경우 Web 에서는 어떻게 보여줄까?
+##### 서버에서 온 base64 로 인코딩되어 온 이미지 파일을 그대로 보내줄 경우 Web 에서는 어떻게 보여줄까?
 
 base64 데이터가 있으면, 이 데이터를 blob:URL 을 만들어 src 속성에 URL 입력해서 이미지를 보여주면 된다.
 
