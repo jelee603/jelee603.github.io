@@ -9,7 +9,16 @@ thumbnail: '/images/thumnail/typescript.png'
 
 [타입스크립트 핸드북](https://typescript-kr.github.io)을 이용해서 문법과 타입스트립트에 대해 알아보자. 
 
-일단 리액트에 타입스크립트 적용해보는 걸로 시작해본다. 
+
+리액트에서 타입스크립트를 지원하고 있어, 간단하게 설치가 가능하지만 기존 프로젝트에 마이그레이션 방법으로 설치를 해보고자 한다. 
+
+### 1. [react-typescript](https://reactjs.org/docs/static-type-checking.html#typescript) 적용 방법: 
+```js
+npx create-react-app my-app --template typescript
+```
+
+
+### 2. 기존 리액트 프로젝트를 타입스크립트로 마이그레이션 방법: <br/>
 [Create React App](https://reactjs.org/docs/create-a-new-react-app.html) 의 순서대로 설치한다.
 
 ```js
