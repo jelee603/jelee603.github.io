@@ -2,7 +2,7 @@
 title: Vanilla JS 다뤄보기
 date: 2021-10-30 23:20:00
 categories: 
-- JavaScript
+- Lab
 tags:
 thumbnail: '/images/thumnail/vanilla.png'
 comments: false
