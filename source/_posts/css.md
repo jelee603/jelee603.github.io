@@ -8,7 +8,7 @@ comments: false
 thumbnail: '/images/thumnail/css.png'
 ---
 
-#### Grid 사용할 때, 중첩된 그리드는 어떻게 나눌까?
+##### Grid 사용할 때, 중첩된 그리드는 어떻게 나눌까?
 
 grid 는 중첩이 필요할 땐, 항상 grid 로 재분할이 필요하다.
 
@@ -47,7 +47,8 @@ grid 는 중첩이 필요할 땐, 항상 grid 로 재분할이 필요하다.
 Grid 에서 크기가 고정된 아이템이 잘 정렬되게 보이려면, 감싸고 있는 컨테이너 박스에서 `grid-auto-rows: max-content` 를 추가해준다.
 ([MDN] [gird])
 
-#### Flex 를 사용할때, 텍스트 중앙 정렬은 어떻게 할까?
+---
+##### Flex 를 사용할때, 텍스트 중앙 정렬은 어떻게 할까?
 
 Flex 는 `align-items`를 사용하면 컨텐츠를 정렬할 수 있다.
 
@@ -64,7 +65,8 @@ Flex 는 `align-items`를 사용하면 컨텐츠를 정렬할 수 있다.
 }
 ```
 
-#### 반응형 레이아웃
+---
+##### 반응형 레이아웃
 
 ```html
 @media only screen and (max-height: 1080px) { body { backgroud: 'red' } }
@@ -76,7 +78,8 @@ Flex 는 `align-items`를 사용하면 컨텐츠를 정렬할 수 있다.
 [opentutorials]: https://opentutorials.org/module/484/4150
 [gird]: https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-rows
 
-#### CSS 선택자
+---
+##### CSS 선택자
 
 [webdir][webdir] 님의 블로그를 보면, 잘 정리되어있는데 보통은 class 선택자로 오버라이드해서 사용하고 있다.
 class 선택자로 chain 된 것도 지정이 가능하다보니 대체로 찾아서 쓰는 경우는 `.class1 .class2` 이렇게 붙여 쓰고 있다.
@@ -129,3 +132,9 @@ p:first-child {
   font-size: 1.5em;
 }
 ```
+
+--- 
+##### 개행 문자 & 공백 문자는 어떻게 처리할까?
+[`white-space`](https://developer.mozilla.org/ko/docs/Web/CSS/white-space) 속성을 이용한다. 
+
+span 태그를 1개만 사용해서 텍스트를 입력할 수 있는데 [이스케이프 문자](https://ko.wikipedia.org/wiki/%EC%9D%B4%EC%8A%A4%EC%BC%80%EC%9D%B4%ED%94%84_%EB%AC%B8%EC%9E%90)를 사용하게 되는데, `\n` 개행 문자를 사용했을 때, `white-space: pre-line` 속성을 주면 적용할 수 있다. 
