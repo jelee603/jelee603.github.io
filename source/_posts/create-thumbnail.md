@@ -4,6 +4,7 @@ date: 2021-11-10 17:55:44
 categories:
 - Lab
 comments: false
+thumbnail: '/images/thumnail/create-thumbnail.png'
 ---
 
 블로그엔 썸네일 이미지도 같이 추가해야하는데 매번 그림을 찾는것도 그 그림의 픽셀이 깨지는 것도 번거로워서 글자와 배경만 바뀌는 심플한 이미지로 대체해봤습니다.
