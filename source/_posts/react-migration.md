@@ -4,7 +4,7 @@ date: 2021-11-05 00:22:39
 categories: 
 - Lab
 comments: false
-thumbnail: '/images/thumnail/react-migration.png'
+thumbnail: '/images/thumbnail/react-migration.png'
 ---
 
 리액트에서 타입스크립트를 지원하고 있어, 간단하게 설치가 가능하지만 기존 프로젝트에 마이그레이션 방법으로 설치를 해보고자 한다. 

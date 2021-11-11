@@ -5,7 +5,7 @@ date: 2019-08-19
 categories:
 - HTML/CSS
 comments: false
-thumbnail: '/images/thumnail/browser.png'
+thumbnail: '/images/thumbnail/browser.png'
 ---
 
 #### CORS 란?

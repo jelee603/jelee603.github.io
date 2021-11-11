@@ -4,7 +4,7 @@ title: Vue.js 2.x Migration 적용기
 date: 2021-10-17 15:24:38
 categories:
 - Lab
-thumbnail: '/images/thumnail/vue-migration.png'
+thumbnail: '/images/thumbnail/vue-migration.png'
 comments: false
 ---
 

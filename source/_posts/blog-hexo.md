@@ -5,10 +5,10 @@ date: 2021-09-24
 categories:
 - Lab
 comments: false
-thumbnail: '/images/thumnail/blog-hexo.png'
+thumbnail: '/images/thumbnail/blog-hexo.png'
 ---
 
-![blog](/images/thumnail/blog-hexo.png)
+![blog](/images/thumbnail/blog-hexo.png)
 
 ##### Hexo 프레임워크를 이용해 블로그를 작성하고, github에 자동 deploy 까지
 

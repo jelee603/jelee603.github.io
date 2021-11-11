@@ -4,7 +4,7 @@ title: 'Javascript Promise 이야기'
 date: 2019-08-28
 categories: 
 - JavaScript
-thumbnail: '/images/thumnail/promise.png'
+thumbnail: '/images/thumbnail/promise.png'
 comments: false
 ---
 

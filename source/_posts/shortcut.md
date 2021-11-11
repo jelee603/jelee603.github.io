@@ -5,9 +5,9 @@ date: 2020-01-09
 categories:
 - Setting
 comments: false
-thumbnail: '/images/thumnail/vscode.png'
+thumbnail: '/images/thumbnail/vscode.png'
 ---
-![image](/images/thumnail/vscode.png)
+![image](/images/thumbnail/vscode.png)
 
 IDE 에서 사용할만한 단축키를 모아두자.
 

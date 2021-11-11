@@ -5,7 +5,7 @@ date: 2019-10-17
 categories: 
 - Lab
 comments: false
-thumbnail: '/images/thumnail/testing-vue.png'
+thumbnail: '/images/thumbnail/testing-vue.png'
 ---
 ### 라이브러리 설치하면서 만나게 되었던 버그들
 

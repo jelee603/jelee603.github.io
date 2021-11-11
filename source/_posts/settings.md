@@ -5,7 +5,7 @@ date: 2019-09-26
 categories: 
 - Setting
 comments: false
-thumbnail: '/images/thumnail/settings.png'
+thumbnail: '/images/thumbnail/settings.png'
 ---
 
 #### 작업환경 세팅하기

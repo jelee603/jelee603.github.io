@@ -5,10 +5,10 @@ date: 2019-08-07
 categories:
 - Lab
 comments: false
-thumbnail: '/images/thumnail/blog-jekyll.png'
+thumbnail: '/images/thumbnail/blog-jekyll.png'
 ---
 
-<img src='/images/thumnail/blog-jekyll.png' width='300'>
+<img src='/images/thumbnail/blog-jekyll.png' width='300'>
 
 #### 환경설정하기
 

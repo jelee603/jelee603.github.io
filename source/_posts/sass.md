@@ -5,7 +5,7 @@ date: 2020-01-22
 categories: 
 - HTML/CSS
 comments: false
-thumbnail: '/images/thumnail/sass.png'
+thumbnail: '/images/thumbnail/sass.png'
 ---
 
 > sass 사용하면, 변수로 사용한 상태에서 스타일을 재사용할 수 있다.

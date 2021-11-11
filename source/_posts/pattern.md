@@ -5,7 +5,7 @@ date: 2019-09-11
 categories:
 - JavaScript
 comments: false
-thumbnail: '/images/thumnail/pattern.png'
+thumbnail: '/images/thumbnail/pattern.png'
 ---
 
 ## 클래스란 (클래스/상속 디자인 패턴)

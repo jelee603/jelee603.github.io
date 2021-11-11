@@ -4,7 +4,7 @@ title:  "Javascript Event 이야기"
 date:   2019-08-22
 categories:
 - JavaScript
-thumbnail: /images/thumnail/event.png
+thumbnail: /images/thumbnail/event.png
 comments: false
 ---
 

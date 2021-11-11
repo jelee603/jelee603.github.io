@@ -5,9 +5,9 @@ date: 2019-08-08
 categories:
 - Setting
 comments: false
-thumbnail: '/images/thumnail/git.png'
+thumbnail: '/images/thumbnail/git.png'
 ---
-![image](/images/thumnail/git.png)
+![image](/images/thumbnail/git.png)
 #### 안 쓰면 잊어버리는 Git 명령어
 
 Git은 만들고 나면 크게 문제가 없고, 충돌나지 않으면 별 문제없이 편하지만, 가끔 발생하는 문제에 대해서는 조치 방법을 위해 정리해둘 필요가 있다.

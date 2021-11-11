@@ -4,7 +4,7 @@ title:  "Vue 이야기"
 date:   2019-08-14
 categories:
 - JavaScript
-thumbnail: /images/thumnail/vue-js.png
+thumbnail: /images/thumbnail/vue-js.png
 comments: false
 ---
 

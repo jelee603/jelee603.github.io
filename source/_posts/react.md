@@ -6,7 +6,7 @@ categories:
 - JavaScript
 tags:
 comments: false
-thumbnail: '/images/thumnail/react.png'
+thumbnail: '/images/thumbnail/react.png'
 ---
 
 조건부 렌더링

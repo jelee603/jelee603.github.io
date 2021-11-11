@@ -5,10 +5,10 @@ date:   2019-10-16
 categories: 
 - Lab
 comments: false
-thumbnail: '/images/thumnail/graphql.png'
+thumbnail: '/images/thumbnail/graphql.png'
 ---
 
-![image](/images/thumnail/graphql.png)
+![image](/images/thumbnail/graphql.png)
 
 [GraphQL](https://graphql-kr.github.io/) 은 상당히 뜨고 있어서 항상 진행해보자.. 싶었던 방법인데 DB도 설치해야하고 복잡할거 같아서 진행을 못하고 있었다.
 찾아보니 Node.js Express 로 구현한 [yuddomack][yuddomack] 님의 블로그를 보고 진행을 해볼 수 있었다. 

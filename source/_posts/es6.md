@@ -5,9 +5,9 @@ date: 2020-02-04
 categories: 
 - JavaScript
 comments: false
-thumbnail: '/images/thumnail/es6.png'
+thumbnail: '/images/thumbnail/es6.png'
 ---
-![image](/images/thumnail/es6.png)
+![image](/images/thumbnail/es6.png)
 
 #### 1.import/export
 

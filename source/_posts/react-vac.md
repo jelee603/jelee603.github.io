@@ -5,7 +5,7 @@ tags:
 categories:
 - JavaScript
 comments: false
-thumbnail: '/images/thumnail/react-vac.png'
+thumbnail: '/images/thumbnail/react-vac.png'
 ---
 
 #### VAC Pattern 이란?

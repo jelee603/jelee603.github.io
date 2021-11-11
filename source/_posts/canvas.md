@@ -5,7 +5,7 @@ date: 2019-06-10
 categories:
 - HTML/CSS
 comments: false
-thumbnail: '/images/thumnail/canvas.png'
+thumbnail: '/images/thumbnail/canvas.png'
 ---
 
 Grid 내부에 그래프를 그려야하는데 캔버스와 SVG, DIV 방법이 있을 수 있는데 어느 것을 골라야할지 망설여졌다.

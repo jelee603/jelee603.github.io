@@ -5,9 +5,9 @@ date: 2019-08-09
 categories: 
 - Setting
 comments: false
-thumbnail: '/images/thumnail/npm.png'
+thumbnail: '/images/thumbnail/npm.png'
 ---
-![image](/images/thumnail/npm.png)
+![image](/images/thumbnail/npm.png)
 
 > Node Pacakge Manager 로 노드기반 패키지들이 NPM 저장소에 저장되어 있다. 
 

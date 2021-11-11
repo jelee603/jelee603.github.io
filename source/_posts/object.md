@@ -4,7 +4,7 @@ title: 'Javascript Object 이야기'
 date: 2019-08-21
 categories: 
 - JavaScript
-thumbnail: '/images/thumnail/object.png'
+thumbnail: '/images/thumbnail/object.png'
 comments: false
 ---
 
