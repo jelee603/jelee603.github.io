@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MyCode - Create Image</title>
+    <title>MyCode</title>
     <style lang="text/css">
       .button {
           padding: 20px;
@@ -36,12 +36,12 @@
     </style>
   </head>
   <body>
-    <div>
-      <button class="button yellow" id="btn_yellow"></button>
-      <button class="button green" id="btn_green"></button>
-      <button class="button black" id="btn_black"></button>
-      <button class="button pink" id="btn_pink"></button>
-      <button class="button blue" id="btn_blue"></button>
+    <div id="btn_group">
+      <button class="button yellow" data-color="yellow"></button>
+      <button class="button green" data-color="green"></button>
+      <button class="button black" data-color="black"></button>
+      <button class="button pink" data-color="pink"></button>
+      <button class="button blue" data-color="blue"></button>
     </div>
     <canvas id="canvas"></canvas>
     <br />
@@ -71,12 +71,7 @@
 
       const canvas = document.getElementById('canvas');
       const ctx = canvas.getContext('2d');
-
-      const btnYellow = document.getElementById('btn_yellow');
-      const btnGreen = document.getElementById('btn_green');
-      const btnBlack = document.getElementById('btn_black');
-      const btnPink = document.getElementById('btn_pink');
-      const btnBlue = document.getElementById('btn_blue');
+      const btnGroup = document.getElementById('btn_group');
       const btnSave = document.getElementById('btn_save');
       const inputText = document.getElementById('input_text');
       let text = inputText.value;
@@ -86,20 +81,11 @@
         draw();
       });
 
-      btnYellow.addEventListener('click', () => {
-        changeColor('yellow');
-      });
-      btnGreen.addEventListener('click', () => {
-        changeColor('green');
-      });
-      btnBlack.addEventListener('click', () => {
-        changeColor('black');
-      });
-      btnPink.addEventListener('click', () => {
-        changeColor('pink');
-      });
-      btnBlue.addEventListener('click', () => {
-        changeColor('blue');
+      btnGroup.addEventListener('click', (e) => {
+        const color = e.target.dataset.color; 
+        if (color) {
+          changeColor(color);
+        }
       });
       btnSave.addEventListener('click', () => onSave());
 
