@@ -1,15 +1,15 @@
 ---
 layout: _posts
-title: React
+title: React 조건부 렌더링
 date: 2021-10-03 18:38:26
 categories:
 - JavaScript
 tags:
 comments: false
-thumbnail: '/images/thumbnail/react.png'
+thumbnail: '/images/thumbnail/react-condition.png'
 ---
 
-조건부 렌더링
+[조건부 렌더링](https://ko.reactjs.org/docs/conditional-rendering.html)
 
 ```
 render() {
@@ -27,6 +27,8 @@ render() {
 ```
 
 참고: https://reactjs-kr.firebaseapp.com/docs/conditional-rendering.html
+
+jsx 에서는 [map](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/map) 메서드를 사용합니다. 배열의 모든 요소를 순회하면서 결과값으로 새로운 배열을 반환할 수 있는 함수입니다.
 
 반복문
 
