@@ -45,7 +45,6 @@ thumbnail: '/images/thumbnail/css-grid-flex.png'
 ```
 
 Grid 에서 크기가 고정된 아이템이 잘 정렬되게 보이려면, 감싸고 있는 컨테이너 박스에서 `grid-auto-rows: max-content` 를 추가해준다.
-([MDN] [gird])
 
 ---
 ##### Flex 를 사용할때, 텍스트 중앙 정렬은 어떻게 할까?
@@ -68,15 +67,12 @@ Grid 에서 크기가 고정된 아이템이 잘 정렬되게 보이려면, 감�
 ---
 ##### 반응형 레이아웃
 
+[미디어 쿼리](https://developer.mozilla.org/ko/docs/Learn/CSS/CSS_layout/Media_queries)를 사용한다.
 ```html
 @media only screen and (max-height: 1080px) { body { backgroud: 'red' } }
 ```
 
 웹브라우저의 높이 해상도가 1080px 이하 일때, 클래스의 스타일을 변경해준다.
-
-[webdir]: https://webdir.tistory.com/339
-[opentutorials]: https://opentutorials.org/module/484/4150
-[gird]: https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-rows
 
 
 
