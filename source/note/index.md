@@ -8,10 +8,10 @@ comments: false
 ### 목차
 
 [1. 자바스크립트](#자바스크립트)
-[2. 브라우저](#브라우저)
-[3. DOM](#DOM)
+[2. 웹 API](#웹_API)
+[3. HTML](#HTML)
 [4. CSS](#CSS)
-[5. 이벤트](#이벤트)
+[5. HTTP](#HTTP)
 [6. 알고리즘](#알고리즘)
 [7. 리팩토링](#리팩토링)
 [8. 그래픽](#그래픽)
@@ -44,44 +44,55 @@ comments: false
 - [TypeScript](#TypeScript)
 - [Babel](#Babel)
 
-### 브라우저
-
+### 웹 API
 ---
 
-- window 객체
-- location 객체
-- 브라우저 탐지
-- hisoty 객체
-- 스토리지
-  ㄴ 쿠키, 웹스토리지, 사용자 데이터
-- 보안, HTTP `Real World HTTP`
-  ㄴ XSS 브라우저 보호
-  ㄴ 사이트간 요청 위조
-  ㄴ HTTP Reqeust
-  ㄴ CORS 정책
-  ㄴ [Axios](#Axios)
-- Restful API 통신 절차
-  ㄴ JSONP, AJAX
+[웹을 만들 때 사용하는 인터페이스 목록](https://developer.mozilla.org/ko/docs/Web/API)
 
-### DOM
 
----
+- <b>DOM</b>
+[DOM](https://developer.mozilla.org/ko/docs/Web/API/Document_Object_Model)은 메모리에 웹페이지 문서 구조를 표현합니다. HTML, XML 문서의 프로그래밍 인터페이스입니다. 
+웹 페이지는 일종의 문서(Document) 입니다. 
+문서를 논리 트리로 표현하고, 트리의 각 브랜치는 노드에서 끝나며 각 노드는 객체를 갖습니다. 
 
-- 노드 계층 구조
-- 선택자 API
-- HTML5
-  ㄴ 미디어 요소
-- DOM 변경점
+  - 노드 계층 구조
+[Dom 레벨1 코어](https://developer.mozilla.org/ko/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core): Document 콘텐츠 트리를 변경하기 위한 강력한 객체형 모델입니다. 웹스크립트의 초석이기도 하며, 주요 브라우저에서 지원합니다.  
 
-### CSS
+  - [선택자 API](https://developer.mozilla.org/ko/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
+  Document, DocumentFragment, Element 인터페이스를 구현하는 모든 객체에 
+  querySelector 와 querySelectorAll 메서드를 추가되어있습니다. 이 메서드들은 엘리먼트 노드에 접근해서 특정 노드를 선택해서 갖고 올 수 있습니다.
 
----
+<br/>
+- <b>Window 인터페이스</b>
+  [window](https://developer.mozilla.org/ko/docs/Web/API/Window)는 DOM 문서를 담는 창을 나타냅니다. 
+  document 속성으로 DOM을 나타냅니다. 
+  자바스크립트 코드에서는 노출된 전역 변수, window는 현재 스크립트가 작동중인 창을 나타냅니다. 
+<br/>
 
-- [poiem](https://poiemaweb.com/css3-syntax)
+- <b>Document 인터페이스</b>
+  브라우저가 불러온 웹페이지를 나타내며 페이지의 진입점 역할을 합니다. 
+<br/>
 
-### 이벤트
+- <b>Storage</b>
+ [웹 스토리지](https://developer.mozilla.org/ko/docs/Web/API/Web_Storage_API)는 브라우저에서 키/값 쌍을 쿠키보다 훨씬 직관적으로 저장할 수 있습니다. 
+ 특징: 세선과 로컬 스토리지 2가지 있습니다.
 
----
+  |세션 스토리지|로컬 스토리지|
+  |--|--|
+  |브라우저가 열려있는 동안 제공| 유효기간 없이 데이터를 제공|
+  |데이터를 절대 서버로 전송하지 않음| 브라우저 캐시 또는 저장 데이터를 삭제해야 함|
+  |저장공간(최대 5MB) | 쿠키나 세션보다 저장공간이 크다|
+<br/>
+
+- <b>location</b>
+[Location](https://developer.mozilla.org/ko/docs/Web/API/Location)인터페이스는 객체가 연결된 장소(URL)을 나타냅니다. 변경햐면, 연결된 객체도 변경됩니다. 
+<br/>
+
+- <b>history</b>
+ window 객체는 [history](https://developer.mozilla.org/ko/docs/Web/API/History_API) 객체를 통해 브라우저 세션 기록에 접근할 수 있는 방법을 가집니다. 방문 기록 스택의 콘텐츠를 조작할 수 있습니다. 
+<br/>
+
+#### 웹 API 이벤트
 
 - 이벤트 흐름
   ㄴ 캡쳐링
@@ -94,6 +105,39 @@ comments: false
 
 - 이벤트 위임
 
+### HTML
+---
+[HTML](https://developer.mozilla.org/ko/docs/Glossary/HTML), 하이퍼텍스트마크업 언어는 웹페이지의 구조를 지정하는 기술적인 언어입니다.
+- [HTML5](https://ko.wikipedia.org/wiki/HTML5)
+DOM 레벨 2의 차기 표준안입니다. 
+  - 구역을 나누는 구조적인 요소가 추가됨 (header, nav, article, section, aside, footer)
+  - 멀티 미디어 요소가 추가됨 (플러그인 없이 오디오와 비디오 재생이 가능)
+  - canvas
+  - 문서 선언 - <!DOCTYPE html>으로 간소화
+  - 웹 접근성 향상을 위해 사용을 지양하는 태그들 - frame, frameset, noframes
+### CSS
+
+---
+- [poiem](https://poiemaweb.com/css3-syntax)
+
+### HTTP
+
+--- 
+[하이퍼텍스트 전송 규약(Hypertext Transfer Protocol)](https://developer.mozilla.org/ko/docs/Web/HTTP)은 웹 브라우저와 웹 서버간의 데이터가 교환되는 통신 규약입니다.
+
+- 보안, HTTP `Real World HTTP`
+- XSS 브라우저 보호
+  XSS(Cross-Site scripting) 권한 없는 사용자가 웹 사이트에 스크립트를 삽입하는 공격 기법입니다. 
+  - 이 공격을 방어하기 위한 방법을 찾아보면, 특수문자로 치환 혹은 문자열 p태그로 치환해서 스크립트가 실행되지 못하도록 하는 방법들이 있다. 
+  - 공격을 감지했을 때, 페이지 로드를 중지시킬 수 있습니다. [X-XSS-Protection](https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/X-XSS-Protection)
+- [HTTP Request](https://developer.mozilla.org/ko/docs/Web/HTTP/Messages)
+  클라이언트가 서버로 전달해서 서버로 액션이 일어나게끔 하는 메시지입니다. 
+- [CORS](https://developer.mozilla.org/ko/docs/Web/HTTP/CORS) 정책
+- [Axios](#Axios)
+<br/>
+
+- Restful API 통신 절차
+  ㄴ JSONP, AJAX
 ### 알고리즘
 
 ---
@@ -252,4 +296,4 @@ acc: 누적치, current: 순회하는 아이템
 
 #### Axios
 
-promise 기반의 브라우저와 Noejs에서 쓸 수 있는 http 라이브러리 
+promise 기반의 브라우저와 Noe.js에서 쓸 수 있는 http 라이브러리 
