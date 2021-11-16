@@ -64,6 +64,7 @@ comments: false
 
 <br/>
 - <b>Window 인터페이스</b>
+
   [window](https://developer.mozilla.org/ko/docs/Web/API/Window)는 DOM 문서를 담는 창을 나타냅니다. 
   document 속성으로 DOM을 나타냅니다. 
   자바스크립트 코드에서는 노출된 전역 변수, window는 현재 스크립트가 작동중인 창을 나타냅니다. 
