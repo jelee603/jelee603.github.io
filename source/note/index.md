@@ -7,7 +7,7 @@ comments: false
 ### 목차
 
 [1. 자바스크립트](#자바스크립트)
-[2. 웹 API](#웹_API)
+[2. 웹 API](#웹-API)
 [3. HTML](#HTML)
 [4. CSS](#CSS)
 [5. HTTP](#HTTP)
