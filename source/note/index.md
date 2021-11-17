@@ -1,5 +1,5 @@
 ---
-layout: note
+layout: post
 title: '웹개발자로 성장하기 위한 공부 계획'
 date: 2021-09-24 14:39:08
 comments: false
