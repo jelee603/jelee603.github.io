@@ -61,8 +61,6 @@ comments: false
   Document, DocumentFragment, Element 인터페이스를 구현하는 모든 객체에 
   querySelector 와 querySelectorAll 메서드를 추가되어있습니다. 이 메서드들은 엘리먼트 노드에 접근해서 특정 노드를 선택해서 갖고 올 수 있습니다.
 
-<br/>
-
 - <b>Window 인터페이스</b>
 
   [Window](https://developer.mozilla.org/ko/docs/Web/API/Window)는 DOM 문서를 담는 창을 나타냅니다. 
