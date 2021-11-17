@@ -81,7 +81,6 @@ comments: false
   |브라우저가 열려있는 동안 제공| 유효기간 없이 데이터를 제공|
   |데이터를 절대 서버로 전송하지 않음| 브라우저 캐시 또는 저장 데이터를 삭제해야 함|
   |저장공간(최대 5MB) | 쿠키나 세션보다 저장공간이 크다|
-<br/>
 
 - <b>location</b>
 [Location](https://developer.mozilla.org/ko/docs/Web/API/Location)인터페이스는 객체가 연결된 장소(URL)을 나타냅니다. 변경햐면, 연결된 객체도 변경됩니다. 
