@@ -19,9 +19,9 @@ comments: false
 [10. 성능](#성능)
 [11. 개발관리](#개발관리)
 
-### 자바스크립트
 
 ---
+### 자바스크립트
 
 - 원시레퍼 타입, 참조 타입
 - 변수/스코프/메모리
@@ -44,8 +44,8 @@ comments: false
 - [TypeScript](#TypeScript)
 - [Babel](#Babel)
 
-### 웹 API
 ---
+### 웹 API
 
 [웹을 만들 때 사용하는 인터페이스 목록](https://developer.mozilla.org/ko/docs/Web/API)
 
@@ -63,9 +63,10 @@ comments: false
   querySelector 와 querySelectorAll 메서드를 추가되어있습니다. 이 메서드들은 엘리먼트 노드에 접근해서 특정 노드를 선택해서 갖고 올 수 있습니다.
 
 <br/>
+
 - <b>Window 인터페이스</b>
 
-  [window](https://developer.mozilla.org/ko/docs/Web/API/Window)는 DOM 문서를 담는 창을 나타냅니다. 
+  [Window](https://developer.mozilla.org/ko/docs/Web/API/Window)는 DOM 문서를 담는 창을 나타냅니다. 
   document 속성으로 DOM을 나타냅니다. 
   자바스크립트 코드에서는 노출된 전역 변수, window는 현재 스크립트가 작동중인 창을 나타냅니다. 
 <br/>
@@ -106,9 +107,10 @@ comments: false
 
 - 이벤트 위임
 
-### HTML
 ---
-[HTML](https://developer.mozilla.org/ko/docs/Glossary/HTML), 하이퍼텍스트마크업 언어는 웹페이지의 구조를 지정하는 기술적인 언어입니다.
+### HTML
+
+[HTML](https://developer.mozilla.org/ko/docs/Glossary/HTML), "하이퍼텍스트마크업" 언어는 웹페이지의 구조를 지정하는 기술적인 언어입니다.
 - [HTML5](https://ko.wikipedia.org/wiki/HTML5)
 DOM 레벨 2의 차기 표준안입니다. 
   - 구역을 나누는 구조적인 요소가 추가됨 (header, nav, article, section, aside, footer)
@@ -116,32 +118,48 @@ DOM 레벨 2의 차기 표준안입니다.
   - canvas
   - 문서 선언 - <!DOCTYPE html>으로 간소화
   - 웹 접근성 향상을 위해 사용을 지양하는 태그들 - frame, frameset, noframes
-### CSS
 
 ---
+### CSS
+
 - [poiem](https://poiemaweb.com/css3-syntax)
 
+---
 ### HTTP
 
---- 
 [하이퍼텍스트 전송 규약(Hypertext Transfer Protocol)](https://developer.mozilla.org/ko/docs/Web/HTTP)은 웹 브라우저와 웹 서버간의 데이터가 교환되는 통신 규약입니다.
 
 - 보안, HTTP `Real World HTTP`
+
 - XSS 브라우저 보호
-  XSS(Cross-Site scripting) 권한 없는 사용자가 웹 사이트에 스크립트를 삽입하는 공격 기법입니다. 
+  "XSS(Cross-Site Scripting)"는 권한 없는 사용자가 웹 사이트에 스크립트를 삽입하는 공격 기법입니다. 
   - 이 공격을 방어하기 위한 방법을 찾아보면, 특수문자로 치환 혹은 문자열 p태그로 치환해서 스크립트가 실행되지 못하도록 하는 방법들이 있다. 
   - 공격을 감지했을 때, 페이지 로드를 중지시킬 수 있습니다. [X-XSS-Protection](https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/X-XSS-Protection)
+
 - [HTTP Request](https://developer.mozilla.org/ko/docs/Web/HTTP/Messages)
   클라이언트가 서버로 전달해서 서버로 액션이 일어나게끔 하는 메시지입니다. 
-- [CORS](https://developer.mozilla.org/ko/docs/Web/HTTP/CORS) 정책
-- [Axios](#Axios)
-<br/>
 
-- Restful API 통신 절차
-  ㄴ JSONP, AJAX
-### 알고리즘
+- [CORS](https://developer.mozilla.org/ko/docs/Web/HTTP/CORS) 정책
+  다른 출처에 접근할 수 있도록 권한을 부여하는 정책입니다. 웹서버에서 옵션을 통해 on/off 가 가능힙니다. 
+
+- [Axios](https://axios-http.com/docs/intro)
+  브라우저와 Node.js 를 위한 Promise API를 활용하는 HTTP 비동기 통신 라이브러리입니다. 
+
+- [Restful API](https://ko.wikipedia.org/wiki/REST) 통신 절차
+  "Representational State Transfer"은 웹를 사용할 때 제약 조건들을 정의하는 소프트웨어 아키텍처 스타일입니다. HTTP URI 를 통해 자원을 명시하고, HTTP Method(POST, GET, PUT, DELETE)를 통해 해당 자원에 대한 CRUD 를 제공합니다. [JSON](https://ko.wikipedia.org/wiki/JSON), XML, TEXT, RSS 등 여러 형태의 Representation으로 나타내어 데이터를 주고 받는 것이 일반적입니다. 
+
+    - [AJAX](https://ko.wikipedia.org/wiki/Ajax)
+    "Asynchronous JavaScript and XML" 비동기적인 어플리케이션 제작을 위한 웹 개발 기법입니다.
+    1. 페이지 이동없이 고속으로 화면을 전환할 수 있다.
+    2. 서버 처리를 기다리지 않고, 비동기 요청이 가능하다.
+    3. 수신하는 데이터 양을 줄일 수 있고, 클라이언트에게 처리를 위임할 수도 있다.
+    4. 플러그인 없이도 인터렉티브한 웹페이지 구현할 수 있다.
+   
+    - [JSONP](https://ko.wikipedia.org/wiki/JSONP)
+     각기 다른 도메인에 상주하는 서버로부터 데이터를 요청하기 위해 사용되었는데 상호 비보안 문제로 CORS 로 대체 되고 있습니다. 
 
 ---
+### 알고리즘
 
 - 그래프
 - 트리
@@ -149,11 +167,12 @@ DOM 레벨 2의 차기 표준안입니다.
 - 이진 검색
 - 설계 기법 `알고리즘 트레이닝`
 
+
+---
 ### 리팩토링
 
 > 켄트 백이 말한, 코드의 소리를 듣는 것은 코드가 원하는 것에 귀를 기울이는 것을 말합니다. 코드는 단순해지려는 욕망이 있습니다. 그걸 이뤄주는 것이 프로그래머입니다.<br/>
 > <리팩토링 자바스크립트 - 에반 버차드>
----
 
 - 배열 객체 대안 `리팩토링 자바스크립트`
 - 함수 추출
@@ -163,34 +182,35 @@ DOM 레벨 2의 차기 표준안입니다.
 - FP (함수형)
   ㄴ 함수 커링, 함수 바인딩, 메모제이션
 
-### 그래픽
 
 ---
+### 그래픽
+
 
 - 애니메이션
   ㄴ 캔버스: 2D Context
   ㄴ window: requestAnimation
 
-### TDD
-
 ---
+### TDD
 
 - 테스트-주도 개발 `테스트 주도 개발로 배우는 객체지향 설계` <br/>
   도달해야하는 목적지를 테스트라는 안정장치를 통해 좀 더 견고한 방법으로 도달할 수 있게 해주는 설계 기법이다.
 - [단위 테스트](#단위-테스트)
 - 비동기 코드 테스트
 
-### 성능
 
 ---
+### 성능
+
 
 - 메모리 성능
 - 웹 워커
 - 웹 소켓
 
-### 개발관리
 
 ---
+### 개발관리
 
 - `Code: 프로그래밍 프로그래머스`
 - `실용주의 프로그래머`
@@ -201,12 +221,13 @@ DOM 레벨 2의 차기 표준안입니다.
 - Prettier 
  ㄴ 팀 단위 코딩 컨벤션을 맞추어 개인화해서 사용합니다. 
  ㄴ 옵션 설정해서 사용합니다.(1라인의 문자길이, 세미콜론, 탭 기타 포매팅 설정)
----
 
+
+---
 ### 디자인 패턴
 
 > 문제의식을 먼저 형성하게 하지 않고 답을 먼저 보여준 뒤 그걸 어디에 써먹을지를 먼저 알려주면,독자는 '어린아이가 망치를 들고 있는 오류'에 빠질 것이다.
---- 
+
 #### 팩터리 패턴
 
 특정 인터페이스의 객체를 생성하는 과정을 함수로 추상화하는 패턴입니다. 코드 중복 해결됩니다.
@@ -293,8 +314,3 @@ acc: 누적치, current: 순회하는 아이템
 [공식문서](https://babeljs.io/docs/en/)
 최신버전의 자바스크립트 파일을 구버전 브라우저에서 인식할 수 있게 트랜스파일해주는 역할을 한다. 
 타입스크립트의 프리셋(플러그인의 집합), 옵션들의 집합을 따로 설치해줘야한다. 바벨쪽에서의 라이러리를 제공한다. 
-
-
-#### Axios
-
-promise 기반의 브라우저와 Noe.js에서 쓸 수 있는 http 라이브러리 
