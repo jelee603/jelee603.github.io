@@ -110,7 +110,7 @@ comments: false
 ---
 ### HTML
 
-[HTML](https://developer.mozilla.org/ko/docs/Glossary/HTML), "하이퍼텍스트마크업" 언어는 웹페이지의 구조를 지정하는 기술적인 언어입니다.
+["하이퍼텍스트마크업 언어"](https://developer.mozilla.org/ko/docs/Glossary/HTML)는 웹페이지의 구조를 지정하는 기술적인 언어입니다.
 - [HTML5](https://ko.wikipedia.org/wiki/HTML5)
 DOM 레벨 2의 차기 표준안입니다. 
   - 구역을 나누는 구조적인 요소가 추가됨 (header, nav, article, section, aside, footer)
