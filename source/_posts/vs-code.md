@@ -11,9 +11,18 @@ thumbnail: '/images/thumbnail/vscode.png'
 
 IDE 에서 사용할만한 단축키를 모아두자.
 
-### HTML5 doctype
+### 1. Mac 단축키 (Window 단축키)
 
-- html:5 followed by tab
+`cmd + d` (`ctrl` + `d`) : 같은 파일내 단어 찾기
+`option + cmd + i` (`F12`) : 크롬 디버그
+`ctrl + space` : 파일에서 프로퍼티 자동완성
+`cmd + shift + p` : [페이지 셋업](#3.페이지-셋업에서-설정하기)
+`cmd + p` : 파일 찾기
+
+
+### 2. Snippets 활용
+
+- `html:5` html 자동완성
 
 ```html
 <!DOCTYPE html>
@@ -26,19 +35,15 @@ IDE 에서 사용할만한 단축키를 모아두자.
 </html>
 ```
 
-### Mac 단축키 / Window 단축키
+- `rfc` 리액트 템플릿 자동완성
+![image](/images/vs-code/react-snippets.png)
 
-`cmd` + `d` / `ctrl` + `d` : 같은 파일내 단어 찾기
-`option + cmd + i` / `F12` : 크롬 디버그
-`ctrl + space` : 파일에서 프로퍼티 자동완성
-`cmd` + `shift` + `p` : 명령어 실행창 표시
 
-> 설정 json 파일 열기
-> `>` open settings (json)
-
-```
-// settings.json
-{
+### 3. 페이지 셋업에서 설정하기 
+- json 파일열기 => open settings (json) 
+ ```
+ // settings.json
+ {
   // set prettier
   "editor.formatOnSave": true,
   "[javascript]": {
@@ -56,9 +61,8 @@ IDE 에서 사용할만한 단축키를 모아두자.
   "eslint.workingDirectories": [{ "mode": "auto" }],
   "eslint.validate": ["javascript", "typescript"]
 }
-```
+ ```
 
-> 프롬프트 창에서 `code .` 으로 실행
-> `>` Shell Command
-> 프로젝트 매니저에서 바로가기 등록
-> `>` Project Manager: Save Project
+- 터미널에서 `code .` 로 프로젝트를 열기 => Shell Command
+- 프로젝트 매니저에 추가하기 => Project Manager: Save Project
+

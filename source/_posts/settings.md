@@ -22,6 +22,11 @@ thumbnail: '/images/thumbnail/settings.png'
 - Git Graph
 - JavaScript and TypeScript Nightly
 - Project Manager
+- ES7 React/Redux/GraphQL/React-Native snippets
+
+#### Chrome plugins
+- React Developer Tools
+- Redux DevTools
 
 참고: https://just-coding.tistory.com/1#recentComments
 
