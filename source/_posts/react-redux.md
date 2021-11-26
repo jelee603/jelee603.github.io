@@ -91,7 +91,7 @@ export type RootState = ReturnType<typeof rootReducer>
 hooks 디렉토리에는 이러한 dispatch 동작들을 정해둡니다.  
 
 ```js
-// hooks/useUpdateSession
+// hooks/useUpdateSession.ts
 
 import { useDispatch } from "react-redux";
 import { useCallback } from "react";
@@ -106,7 +106,7 @@ export default function useUpdateSession() {
 그리고 컴포넌트에서는 useUpdateSession 처럼 `use` 로 시작하는 함수들을 사용합니다. 
 
 ```js
-// components/**.jsx
+// components/**.tsx
 
 const updateSession = useUpdateSession({loggedIn: true, session: '', userName: ''};
 ```
@@ -123,5 +123,7 @@ $ yarn add redux-devtools-extension
 import { composeWithDevTools } from 'redux-devtools-extension';
 const store = createStore(rootReducer, composeWithDevTools());
 ```
+
+참고: https://velog.io/@velopert/use-typescript-and-redux-like-a-pro
 
 
