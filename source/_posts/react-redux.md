@@ -1,5 +1,5 @@
 ---
-title: react-redux
+title: React Redux
 date: 2021-11-26 13:45:56
 comments: false
 categories:
@@ -114,6 +114,10 @@ const updateSession = useUpdateSession({loggedIn: true, session: '', userName: '
 리덕스를 사용해서 상태값이 정상적으로 변경되었는지 확인하는 작업은 크롬 확장자 도구와 아래 코드를 삽입하면 확인할 수 있습니다.  
 
 [리덕스 개발자도구 적용](https://react.vlpt.us/redux/06-redux-devtools.html)하기 
+
+<img src='/images/react-redux/redux-devtools.png' width='400'>
+
+
 ```js
 $ yarn add redux-devtools-extension
 
@@ -122,7 +126,5 @@ $ yarn add redux-devtools-extension
 import { composeWithDevTools } from 'redux-devtools-extension';
 const store = createStore(rootReducer, composeWithDevTools());
 ```
-
-<img src='/images/react-redux/redux-devtools.png' width='300'>
 
 
