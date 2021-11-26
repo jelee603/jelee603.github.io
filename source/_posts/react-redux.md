@@ -43,7 +43,7 @@ interface UpdateSessionAction {
   payload: SystemState
 }
 
-// 액션은 상태 변화 시킬 때 참조하는 객체를 정의하면 된다.
+// 액션은 상태 변화 시킬 때 참조하는 객체를 정의한다.
 export type SystemActionTypes = UpdateSessionAction
 
 const initialState: SystemState = {
@@ -52,7 +52,7 @@ const initialState: SystemState = {
   userName: ''
 }
 
-// 리듀서는 액션으로부터 받은 상태 변화 로직만 처리하면 된다. 
+// 리듀서는 액션으로부터 받은 상태 변화 로직만 처리한다. 
 export function systemReducer(
   state = initialState,
   action: SystemActionTypes
@@ -114,9 +114,6 @@ const updateSession = useUpdateSession({loggedIn: true, session: '', userName: '
 리덕스를 사용해서 상태값이 정상적으로 변경되었는지 확인하는 작업은 크롬 확장자 도구와 아래 코드를 삽입하면 확인할 수 있습니다.  
 
 [리덕스 개발자도구 적용](https://react.vlpt.us/redux/06-redux-devtools.html)하기 
-
-<img src='/images/react-redux/redux-devtools.png' width='400'>
-
 
 ```js
 $ yarn add redux-devtools-extension
