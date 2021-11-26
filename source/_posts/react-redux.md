@@ -20,13 +20,13 @@ thumbnail: '/images/thumbnail/react-redux.png'
 액션 처리 후에 새 상태를 스토어에 담습니다. 
 스토어 안에 있는 상태가 바뀌면 구독하고 있는 컴포넌트에게 전달합니다. 
 
-[타입스크립트에서 리덕스를 사용하는 방법](https://ko.redux.js.org/recipes/usage-with-typescript)은 ConnectedProps 로 타이핑하는 것보다 기본적으로 제공하는 hook 을 이용하는게 더 편리하다. 
+[타입스크립트에서 리덕스를 사용하는 방법](https://ko.redux.js.org/recipes/usage-with-typescript)은 ConnectedProps 로 타이핑하는 것보다 기본적으로 제공하는 hook 을 이용하는게 더 편리한거 같습니다. 
 
 ```js
 yarn add redux react-redux
 ```
 
-공식문서의 예제는 actions 와 reducer 파일을 분리했지만, 공부하는 입장에서 분리하지 않고 하나로 보면 아래와 같다. 액션 객체에는 payload 에 넘겨줄 값들의 타입들을 정의하고, 리듀서 상태를 변경하는 로직을 넣어준다 
+공식문서의 예제는 actions 와 reducer 파일을 분리했지만, 공부하는 입장에서 분리하지 않고 하나로 보면 아래와 같습니다. 액션 객체에는 payload 에 넘겨줄 값들의 타입들을 정의하고, 리듀서 상태를 변경하는 로직을 넣어줍니다.
 
 ```js
 // src/store/system.ts
