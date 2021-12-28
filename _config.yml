@@ -67,3 +67,15 @@ deploy:
   type: git
   repo: https://__GITHUB_TOKEN__@github.com/jelee603/jelee603.github.io.git
   branch: main
+# sitemap.xml
+  path: sitemap.xml
+  tag: false
+  category: false
+# robots.txt
+robotstxt:
+  useragent: "*"
+  allow:
+    - /
+  disallow: 
+    - /source/
+  sitemap: https://jelee603.github.io/sitemap.xml
