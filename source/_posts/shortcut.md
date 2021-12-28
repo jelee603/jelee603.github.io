@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'VSCode 단축키 모음'
+title: '단축키 모음'
 date: 2020-01-09
 categories:
 - Setting
@@ -11,16 +11,22 @@ thumbnail: '/images/thumbnail/vscode.png'
 
 IDE 에서 사용할만한 단축키를 모아두자.
 
-### 1. Mac 단축키 (Window 단축키)
+### 1. VSCode 단축키 (Window 단축키)
 
 `cmd + d` (`ctrl` + `d`) : 같은 파일내 단어 찾기
 `option + cmd + i` (`F12`) : 크롬 디버그
 `ctrl + space` : 파일에서 프로퍼티 자동완성
 `cmd + shift + p` : [페이지 셋업](#3.페이지-셋업에서-설정하기)
 `cmd + p` : 파일 찾기
+`cmd + j` : 터미널 창 열기
 
+### 2. Mac 단축키
+`cmd + option + esc` : 응용 프로그램 강제 종료
+`cmd + space` : 스포트라이트 검색 - (활성 상태 보기)
+`cmd + w` : 크롬 텝 닫기
+`cmd + y` : 크롬 브라우저 방문기록 보기
 
-### 2. Snippets 활용
+### 3. Snippets 활용
 
 - `html:5` html 자동완성
 
@@ -39,7 +45,7 @@ IDE 에서 사용할만한 단축키를 모아두자.
 ![image](/images/vs-code/react-snippets.png)
 
 
-### 3. 페이지 셋업에서 설정하기 
+### 4. 페이지 셋업에서 설정하기 
 - json 파일열기 => open settings (json) 
  ```
  // settings.json

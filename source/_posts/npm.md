@@ -47,7 +47,7 @@ found 0 vulnerabilities
 문제가 발생했을 때, 설치된 모듈의 버전을 확인하고 싶을때가 있다.
 
 ```html
-$ npm view <package-name> version</package-name>
+$ npm view <package-name> version 
 ```
 
 #### package json 경로 지정 방법:
