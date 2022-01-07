@@ -13,9 +13,9 @@ customize:
     width: 165
     height: 60
     url: images/logo-header.png
-  theme_color: '#db7093'
+  theme_color: '#3ed4be'
   highlight: androidstudio
-  sidebar: right # sidebar position, options: left, right
+  sidebar: left # sidebar position, options: left, right
   thumbnail: true # enable posts thumbnail, options: true, false
   favicon: images/favicon/favicon.ico # path to favicon
   social_links: # for more icons, please see http://fontawesome.io/icons/#brand
@@ -25,7 +25,7 @@ customize:
     github: https://github.com/jelee603
     # weibo: /
     # rss: /
-  max_width: 1200px
+  max_width: 1500px
 
 # Widgets
 widgets:

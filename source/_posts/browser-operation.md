@@ -5,9 +5,12 @@ categories:
 - HTML/CSS
 comments: false
 thumbnail: '/images/thumbnail/browser-operation.png'
+contents: 
+- 브라우저의 역할|#브라우저의-역할
+- 동작 과정|#동작-과정
+- 자바스크립트 엔진|#자바스크립트-엔진
 ---
-
-### 브라우저의 역할
+## 브라우저의 역할
 
 브라우저는 웹페이지를 서버에 요청하고 서버의 응답을 받아 표시합니다. 
 서버로부터 html, css, javascript, 이미지 파일 등 응답받는 것입니다. 
@@ -19,7 +22,7 @@ html, css 는 렌더링 엔진인 html 파서와 css 파서에 의해 파싱되�
 
 사파리와 크롬은 [웹킷 엔진]([https://webkit.org](https://webkit.org/))을 사용합니다. 
 
-### 동작 과정
+## 동작 과정
 
 #### 1. 렌더링 엔진 
 
@@ -39,7 +42,7 @@ html 파서는 script 태그를 만나면 자바스크립트 코드를 실행하
 이처럼 브라우저는 동기적으로 html, css, javascript를 처리하게 됩니다. 
 그래서 흔히, body 아래에 script 써주는 방법이 dom 생성이 지연되어 발생할 수 있는 오류를 예방하는데 좋은 방법이 되었습니다. 
 
-#### 2. 자바스립트 엔진
+## 자바스크립트 엔진
 
 자바스크립트는 렌더링 엔진이 아닌 chrome 에서는 chrome v8 자바스크립트 엔진이 담당합니다. 
 
