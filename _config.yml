@@ -79,3 +79,13 @@ robotstxt:
   disallow: 
     - /source/
   sitemap: https://jelee603.github.io/sitemap.xml
+# Feed
+feed:
+  type: rss2
+  path: rss2.xml
+  limit: 20
+# sitemap
+sitemap:
+  path: sitemap.xml
+  tag: false
+  category: false
