@@ -24,10 +24,10 @@
                 var temp = document.createElement('textarea');
                 temp.value = url;
 
-                $('body').append(temp);
+                document.body.appendChild(temp);
                 temp.select();
                 document.execCommand('copy');
-                $('body').remove(temp);
+                document.body.removeChild(temp);
 
                 alert('링크가 복사되었습니다.')
 
