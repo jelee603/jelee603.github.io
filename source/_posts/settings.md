@@ -3,7 +3,7 @@ layout: post
 title: '개발환경 세팅하기'
 date: 2019-09-26
 categories: 
-- Setting
+- Option
 comments: false
 thumbnail: '/images/thumbnail/settings.png'
 ---

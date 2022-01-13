@@ -139,8 +139,12 @@
         &:before
             content: "#"
 
-.article-entry
+.article-wrapper
     @extend $base-style
+    display: flex
+    flex-direction: row
+
+.article-entry
     clearfix()
     color: color-default
     font-size: font-size-article

@@ -16,11 +16,16 @@
             </div>
         <% } %>
         <%- partial('post/gallery') %>
-        <div class="article-entry" itemprop="articleBody">
-            <%- partial('authors', { post: post }) %>
-            <%- partial('tags', { post: post }) %>
-            <%- partial('categories', { post: post }) %>
-            <%- post.content %>
+        <div class="article-wrapper"> 
+            <div class="article-entry" itemprop="articleBody">
+                <%- partial('authors', { post: post }) %>
+                <%- partial('tags', { post: post }) %>
+                <%- partial('categories', { post: post }) %>
+                <%- post.content %>
+            </div>
+            <div id="main-body-sidebar">
+                <%- partial('widget/contents', {post: page}) %>
+            </div>
         </div>
         <footer class="article-footer">
             <!-- <%- partial('share/index', { post: post }) %> -->

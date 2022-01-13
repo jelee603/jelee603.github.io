@@ -3,7 +3,7 @@ layout: post
 title: 'NPM'
 date: 2019-08-09
 categories: 
-- Setting
+- Option
 comments: false
 thumbnail: '/images/thumbnail/npm.png'
 ---

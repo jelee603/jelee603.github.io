@@ -2,7 +2,7 @@
 title: Yarn
 date: 2021-10-17 15:31:01
 categories: 
-- Setting
+- Option
 tags:
 thumbnail: '/images/thumbnail/yarn.png'
 comments: false

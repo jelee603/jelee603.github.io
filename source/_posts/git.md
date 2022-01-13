@@ -3,7 +3,7 @@ layout: post
 title: 'Git 이야기'
 date: 2019-08-08
 categories:
-- Setting
+- Option
 comments: false
 thumbnail: '/images/thumbnail/git.png'
 ---
