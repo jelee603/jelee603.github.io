@@ -47,7 +47,6 @@ html 파서는 script 태그를 만나면 자바스크립트 코드를 실행하
 자바스크립트는 렌더링 엔진이 아닌 chrome 에서는 chrome v8 자바스크립트 엔진이 담당합니다. 
 
 
-#### Reference
-
+## Reference
 - [https://poiemaweb.com/js-browser](https://poiemaweb.com/js-browser)
 - [https://d2.naver.com/helloworld/59361](https://d2.naver.com/helloworld/59361)

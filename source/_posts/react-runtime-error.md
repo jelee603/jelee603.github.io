@@ -38,10 +38,10 @@ npm -v // v6.14.15
 예전에 작업하면서 노드 버전을 v12.22 로 사용하고 있었네요. v14.18 로 NVM을 변경해줍니다.
 
 스위칭 후에 OSX 터미널에서 실행하면 정상적으로 동작합니다. 이제 VSCode 터미널에서 실행해봅니다. 
-앗 여전히 처음 그 오류가 나오네요. 
+여전히 오류가 발생합니다. <br/><br/>
 
 한참을 찾아보다가 좋은 [해결 방법](https://stackoverflow.com/questions/44700432/visual-studio-code-to-use-node-version-specified-by-nvm)을 발견했습니다.
-NVM을 이용해서 전역 버전을 변경하더라도 모든 동일하게 반영이 되지 않네요.
+NVM을 이용해서 전역 버전을 변경하더라도 모든 동일하게 반영이 되지 않네요. <br/><br/>
 
 항상 사용하는 버전을 NVM Default 로 맞춰두고, `nvm use default` 로 사용을 해야할 거 같습니다.
 VSCode 에서는 [launch.json 파일](https://code.visualstudio.com/docs/editor/debugging#_run-view)에 `runtimeVersion: default`로 추가해두면 항상 default 값을 사용할 수 있습니다. 
