@@ -23,9 +23,11 @@
                 <%- partial('categories', { post: post }) %>
                 <%- post.content %>
             </div>
+            <% if (post.contents) {%>
             <div id="main-body-sidebar">
                 <%- partial('widget/contents', {post: page}) %>
             </div>
+            <%}%>
         </div>
         <footer class="article-footer">
             <!-- <%- partial('share/index', { post: post }) %> -->
