@@ -1,5 +1,5 @@
 ---
-title: React 에서 TypeScript 사용하기
+title: 리액트에 타입스크립트 적용하기
 date: 2021-11-05 00:22:39
 categories: 
 - Lab
