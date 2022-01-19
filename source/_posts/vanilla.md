@@ -1,83 +1,92 @@
 ---
 title: Vanilla JS 다뤄보기
 date: 2021-10-30 23:20:00
-categories: 
-- Lab
+categories:
+  - Lab
 tags:
 thumbnail: '/images/thumbnail/vanilla.png'
 comments: false
 ---
+
 ![image](/images/thumbnail/vanilla.png)
 
-일반적으로 프레임워크를 사용하지 않고 자바스크립트를 다루는 방법은 있습니다. 
-너무 프레임워크에 익숙해져 그 방법을 잊어버리지 않게 적습니다. 
+일반적으로 프레임워크를 사용하지 않고 자바스크립트를 다루는 방법은 있습니다.
+너무 프레임워크에 익숙해져 그 방법을 잊어버리지 않게 적습니다.
 
-먼저 html 파일에서 js를 로드를 합니다. 
+먼저 html 파일에서 js를 로드를 합니다.
 
 ```js
-<body>
-    <script type="text/javascript" src="[file].js" />
-</body>
+//html
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+      <script type="text/javascript" src="[file].js" />
+    </body>
+</html>
 ```
 
-css 스크립트를 작성합니다. 
+css 스크립트는 <head> 태그 사이에 작성합니다.
+
 ```js
 <head>
-    <style lang="text/css"></style>
+  <style lang="text/css"></style>
 </head>
 ```
 
+간단하게 HTML에서 자바스크립트를 사용하게 되었습니다.
 
-파일을 여러개 로드를 하려다보면, 모듈 파일을 읽어오지 못합니다. 사용하던 방법대로 `import` 와 `export default` 를 하려면, script type 을 변경해줍니다. 
+그런데 모듈화라는 개념이 생기면서,
+[`import`](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/import) 를 통해 스크립트 모듈 파일을 가져오게 되었습니다.
 
-> Uncaught SyntaxError: Cannot use import statement outside a module
+`export`로 파일을 내보냈을 경우에 html 에서는 위와 같은 방법으로는 오류를 만나게 됩니다.
+
+> <span style="color: red">Uncaught SyntaxError: Cannot use import statement outside a module</span>
 >
-> 해결 방법: 
+> 해결 방법:
+>
 > ```js
 > <body>
->    <script type="module" src="[file].js" />
+>   <script type="module" src="[file].js" />
 > </body>
 > ```
 
-[webpack](https://webpack.js.org/guides/getting-started) 설정을 해줍니다. 
-웹팩은 여러개의 자바스크립트 파일을 압축해주는 번들러입니다.
+`script type` 을 모듈이라 명시해주면서 문제를 해결할 수 있습니다.
+이렇게 간단한 방법도 매번 프레임워크의 렌더함수만 작성하다보면 잊어버리게 됩니다.
 
-#### project 구조
+다음은 만들어진 여러개의 모듈파일을 한번에 압축해주는 방법인 웹팩으로 HTML 파일에서 로드하는 방법을 적어봅니다.
+
+[웹팩](https://webpack.js.org/guides/getting-started)을 설치하고, 프로젝트 구조를 다음과 같이 추가해서 세팅해줍니다.
+
+```
+npm init -y
+npm install webpack webpack-cli --save-dev
+```
+
+##### project 구조
+
 ```js
 webpack-demo
  |- /dist
- |- /src
-    |- index.js
- |- webpack.config.js
- |- index.html
++   |- index.html
+- |- index.html
++ |- /src
++    |- index.js
++ |- webpack.config.js
  |- package.json
 ```
 
+웹팩 설정 파일에서 entry 와 output 을 설정하면, entry 에 설정된 파일을 로드해서 output 의 번들파일을 생성해줍니다. `index.js` 모듈 파일을 호출하도록 해줍니다.
 
 ```js
-// package.json
+// src/index.js
 
-{
-   "name": "webpack-demo",
-   "version": "1.0.0",
-   "description": "",
--  "main": "index.js",
-+  "private": true,
-   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --mode development"
-   },
-   "keywords": [],
-   "author": "",
-   "license": "ISC",
-   "devDependencies": {
-     "webpack": "^5.4.0",
-     "webpack-cli": "^4.2.0"
-   },
-   "dependencies": {
-     "lodash": "^4.17.20"
-   }
- }
+import file from '[file].js';
 ```
 
 ```js
@@ -93,11 +102,24 @@ module.exports = {
   },
 };
 ```
-`npm run build` 후,
-dist 폴더에 main.js 파일이 생성되면, html 파일에서 로드하면 됩니다.
+
+패키지 설정파일에 웹팩을 실행할 스크립트를 작성해줍니다.
 
 ```js
-// index.html
+// package.json
+
+{
+   "scripts": {
+    "build": "webpack --mode development"
+   }
+}
+```
+
+`npm run build` 실행하면, 'dist' 경로에 'main.js' 라는 파일이 생성됩니다.
+HTML 파일에서 생성된 파일을 로드하도록 추가해주면 됩니다.
+
+```js
+// dist/index.html
 
 <!DOCTYPE html>
 <html lang="en">
@@ -108,7 +130,7 @@ dist 폴더에 main.js 파일이 생성되면, html 파일에서 로드하면 �
     <title>Document</title>
 </head>
 <body>
-    <script src="./dist/main.js"></script>
+    <script src="./main.js"></script>
 </body>
 </html>
 ```

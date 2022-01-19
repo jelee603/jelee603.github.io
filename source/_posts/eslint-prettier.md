@@ -39,7 +39,7 @@ VSCode에서 자동 저장 시, ESLint 와 Prettier 를 적용하기 위해서�
 {
     "trailingComma": "es5",
     "tabWidth": 4,
-    "semi": false,
+    "semi": true,
     "singleQuote": true
 }
 ```
