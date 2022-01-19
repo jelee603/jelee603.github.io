@@ -3,7 +3,7 @@ layout: post
 title: 'Hexo를 이용한 github 블로그 생성하기'
 date: 2021-09-24
 categories:
-- Lab
+  - Lab
 comments: false
 thumbnail: '/images/thumbnail/blog-hexo.png'
 ---
@@ -93,35 +93,40 @@ Actions 실행되는 스크립트는 config 파일의 deploy 변수를 제대로
 
 > fatal: could not read Password for 'https://jelee603@github.com': No such device or address
 >
-> 해결 방법: 
+> 해결 방법:
 > 등록된 토큰을 확인하고, 아래와 같이 변수를 추가해준다.
+>
 > ```js
 > // _config.yml
-> deploy:
-> type: git
-> repo: https://__GITHUB_TOKEN__@github.com/[user_name]/[user_name].github.io.git
-> branch: main
+> deploy: type: git;
+> //__GITHUB_TOKEN__@github.com/[user_name]/[user_name].github.io.git
+> repo: https: branch: main;
 > ```
 
 위와 같이 작성하고, push 를 하게 되면, build 가 시작되고 정상적으로 완료되면, 블로그에 반영이 된다!
 
-## 4. hexo 글쓰기
-
-```
-hexo new [layout] <title>
-ex) hexo new _posts start
-```
+## 4. Hexo 글쓰기
 
 4-1. Hexo 문법
-https://hexo.io/ko/docs/writing.html [hexo]
 
-4-2. 마크다운 문법
+```
+// new post
+hexo new [layout] <title>
+hexo server
+ex) hexo new <title>
 
-1. https://www.w3schools.io/file/markdown-cheatsheet
-2. https://ko.wikipedia.org/wiki/%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4#%EB%AC%B8%EB%B2%95
+// draft
+hexo new draft <title>
+hexo server --draft
+```
 
-4-3. 하이퍼링크
+4-2. 마크다운 하이퍼링크 연결
 알파벳은 반드시 소문자만 가능
 띄어쓰기는 -(하이픈)으로 구분
 
-출처: https://young-cow.tistory.com/21 [어린소]
+## Reference
+
+- https://hexo.io/ko/docs/writing.html
+- https://www.w3schools.io/file/markdown-cheatsheet
+- https://ko.wikipedia.org/wiki/%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4#%EB%AC%B8%EB%B2%95
+- https://young-cow.tistory.com/21
