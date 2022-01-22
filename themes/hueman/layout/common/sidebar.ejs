@@ -1,27 +1,47 @@
 <aside id="sidebar">
-    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
-    <div class="sidebar-top">
-        <p><%= __('sidebar.follow') %>:</p>
-        <ul class="social-links">
-            <% for (var i in theme.customize.social_links) { %>
-                <% if (theme.customize.social_links[i]) { %>
-                <li>
-                    <a class="social-tooltip" title="<%= i %>" href="<%- url_for(theme.customize.social_links[i]) %>" target="_blank" rel="noopener">
-                        <i class="icon fa fa-<%= i %>"></i>
-                    </a>
-                </li>
-                <% } %>
-            <% } %>
-        </ul>
-    </div>
-    <% if (is_post()) { %>
-        <%- partial('post/nav', {post: page}) %>
-    <% } %>
-    <div class="widgets-container">
-        <% if (theme.widgets) { %>
-            <% theme.widgets.forEach(function(widget) { %>
-                <%- partial('widget/' + widget, {post: page}) %>
-            <% }) %>
-        <% } %>
-    </div>
+  <a class="sidebar-toggle" title="Expand Sidebar"
+    ><i class="toggle icon"></i
+  ></a>
+  <div class="sidebar-top">
+    <p><%= __('sidebar.follow') %>:</p>
+    <ul class="social-links">
+      <% for (var i in theme.customize.social_links) { %> <% if
+      (theme.customize.social_links[i]) { %>
+      <li>
+        <a
+          class="social-tooltip"
+          title="<%= i %>"
+          href="<%- url_for(theme.customize.social_links[i]) %>"
+          target="_blank"
+          rel="noopener"
+        >
+          <i class="icon fa fa-<%= i %>"></i>
+        </a>
+      </li>
+      <% } %> <% } %>
+    </ul>
+  </div>
+  <% if (is_post()) { %> <%- partial('post/nav', {post: page}) %> <% } %>
+  <div class="widgets-container">
+    <% if (theme.widgets) { %> <% theme.widgets.forEach(function(widget, index)
+    { %> <% if(index == 2) { %>
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7250093750072260"
+      crossorigin="anonymous"
+    ></script>
+    <!-- 블로그 사이드광고 -->
+    <ins
+      class="adsbygoogle"
+      style="display: block"
+      data-ad-client="ca-pub-7250093750072260"
+      data-ad-slot="4932064801"
+      data-ad-format="auto"
+      data-full-width-responsive="true"
+    ></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    <% } %> <%- partial('widget/' + widget, {post: page}) %> <% }) %> <% } %>
+  </div>
 </aside>
