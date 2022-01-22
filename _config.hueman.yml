@@ -5,7 +5,6 @@ menu:
   Steady: /steady
   Categories:
   # About: /about
-  
 
 # Customize
 customize:
@@ -31,12 +30,12 @@ customize:
 widgets:
   - catalog
   - recent_posts
+  - google_adsense
   # - category
   - archive
   # - tag
   # - tagcloud
   # - links
-  # - google_adsense
 
 # Search
 search:

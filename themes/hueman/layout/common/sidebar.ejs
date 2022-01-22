@@ -23,25 +23,7 @@
   </div>
   <% if (is_post()) { %> <%- partial('post/nav', {post: page}) %> <% } %>
   <div class="widgets-container">
-    <% if (theme.widgets) { %> <% theme.widgets.forEach(function(widget, index)
-    { %> <% if(index == 2) { %>
-    <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7250093750072260"
-      crossorigin="anonymous"
-    ></script>
-    <!-- 블로그 사이드광고 -->
-    <ins
-      class="adsbygoogle"
-      style="display: block"
-      data-ad-client="ca-pub-7250093750072260"
-      data-ad-slot="4932064801"
-      data-ad-format="auto"
-      data-full-width-responsive="true"
-    ></ins>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-    <% } %> <%- partial('widget/' + widget, {post: page}) %> <% }) %> <% } %>
+    <% if (theme.widgets) { %> <% theme.widgets.forEach(function(widget) { %>
+    <%- partial('widget/' + widget, {post: page}) %> <% }) %> <% } %>
   </div>
 </aside>
