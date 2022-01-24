@@ -2,9 +2,9 @@
 layout: post
 title: 'Javascript Object 이야기'
 date: 2019-08-21
-categories: 
-- JavaScript
-thumbnail: '/images/thumbnail/object.png'
+categories:
+  - JavaScript
+thumbnail: '/images/object.png'
 comments: false
 ---
 

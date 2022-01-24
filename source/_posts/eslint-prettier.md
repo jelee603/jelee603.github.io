@@ -4,7 +4,7 @@ date: 2022-01-15 17:05:58
 categories:
   - Option
 comments: false
-thumbnail: '/images/thumbnail/eslint-prettier.png'
+thumbnail: '/images/eslint-prettier.png'
 ---
 
 VSCode에서 자동 저장 시, ESLint 와 Prettier 를 적용하기 위해서는 다음과 같이 코드를 추가해주면 됩니다.

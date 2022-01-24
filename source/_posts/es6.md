@@ -2,12 +2,13 @@
 layout: post
 title: 'ES6 문법'
 date: 2020-02-04
-categories: 
-- JavaScript
+categories:
+  - JavaScript
 comments: false
-thumbnail: '/images/thumbnail/es6.png'
+thumbnail: '/images/es6.png'
 ---
-![image](/images/thumbnail/es6.png)
+
+![image](/images/es6.png)
 
 #### 1.import/export
 
@@ -42,6 +43,7 @@ console.log(result); // {a:2, b:3, c: {d:4}}
 const result2 = { ...source, ...target, c: { ...source.c, ...target.c } };
 console.log(result2); // {a: 2, b: 3, c: {d: 4, d2: 1}}
 ```
+
 #### 최대값, 최소값
 
 ES6 문법의 Spread 연산자를 사용할 수 있게 되면서 최대값과 최소값을 간편하게 계산할 수 있게 되었다.

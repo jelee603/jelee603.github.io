@@ -2,9 +2,9 @@
 layout: post
 title: 'Javascript Array 이야기'
 date: 2019-08-18
-categories: 
-- JavaScript
-thumbnail: '/images/thumbnail/array.png'
+categories:
+  - JavaScript
+thumbnail: '/images/array.png'
 comments: false
 ---
 

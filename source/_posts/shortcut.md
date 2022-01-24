@@ -3,11 +3,12 @@ layout: post
 title: '단축키 모음'
 date: 2020-01-09
 categories:
-- Option
+  - Option
 comments: false
-thumbnail: '/images/thumbnail/vscode.png'
+thumbnail: '/images/vscode.png'
 ---
-![image](/images/thumbnail/vscode.png)
+
+![image](/images/vscode.png)
 
 IDE 에서 사용할만한 단축키를 모아두자.
 
@@ -21,6 +22,7 @@ IDE 에서 사용할만한 단축키를 모아두자.
 `cmd + j` : 터미널 창 열기
 
 ### 2. Mac 단축키
+
 `cmd + option + esc` : 응용 프로그램 강제 종료
 `cmd + space` : 스포트라이트 검색 - (활성 상태 보기)
 `cmd + w` : 크롬 텝 닫기
@@ -42,33 +44,33 @@ IDE 에서 사용할만한 단축키를 모아두자.
 ```
 
 - `rfc` 리액트 템플릿 자동완성
-![image](/images/vs-code/react-snippets.png)
+  ![image](/shortcut/react-snippets.png)
 
+### 4. 페이지 셋업에서 설정하기
 
-### 4. 페이지 셋업에서 설정하기 
-- json 파일열기 => open settings (json) 
- ```
- // settings.json
- {
-  // set prettier
-  "editor.formatOnSave": true,
-  "[javascript]": {
-    "editor.formatOnSave": true
-  },
-  "editor.codeActionsOnSave": {
-    // For ESLint
-    "source.fixAll.eslint": false
-  },
-  "files.autoSave": "onFocusChange",
-  "editor.fontSize": 13,
+- json 파일열기 => open settings (json)
 
-  // set eslint
-  "eslint.alwaysShowStatus": true,
-  "eslint.workingDirectories": [{ "mode": "auto" }],
-  "eslint.validate": ["javascript", "typescript"]
+```
+// settings.json
+{
+ // set prettier
+ "editor.formatOnSave": true,
+ "[javascript]": {
+   "editor.formatOnSave": true
+ },
+ "editor.codeActionsOnSave": {
+   // For ESLint
+   "source.fixAll.eslint": false
+ },
+ "files.autoSave": "onFocusChange",
+ "editor.fontSize": 13,
+
+ // set eslint
+ "eslint.alwaysShowStatus": true,
+ "eslint.workingDirectories": [{ "mode": "auto" }],
+ "eslint.validate": ["javascript", "typescript"]
 }
- ```
+```
 
 - 터미널에서 `code .` 로 프로젝트를 열기 => Shell Command
 - 프로젝트 매니저에 추가하기 => Project Manager: Save Project
-

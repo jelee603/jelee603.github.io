@@ -2,14 +2,16 @@
 layout: post
 title: 'NPM'
 date: 2019-08-09
-categories: 
-- Option
+categories:
+  - Option
 comments: false
-thumbnail: '/images/thumbnail/npm.png'
+thumbnail: '/images/npm.png'
 ---
-![image](/images/thumbnail/npm.png)
 
-[Node Package Manager](https://ko.wikipedia.org/wiki/Npm_(%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4)) 라 하며, 자바스크립트 라이브러리를 모아놓은 패키지 관리자입니다. 
+![image](/images/npm.png)
+
+[Node Package Manager](<https://ko.wikipedia.org/wiki/Npm_(%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4)>) 라 하며, 자바스크립트 라이브러리를 모아놓은 패키지 관리자입니다.
+
 #### NPM 설정
 
 ```
@@ -47,7 +49,7 @@ found 0 vulnerabilities
 문제가 발생했을 때, 설치된 모듈의 버전을 확인하고 싶을때가 있다.
 
 ```html
-$ npm view <package-name> version 
+$ npm view <package-name> version </package-name>
 ```
 
 #### package json 경로 지정 방법:
@@ -75,7 +77,8 @@ $ npm insatll -D babel-core@^7.0.0-0
 ```
 
 #### Node 모듈 업데이트 방법:
-[Node](https://nodejs.org/en/) 에서 pkg 다운받으면, 그 후로 업데이트 방법은 아래와 같이 stable 안정화버전으로 업데이트한다. 
+
+[Node](https://nodejs.org/en/) 에서 pkg 다운받으면, 그 후로 업데이트 방법은 아래와 같이 stable 안정화버전으로 업데이트한다.
 
 ```
 $npm install -g n
@@ -84,6 +87,7 @@ $sudo n stable
 ```
 
 #### NVM 사용 방법:
+
 [NVM](https://github.com/nvm-sh/nvm#installing-and-updating) 다양한 버전의 노드를 설치할 수 있도록 해주는 관리자 툴이다.
 현재 노드버전을 확인하고, [major version](https://semver.org/) 을 쓰면, 그 메이저 버전의 최신을 설치할 수 있다.
 
@@ -91,10 +95,10 @@ $sudo n stable
 nvm install v14
 nvm list
 nvm use v14.18.1
-``` 
+```
 
-#### 전역에 설치된 모듈을 확인하는 방법: 
+#### 전역에 설치된 모듈을 확인하는 방법:
+
 ```
 npm list -g --depth 0
 ```
-

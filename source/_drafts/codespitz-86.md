@@ -1,7 +1,7 @@
 ---
 title: 코드스피츠 객체지향 자바스크립트
 tags:
-thumbnail: '/images/thumbnail/codespitz.png'
+thumbnail: '/images/codespitz.png'
 categories: 'JavaScript'
 comments: false
 ---

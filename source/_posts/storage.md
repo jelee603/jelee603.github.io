@@ -3,9 +3,9 @@ layout: post
 title: 'Local & Session Storage'
 date: 2019-11-01
 categories:
-- HTML/CSS
+  - HTML/CSS
 comments: false
-thumbnail: '/images/thumbnail/storage.png'
+thumbnail: '/images/storage.png'
 ---
 
 #### 로컬과 세션 스토리지의 차이점?

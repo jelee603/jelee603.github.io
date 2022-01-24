@@ -3,10 +3,10 @@ layout: _posts
 title: React 조건부 렌더링
 date: 2021-10-03 18:38:26
 categories:
-- JavaScript
+  - JavaScript
 tags:
 comments: false
-thumbnail: '/images/thumbnail/react-condition.png'
+thumbnail: '/images/react-condition.png'
 ---
 
 [조건부 렌더링](https://ko.reactjs.org/docs/conditional-rendering.html)
@@ -44,6 +44,6 @@ const todoItems = todos.map((todo, index) =>
 참고:
 https://ko.reactjs.org/docs/lists-and-keys.html
 
+#### append dynamic component
 
-#### append dynamic component 
 https://stackoverflow.com/questions/51404335/append-a-react-component-in-another-on-button-click

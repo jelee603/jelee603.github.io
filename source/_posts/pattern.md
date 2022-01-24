@@ -3,9 +3,9 @@ layout: post
 title: 'Javascript 디자인패턴 이야기'
 date: 2019-09-11
 categories:
-- JavaScript
+  - JavaScript
 comments: false
-thumbnail: '/images/thumbnail/pattern.png'
+thumbnail: '/images/pattern.png'
 ---
 
 ## 클래스란 (클래스/상속 디자인 패턴)
@@ -60,10 +60,9 @@ Object.setPrototyupeOf();
 
 [infoscis]: https://infoscis.github.io/2018/01/25/ecmascript-6-expanded-object-functionality/
 
-
 ## 디자인 패턴이란
 
-> 반복적으로 발생하는 문제와 그 문제의 해법으로 정의된다. 
+> 반복적으로 발생하는 문제와 그 문제의 해법으로 정의된다.
 > 패턴은 유사한 상황에서 반복적으로 적용할 수 있는 책임-주도 설계의 결과물이다. <br/> 그리고 그 방법이 왜 더 효과적인지에 대한 이유를 설명한다. <br/>
 > <객체 지향의 사실과 오해 - 조영호>
 

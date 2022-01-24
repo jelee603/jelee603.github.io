@@ -5,7 +5,7 @@ date: 2022-01-14 16:14:08
 categories:
   - Option
 comments: false
-thumbnail: '/images/thumbnail/typescript-config.png'
+thumbnail: '/images/typescript-config.png'
 ---
 
 타입스크립트로 전환하면, config 파일을 생성해서 프로퍼티를 추가하게 되는데요,

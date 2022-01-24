@@ -2,9 +2,9 @@
 title: CSS 선택자
 date: 2021-11-12 15:12:23
 categories:
-- HTML/CSS
+  - HTML/CSS
 comments: false
-thumbnail: '/images/thumbnail/css-selectors.png'
+thumbnail: '/images/css-selectors.png'
 ---
 
 [CSS 선택자](https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Selectors)는 CSS 규칙을 적용할 요소를 정의합니다.

@@ -4,11 +4,11 @@ date: 2021-10-30 23:20:00
 categories:
   - Lab
 tags:
-thumbnail: '/images/thumbnail/vanilla.png'
+thumbnail: '/images/vanilla.png'
 comments: false
 ---
 
-![image](/images/thumbnail/vanilla.png)
+![image](/images/vanilla.png)
 
 일반적으로 프레임워크를 사용하지 않고 자바스크립트를 다루는 방법은 있습니다.
 너무 프레임워크에 익숙해져 그 방법을 잊어버리지 않게 적습니다.

@@ -2,10 +2,10 @@
 layout: post
 title: 'Sass(SCSS) 알아가기'
 date: 2020-01-22
-categories: 
-- HTML/CSS
+categories:
+  - HTML/CSS
 comments: false
-thumbnail: '/images/thumbnail/sass.png'
+thumbnail: '/images/sass.png'
 ---
 
 > sass 사용하면, 변수로 사용한 상태에서 스타일을 재사용할 수 있다.
@@ -13,6 +13,7 @@ thumbnail: '/images/thumbnail/sass.png'
 ```js
 yarn add node-sass --save
 ```
+
 ### 1. &부모 요소 참조, $변수 사용
 
 - 부모요소의 참조가 필요한 경우엔 `&` 를 사용한다.

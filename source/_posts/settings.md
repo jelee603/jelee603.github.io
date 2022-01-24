@@ -2,10 +2,10 @@
 layout: post
 title: '개발환경 세팅하기'
 date: 2019-09-26
-categories: 
-- Option
+categories:
+  - Option
 comments: false
-thumbnail: '/images/thumbnail/settings.png'
+thumbnail: '/images/settings.png'
 ---
 
 #### 작업환경 세팅하기
@@ -13,11 +13,11 @@ thumbnail: '/images/thumbnail/settings.png'
 ##### (2021.10.26) VSCode 2021.10.26 작업환경 세팅
 
 - Material Theme
-- Material Theme Icons 
+- Material Theme Icons
 - Prettier - Code formatter
 - Code Spell Checker
 - Bracket Pair Colorizer
-- vscode-styled-components 
+- vscode-styled-components
 - TODO Highlight
 - Git Graph
 - JavaScript and TypeScript Nightly
@@ -25,6 +25,7 @@ thumbnail: '/images/thumbnail/settings.png'
 - ES7 React/Redux/GraphQL/React-Native snippets
 
 #### Chrome plugins
+
 - React Developer Tools
 - Redux DevTools
 

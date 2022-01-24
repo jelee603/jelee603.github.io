@@ -2,9 +2,9 @@
 layout: post
 title: 'Javascript Promise 이야기'
 date: 2019-08-28
-categories: 
-- JavaScript
-thumbnail: '/images/thumbnail/promise.png'
+categories:
+  - JavaScript
+thumbnail: '/images/promise.png'
 comments: false
 ---
 

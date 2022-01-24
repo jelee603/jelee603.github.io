@@ -5,10 +5,10 @@ date: 2021-09-24
 categories:
   - Lab
 comments: false
-thumbnail: '/images/thumbnail/blog-hexo.png'
+thumbnail: '/images/blog-hexo.png'
 ---
 
-![blog](/images/thumbnail/blog-hexo.png)
+![blog](/images/blog-hexo.png)
 
 ##### Hexo 프레임워크를 이용해 블로그를 작성하고, github에 자동 deploy 까지
 
@@ -39,8 +39,8 @@ HEXO_DEPLOY_TOKEN 이름으로 토큰을 등록한다.
 
 기간을 설정하면, 새로운 토큰을 발급하는데 이 발급된 토큰을 등록해준다.
 
-![token1](/images/blog-hexo/token1.png)
-![token2](/images/blog-hexo/token2.png)
+![token1](/blog-hexo/token1.png)
+![token2](/blog-hexo/token2.png)
 
 참고: https://hyeo-noo.tistory.com/184
 

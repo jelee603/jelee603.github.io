@@ -3,11 +3,13 @@ layout: post
 title: 'Git 이야기'
 date: 2019-08-08
 categories:
-- Option
+  - Option
 comments: false
-thumbnail: '/images/thumbnail/git.png'
+thumbnail: '/images/git.png'
 ---
-![image](/images/thumbnail/git.png)
+
+![image](/images/git.png)
+
 #### 안 쓰면 잊어버리는 Git 명령어
 
 Git은 만들고 나면 크게 문제가 없고, 충돌나지 않으면 별 문제없이 편하지만, 가끔 발생하는 문제에 대해서는 조치 방법을 위해 정리해둘 필요가 있다.
@@ -33,9 +35,7 @@ gitignore 파일을 만들고 추후에 파일들을 삭제하고 싶을땐, 항
 **Git Ignore**
 
 ```html
-// .gitignore 파일에 제외할 폴더 추가 ex) .idea/ 
-git rm -r --cached .
-git add . 
+// .gitignore 파일에 제외할 폴더 추가 ex) .idea/ git rm -r --cached . git add .
 git commit -m 'ignore 수정'
 ```
 
