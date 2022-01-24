@@ -39,8 +39,8 @@ HEXO_DEPLOY_TOKEN 이름으로 토큰을 등록한다.
 
 기간을 설정하면, 새로운 토큰을 발급하는데 이 발급된 토큰을 등록해준다.
 
-![토큰](token1.png)
-![토큰](blog-hexo/token2.png)
+{% asset_img token1.png 토큰 %}
+{% asset_img token2.png 토큰 %}
 
 참고: https://hyeo-noo.tistory.com/184
 
