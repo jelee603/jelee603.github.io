@@ -1,38 +1,55 @@
-<article id="<%= post.layout %>-<%= post.slug %>" class="article article-single article-type-<%= post.layout %><%= (post.direction && post.direction.toLowerCase() === 'rtl' ? ' rtl' : '') %>" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        <% if ((post.link || post.title ) && !['note'].includes(post.layout)){ %>
-            <header class="article-header">
-                <%- partial('post/title', { class_name: 'article-title' }) %>
-                <%- partial('share/index', { post: post }) %>
-            </header>
-        <% } %>
-        <% if (!['page','authors','tags','categories','note'].includes(post.layout)) { %>
-            <div class="article-meta">
-                <%- partial('post/date', { class_name: 'article-date', date_format: null }) %>
-                <%- partial('post/author') %>
-                <%- partial('post/tag') %>
-                <%- partial('post/valinecounter') %>
-                <%- partial('post/counter') %>
-            </div>
-        <% } %>
-        <%- partial('post/gallery') %>
-        <div class="article-wrapper"> 
-            <div class="article-entry" itemprop="articleBody">
-                <%- partial('authors', { post: post }) %>
-                <%- partial('tags', { post: post }) %>
-                <%- partial('categories', { post: post }) %>
-                <%- post.content %>
-            </div>
-            <% if (post.contents) {%>
-            <div id="main-body-sidebar">
-                <%- partial('widget/contents', {post: page}) %>
-            </div>
-            <%}%>
-        </div>
-        <footer class="article-footer">
-            <!-- <%- partial('share/index', { post: post }) %> -->
-        </footer>
+<article
+  id="<%= post.layout %>-<%= post.slug %>"
+  class="article article-single article-type-<%= post.layout %><%= (post.direction && post.direction.toLowerCase() === 'rtl' ? ' rtl' : '') %>"
+  itemscope
+  itemprop="blogPost"
+>
+  <div class="article-inner">
+    <% if ((post.link || post.title ) && !['note'].includes(post.layout)){ %>
+    <header class="article-header">
+      <%- partial('post/title', { class_name: 'article-title' }) %> <%-
+      partial('share/index', { post: post }) %>
+    </header>
+    <% } %> <% if
+    (!['page','authors','tags','categories','note'].includes(post.layout)) { %>
+    <div class="article-meta">
+      <%- partial('post/date', { class_name: 'article-date', date_format: null
+      }) %> <%- partial('post/author') %> <%- partial('post/tag') %> <%-
+      partial('post/valinecounter') %> <%- partial('post/counter') %>
     </div>
-    <%- partial('post/ld_json', { post: post }) %>
+    <% } %> <%- partial('post/gallery') %>
+    <div class="article-wrapper">
+      <div class="article-entry" itemprop="articleBody">
+        <%- partial('authors', { post: post }) %> <%- partial('tags', { post:
+        post }) %> <%- partial('categories', { post: post }) %> <%- post.content
+        %>
+      </div>
+      <% if (post.contents) {%>
+      <div id="main-body-sidebar">
+        <%- partial('widget/contents', {post: page}) %>
+      </div>
+      <%}%>
+    </div>
+    <footer class="article-footer">
+      <!-- <%- partial('share/index', { post: post }) %> -->
+      <script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7250093750072260"
+        crossorigin="anonymous"
+      ></script>
+      <ins
+        class="adsbygoogle"
+        style="display: block; text-align: center"
+        data-ad-layout="in-article"
+        data-ad-format="fluid"
+        data-ad-client="ca-pub-7250093750072260"
+        data-ad-slot="2385792512"
+      ></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </footer>
+  </div>
+  <%- partial('post/ld_json', { post: post }) %>
 </article>
 <%- partial('comment/index') %>
