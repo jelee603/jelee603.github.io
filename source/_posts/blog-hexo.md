@@ -105,10 +105,33 @@ Actions 실행되는 스크립트는 config 파일의 deploy 변수를 제대로
 
 위와 같이 작성하고, push 를 하게 되면, build 가 시작되고 정상적으로 완료되면, 블로그에 반영이 된다!
 
-## 4. Hexo 글쓰기
+## 4. Generate 포매터 변경
 
-4-1. Hexo 문법
+`scaffolds > post.md`에 필요한 포맷을 넣어두면 파일이 생성될 때, 자동으로 들어간다. 
 
+기본 포맷은 날짜형태가 중괄호 문법으로 들어가 있는데, 자동완성으로 코드가 변경되면 이 포맷이 깨지게 된다. 
+```
+// 원본 
+title: {{ title }}
+date: {{ date }}
+
+// 자동 변경
+title: { { title } }
+date: { { date } }
+```
+
+이렇게 저장되는 것을 방지하려면, 마크다운 파일의 경우에만 자동저장 기능을 꺼준다. 
+
+```
+//settings.json
+
+"[markdown]": {
+    "editor.formatOnSave": false,
+}
+```
+## 5. 글쓰기 (마크다운)
+
+- post 파일 생성 방법
 ```
 // new post
 hexo new [layout] <title>
@@ -120,7 +143,7 @@ hexo new draft <title>
 hexo server --draft
 ```
 
-4-2. 마크다운 하이퍼링크 연결
+- 마크다운 하이퍼링크 연결
 알파벳은 반드시 소문자만 가능
 띄어쓰기는 -(하이픈)으로 구분
 
