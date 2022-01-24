@@ -44,7 +44,8 @@ IDE 에서 사용할만한 단축키를 모아두자.
 ```
 
 - `rfc` 리액트 템플릿 자동완성
-  ![image](/shortcut/react-snippets.png)
+
+{% asset_img react-snippets.png 자동완성 템플릿 %}
 
 ### 4. 페이지 셋업에서 설정하기
 
