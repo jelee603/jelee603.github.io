@@ -8,11 +8,9 @@ comments: false
 thumbnail: '/images/vscode.png'
 ---
 
-![image](/images/vscode.png)
+유용한 단축키를 정리합니다.
 
-IDE 에서 사용할만한 단축키를 모아두자.
-
-### 1. VSCode 단축키 (Window 단축키)
+#### VSCode 단축키 (Window 단축키)
 
 `cmd + d` (`ctrl` + `d`) : 같은 파일내 단어 찾기
 `option + cmd + i` (`F12`) : 크롬 디버그
@@ -21,16 +19,8 @@ IDE 에서 사용할만한 단축키를 모아두자.
 `cmd + p` : 파일 찾기
 `cmd + j` : 터미널 창 열기
 
-### 2. Mac 단축키
-
-`cmd + option + esc` : 응용 프로그램 강제 종료
-`cmd + space` : 스포트라이트 검색 - (활성 상태 보기)
-`cmd + w` : 크롬 텝 닫기
-`cmd + y` : 크롬 브라우저 방문기록 보기
-
-### 3. Snippets 활용
-
-- `html:5` html 자동완성
+- Snippets 활용
+:`html:5` html 자동완성
 
 ```html
 <!DOCTYPE html>
@@ -43,13 +33,12 @@ IDE 에서 사용할만한 단축키를 모아두자.
 </html>
 ```
 
-- `rfc` 리액트 템플릿 자동완성
+  :`rfc` 리액트 템플릿 자동완성
 
-{% asset_img react-snippets.png 자동완성 템플릿 %}
+![자동완성 템플릿](react-snippets.png)
 
-### 4. 페이지 셋업에서 설정하기
-
-- json 파일열기 => open settings (json)
+- 페이지 셋업에서 설정하기
+: json 파일열기 => open settings (json)
 
 ```
 // settings.json
@@ -75,3 +64,10 @@ IDE 에서 사용할만한 단축키를 모아두자.
 
 - 터미널에서 `code .` 로 프로젝트를 열기 => Shell Command
 - 프로젝트 매니저에 추가하기 => Project Manager: Save Project
+
+#### Mac 단축키
+
+`cmd + option + esc` : 응용 프로그램 강제 종료
+`cmd + space` : 스포트라이트 검색 - (활성 상태 보기)
+`cmd + w` : 크롬 텝 닫기
+`cmd + y` : 크롬 브라우저 방문기록 보기
