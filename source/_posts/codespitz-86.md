@@ -7,7 +7,7 @@ thumbnail: /images/codespitz.png
 date: 2022-01-27 21:11:37
 ---
 
-[코드스피츠 86 - 객체지향 자바스크립트](https://youtu.be/E9NZ0YEZrYU) 강의를 정리해봅니다. 
+[코드스피츠 86 - 객체지향 자바스크립트](https://www.youtube.com/watch?v=E9NZ0YEZrYU&list=PLBNdLLaRx_rIRXCp9tKsg7qDQmAX19ocw) 강의를 정리해봅니다. 
 
 #### 프로그래밍의 기준을 어디에 둘까요?
 
@@ -225,7 +225,7 @@ View <- Binder(옵저버) -> ViewModel -> Model -> ViewModel
 
 #### 코드 작성 [(소스)](https://gist.github.com/hikaMaeng/ae5301b2808afd150c4f55a47bd9466a)
 
-### 1일차
+### 1회차
 
 - TypeCheck() 
 : 자바스크립트는 런타임에 에러가 발견되는 즉시, throw 로 멈추게 하는 코드가 필요합니다. 타입검사를 해서 'string' 또는 객체인지를 비교합니다.
@@ -249,12 +249,48 @@ typeof type == 'string' // type 이 string 이 아니면 객체이다.
 
 SRP원칙을 기반으로 HTML 해석 스캐너를 따로 둡니다. 
 
-
-
 > HTML5 에서는 'data-' 만들지 않는 속성은 [유효성 검사](https://validator.w3.org/#validate_by_uri)에서 모두 깨지게 되어있습니다. 속성을 만들 때는 'data-' 프리픽스로 만들어줍니다. 
 
+- 애니메이션 효과 
 
-### 2일차
+isStop 플래그로 색상이 변경된 후, 클릭했을 때 멈추도록 설정해줍니다.
+```js
+const viewmodel = ViewModel.get({
+    isStop: false,
+    changeContents() {
+        this.wrapper.styles.background = `rgb(${
+            parseInt(Math.random() * 150) + 100
+        },${parseInt(Math.random() * 150) + 100},${
+            parseInt(Math.random() * 150) + 100
+        })`;
+        this.contents.properties.innerHTML = Math.random()
+            .toString(16)
+            .replace('.', '');
+        binder.render(viewmodel);
+    },
+    wrapper: ViewModel.get({
+        ....
+        events: {
+            click(e, vm) {
+                vm.isStop = true;
+                console.log('click', vm);
+            },
+        },
+    }),
+    ...
+});
+
+const f = (_) => {
+    viewmodel.changeContents();
+    console.log(viewmodel.isStop);
+    if (!viewmodel.isStop) requestAnimationFrame(f);
+};
+
+requestAnimationFrame(f);
+```
+
+
+### 2회차
 
 ![MVVM 패턴](ex-2.png)
 
@@ -266,23 +302,22 @@ ViewModel <- Binder[BinderItem] <- Scanner -> HTMLElement
 
 ```js
  Object.entries(data).forEach(([k, v]) => {
-            switch (k) {
-                case 'styles':
-                    this.styles = v;
-                    break;
-                case 'attributes':
-                    this.attributes = v;
-                    break;
-                case 'properties':
-                    this.properties = v;
-                    break;
-                case 'events':
-                    this.events = v;
-                    break;
-                default:
-                    this[k] = v;
-            }
+    if ('styles.attributes.properties'.includes(k)) {
+        this[k] = ViewModel.define(this, k, v);
+    } else {
+        Object.defineProperty(this, k, {
+            enumerable: true,
+            get: (_) => v,
+            set: (newV) => {
+                v = newV;
+            },
         });
+
+        if (v instanceof ViewModel) {
+            v.subKey = k;
+        }
+    }
+});
 ```
 
 
@@ -328,24 +363,25 @@ ViewModel <- Binder[BinderItem] <- Scanner -> HTMLElement
   wrapper 랑 contents 를 바꾼 후에 한번만 렌더합니다.
 
 ```js
-Object.entries(data).forEach(([cat, obj]) => {
-  if ('styles,attributes,properties'.includes(obj)) {
-    ...
-      this[cat] = Object.defineProperties(
-          obj,
-          Object.entries(obj).reduce((r, [k, v]) => {
-            ...
-          }
-    return r;
-  }, {})
-  else {
-    ...
-  }
-}
-```
-> reduce 는 초기값은 두고 첫번째 인자 accumulator 가 계속 앞에 인자로 들어오고 두번째 인자는 배열의 원소들이 들어온다. 그 다음에 있는  accumulator 있는 건 함수가 반환하는 값으로 변경된다. 오브젝트로 반환 될거다. ex) Object.entries().reduce(() => {}, {})
+Object.entries(data).forEach(([k, v]) => {
+    if ('styles.attributes.properties'.includes(k)) {
+        this[k] = ViewModel.define(this, k, v);
+    } else {
+        Object.defineProperty(this, k, {
+            enumerable: true,
+            get: (_) => v,
+            set: (newV) => {
+                newV = v;
+            },
+        });
 
-### 3일차 
+        if (v instanceof ViewModel) {
+            v.subKey = k;
+        }
+    }
+});
+```
+### 3회차
 
 ![전략 패턴](ex-3.png)
 
@@ -356,7 +392,7 @@ Object.entries(data).forEach(([cat, obj]) => {
 어떤 문제를 해결하기 위한 핵심적인 지식 부분을 의미합니다. 객체에서 상태는 프로퍼티, 행동은 메소드로 표현합니다. 
 
 1. 변화가 생길 때마다 코드를 변경하는게 아니라 객체로 변경합니다. (컴포지션 패턴 -> DI)
-   - 내부에서 만들면 다시 하드코딩이 됩니다. 코드를 변경하지 않고 외부에서 공급받으면 객체에 대한 의존성을 줄일 수 있다. (DI)
+   - 내부에서 만들면 다시 하드코딩이 됩니다. 코드를 변경하지 않고 외부에서 공급받으면 객체에 대한 의존성을 줄일 수 있습니다. (DI)
 2. 반드시 인터페이스나 타입으로 변환합니다. 
 3. 내부의 코드를 프로세서와의 계약으로 풀었기 때문에 프로세서로 풀어줍니다.(알고리즘의 일반화)
 
@@ -365,6 +401,40 @@ Object.entries(data).forEach(([cat, obj]) => {
 
 #### 템플릿 패턴
 기존 Binder 기능을 Processor Class를 생성해서 위임합니다. 
+
+```js
+const Processor = class {
+    cat;
+    constructor(cat) {
+        this.cat = cat;
+        Object.freeze(this);
+    }
+    process(
+        vm,
+        el,
+        k,
+        v,
+        _0 = type(vm, ViewModel),
+        _1 = type(el, HTMLElement),
+        _2 = type(k, 'string')
+    ) {
+        this._process(vm, el, k, v);
+    }
+
+    _process(vm, el, k, v) {
+        throw 'override';
+    }
+};
+
+binder.addProcessor(
+    new (class extends Processor {
+        _process(vm, el, k, v) {
+            el.styles[k] = v;
+        }
+    })('styles')
+);
+
+```
 
 > 자식한테 위임하는 방법 (템플릿 메소드 -> `hook` 이라 부른다.)
 
@@ -405,7 +475,9 @@ vm 커버하는 단일 루프 하나에 등록해서 씁니다. 배열 루프가
 뷰모델의 부모의 isStop 을 업데이트해줍니다.
 
 
-### 4일차
+### 4회차
+
+![권한 조정](ex-4.png)
 
 책임에 맞는 권한을 부여합니다.
 
@@ -476,7 +548,7 @@ Binder가 스캐너의 역할을 가져가고 Scanner는 checkItem 정책을 돌
 많은 구현체들은 직접 바인더 콜하는 경우가 많아졌고, 옵저버 패턴으로 연결된 부분만 복잡도가 높게 되었습니다. 
 
 
-### 5일차
+### 5회차
 
 #### 문제점 짚어보기
 
@@ -488,6 +560,9 @@ Binder가 스캐너의 역할을 가져가고 Scanner는 checkItem 정책을 돌
 - 임의의 키를 매핑할 수 있는 코드로 수정한다. (하드코딩을 제거한다.)
 - 처리기는 데이터 구조가 매핑된다. 데이터 구조도 동적으로 바꾸는과정이 필요하다. 
 define 이 재귀로 호출하게끔 한다.
+
+> reduce 는 초기값은 두고 첫번째 인자 accumulator 가 계속 앞에 인자로 들어오고 두번째 인자는 배열의 원소들이 들어온다. 그 다음에 있는  accumulator 있는 건 함수가 반환하는 값으로 변경된다. 오브젝트로 반환 될거다. ex) Object.entries().reduce(() => {}, {})
+
 
 문제3. setDomProcessor 세팅을 넣어준다. 
 바인더에게 데코레이팅 해준다.
