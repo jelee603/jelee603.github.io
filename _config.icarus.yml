@@ -92,7 +92,7 @@ donates:
   - type: none
     qrcode: ''
 share:
-  type: none
+  type: ''
   install_url: ''
 sidebar:
   left:

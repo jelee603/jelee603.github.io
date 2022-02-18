@@ -62,7 +62,7 @@ exclude: null
 ignore: null
 plugins:
   - hexo-deployer-git
-theme: hueman
+theme: icarus
 deploy:
   type: git
   repo: https://__GITHUB_TOKEN__@github.com/jelee603/jelee603.github.io.git
