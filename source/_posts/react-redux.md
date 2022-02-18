@@ -1,6 +1,7 @@
 ---
 title: React Redux
 date: 2021-11-26 13:45:56
+toc: true
 comments: false
 categories:
   - JavaScript
@@ -13,7 +14,7 @@ thumbnail: '/images/react-redux.png'
 - 여러 컴포넌트에 걸쳐 전달하게 될 경우, 불필요한 props 가 늘어날 수 있다.
 - 형제 컴포넌트에서 불필요한 렌더링이 일어날 수 있다.
 - 최상위 컴포넌트에서 상태관리 로직이 많아 길어지는 현상도 있을 수 있다.
-
+<!-- more -->
 ## 리덕스의 동작 과정
 
 ```

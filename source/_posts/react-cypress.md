@@ -4,12 +4,13 @@ title: 리액트 타입스크립트에 Cypress 적용하기
 date: 2022-01-14 13:58:02
 categories:
   - Lab
+toc: true
 comments: false
 thumbnail: '/images/react-cypress.png'
 ---
 
 이 글은 Cypress 블로그의 [원문](https://www.cypress.io/blog/2021/04/06/cypress-component-testing-react)을 직역해서 [실습](https://github.com/jelee603/cypress-testing-example)하기 위해 작성했습니다.
-
+<!-- more -->
 ## Cypress 시작하기
 
 Cypress7.0 중, Cypress와 함께 패키지로 묶은 새로운 컴포넌트입니다.

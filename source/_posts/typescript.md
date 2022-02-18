@@ -3,12 +3,13 @@ title: TypeScript 스터디
 date: 2021-11-01 14:27:36
 categories:
   - JavaScript
+toc: true
 comments: false
 thumbnail: '/images/typescript.png'
 ---
 
 [타입스크립트 핸드북](https://typescript-kr.github.io)을 이용해서 문법과 타입스트립트에 대해 공부합니다. 예제를 확인해보고 싶다면, [TS Playground](https://www.typescriptlang.org/play)에서 확인을 해봅니다.
-
+<!-- more -->
 ## 타입 추론
 
 타입을 명시적으로 정의하기 위한 구문으로 `interface` 를 우선적으로 사용하고 특정 기능이 필요할 때 `type`을 사용합니다.

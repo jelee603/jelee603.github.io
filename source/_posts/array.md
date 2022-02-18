@@ -5,6 +5,7 @@ date: 2019-08-18
 categories:
   - JavaScript
 thumbnail: '/images/array.png'
+toc: true
 comments: false
 ---
 
@@ -12,7 +13,7 @@ comments: false
 
 array 를 string으로 string 을 array 로 바꾸는 연습은 너무나 중요하지만.. 헷갈림의 연속이다.
 array 를 string 으로 바꾸는 방법으로 콤마를 split 으로 분리해서 띄어쓰기를 주면 된다.
-
+<!-- more -->
 ```js
 const arr = ['first', 'second', 'third'];
 

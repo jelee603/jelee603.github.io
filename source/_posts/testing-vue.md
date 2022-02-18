@@ -4,6 +4,7 @@ title: 'Vue.js 2.x 테스트 적용기'
 date: 2019-10-17
 categories:
   - Lab
+toc: true
 comments: false
 thumbnail: '/images/testing-vue.png'
 ---
@@ -12,6 +13,7 @@ thumbnail: '/images/testing-vue.png'
 
 vue-cli 3.x 를 받게되면 자동으로 test 를 할 수 있는 환경이 구축되는데 <span style="text-decoration: line-through">프로젝트가 그렇게 쉽게 올라가는 건 아니니</span> 2019년도에 작성한 블로그이니, 지금은 3.0 을 사용하면 된다.
 
+<!-- more -->
 기존 프로젝트를 위한 2.x 에 테스트 작업환경을 추가를 해보았다. 일단은 가장 많이 사용하는 jest 를 설정해보았다.
 [Vue Test Util](https://vue-test-utils.vuejs.org) 을 참고하고 [joshua1988](https://joshua1988.github.io/vue-camp/testing/getting-started.html#%EB%B7%B0-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%BD%94%EB%93%9C-%EC%98%88%EC%8B%9C)님 블로그르 참고하면서 설치해보았다.
 

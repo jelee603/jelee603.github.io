@@ -4,6 +4,7 @@ title: 'Browser 이야기'
 date: 2019-08-19
 categories:
   - HTML/CSS
+toc: true
 comments: false
 thumbnail: '/images/browser.png'
 ---
@@ -15,7 +16,7 @@ XMLHttpRequest 는 보안상의 이유로 동일한 도메인에서만 HTTP 요�
 
 GET, POST 방식 중 Request 간단하게 요청하고 응답할 수 있다.
 `Access-Control-Allow-Origin: *` 모든 도메인으로 부터 접근이 가능하도록 허용하게 된다.
-
+<!-- more -->
 #### 브라우저는 받아온 정보를 화면에 표현하는 역할을 한다. 브라우저에 어떻게 문서를 전달될까?
 
 `HTTP (Hypertext Transfer Protocol)` 의 줄임말로, 인터넷상에서 데이터를 주고 받을 수 있는 프로토콜이다.

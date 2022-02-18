@@ -4,6 +4,7 @@ title: Port
 date: 2021-10-10 23:31:07
 categories:
   - Option
+toc: true
 thumbnail: '/images/port.png'
 comments: false
 ---
@@ -18,6 +19,7 @@ $ kill -9 {PID}
 ```
 
 점유하고 있는 포트번호의 PID(Porcess ID) 를 찾아서 kill 로직을 써준다.
+<!-- more -->
 
 ```js
 lsof -i :19000

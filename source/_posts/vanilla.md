@@ -5,14 +5,14 @@ categories:
   - Lab
 tags:
 thumbnail: '/images/vanilla.png'
+toc: true
 comments: false
 ---
-
-![image](/images/vanilla.png)
 
 일반적으로 프레임워크를 사용하지 않고 자바스크립트를 다루는 방법은 있습니다.
 너무 프레임워크에 익숙해져 그 방법을 잊어버리지 않게 적습니다.
 
+<!-- more -->
 먼저 html 파일에서 js를 로드를 합니다.
 
 ```js

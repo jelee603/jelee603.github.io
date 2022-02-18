@@ -4,6 +4,7 @@ title: 'Graphql 적용기'
 date: 2019-10-16
 categories:
   - Lab
+toc: true
 comments: false
 thumbnail: '/images/graphql.png'
 ---
@@ -12,6 +13,7 @@ thumbnail: '/images/graphql.png'
 
 [GraphQL](https://graphql-kr.github.io/) 은 상당히 뜨고 있어서 항상 진행해보자.. 싶었던 방법인데 DB도 설치해야하고 복잡할거 같아서 진행을 못하고 있었다.
 찾아보니 Node.js Express 로 구현한 [yuddomack][yuddomack] 님의 블로그를 보고 진행을 해볼 수 있었다.
+<!-- more -->
 공식문서([GraphQL][graphql])에서는 저렇게 쓰면 되겠구나 싶었던 방법이 구체적인 웹으로도 쉽게 조회를 할 수 있게 제공된다.
 구현부를 express 에 작성하고, 간단한 조회를 하는 방법이 있고, 실제 DB와 연결해서 하는 방법을 계속 진행해볼까 한다.
 DB는 서버에 설치해야하는 번거로움이 있으니.. [kamang][kamang] 님의 블로그처럼 SqlLite로 프로젝트에 저장될 수 있게 만들어 볼 예정이다.

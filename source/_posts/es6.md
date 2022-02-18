@@ -4,11 +4,10 @@ title: 'ES6 문법'
 date: 2020-02-04
 categories:
   - JavaScript
+toc: true
 comments: false
 thumbnail: '/images/es6.png'
 ---
-
-![image](/images/es6.png)
 
 #### 1.import/export
 
@@ -17,6 +16,7 @@ thumbnail: '/images/es6.png'
 기본값을 사용할 경우에 오버라이딩해서 쓸 수 있게 만들면 좋을거 같아 사용한다.
 
 그래서 함수도 Util 의 기능으로 만들어서 쓸려고 해보니, 문제가 발생했다.
+<!-- more -->
 
 `export default {함수명}`으로 사용을 해준다. 그리고 `import 파일명 from 파일위치` 로 지정을해두면
 `파일명.함수명` 으로 접근해서 사용을 할 수 있다.

@@ -3,6 +3,7 @@ title: CSS 선택자
 date: 2021-11-12 15:12:23
 categories:
   - HTML/CSS
+toc: true
 comments: false
 thumbnail: '/images/css-selectors.png'
 ---
@@ -10,7 +11,7 @@ thumbnail: '/images/css-selectors.png'
 [CSS 선택자](https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Selectors)는 CSS 규칙을 적용할 요소를 정의합니다.
 
 타입 선택자 분류는 다음과 같이 쓴다.
-
+<!-- more -->
 ```css
 ol li span {
   /* 공백 : 하위 선택자 */

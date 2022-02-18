@@ -19,7 +19,7 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: ':lang'
-skip_render: 'code/**/*'
+skip_render: code/**/*
 new_post_name: ':title.md'
 default_layout: post
 titlecase: false
@@ -62,12 +62,11 @@ exclude: null
 ignore: null
 plugins:
   - hexo-deployer-git
-theme: hueman
+theme: icarus
 deploy:
   type: git
   repo: https://__GITHUB_TOKEN__@github.com/jelee603/jelee603.github.io.git
   branch: main
-# robots.txt
 robotstxt:
   useragent: '*'
   allow:
@@ -75,12 +74,10 @@ robotstxt:
   disallow:
     - /source/
   sitemap: https://jelee603.github.io/sitemap.xml
-# Feed
 feed:
   type: rss2
   path: rss2.xml
   limit: 20
-# Sitemap
 sitemap:
   path: sitemap.xml
   tag: false

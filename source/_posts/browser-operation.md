@@ -3,18 +3,16 @@ title: 브라우저 동작 원리
 date: 2021-12-01 21:59:43
 categories:
   - HTML/CSS
+toc: true
 comments: false
 thumbnail: '/images/browser-operation.png'
-contents:
-  - 브라우저의 역할|#브라우저의-역할
-  - 동작 과정|#동작-과정
-  - 자바스크립트 엔진|#자바스크립트-엔진
 ---
 
 ## 브라우저의 역할
 
 브라우저는 웹페이지를 서버에 요청하고 서버의 응답을 받아 표시합니다.
 서버로부터 html, css, javascript, 이미지 파일 등 응답받는 것입니다.
+<!-- more -->
 
 html, css 는 렌더링 엔진인 html 파서와 css 파서에 의해 파싱되어 DOM, CSSOM 트리로 변환되어 렌더 트리로 결합됩니다. 브라우저는 렌더 트리를 기반으로 웹페이지를 표시합니다.
 

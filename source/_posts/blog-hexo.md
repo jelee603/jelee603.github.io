@@ -4,6 +4,7 @@ title: 'Hexo를 이용한 github 블로그 생성하기'
 date: 2021-09-24
 categories:
   - Lab
+toc: true
 comments: false
 thumbnail: '/images/blog-hexo.png'
 ---
@@ -11,7 +12,7 @@ thumbnail: '/images/blog-hexo.png'
 ![blog](/images/blog-hexo.png)
 
 ##### Hexo 프레임워크를 이용해 블로그를 작성하고, github에 자동 deploy 까지
-
+<!-- more -->
 ## 1. 설치하기
 
 ```

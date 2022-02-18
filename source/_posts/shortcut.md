@@ -4,6 +4,7 @@ title: '단축키 모음'
 date: 2020-01-09
 categories:
   - Option
+toc: true
 comments: false
 thumbnail: '/images/vscode.png'
 ---
@@ -11,6 +12,8 @@ thumbnail: '/images/vscode.png'
 유용한 단축키를 정리합니다.
 
 #### VSCode 단축키 (Window 단축키)
+
+<!-- more -->
 
 `cmd + d` (`ctrl` + `d`) : 같은 파일내 단어 찾기
 `option + cmd + i` (`F12`) : 크롬 디버그

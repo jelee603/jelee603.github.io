@@ -5,13 +5,12 @@ categories:
   - Option
 tags:
 thumbnail: '/images/yarn.png'
+toc: true
 comments: false
 ---
-
-![image](/images/yarn.png)
-
 #### 전역에 설치된 모듈을 확인하는 방법:
 
+<!-- more -->
 ```
 yarn global list
 ```

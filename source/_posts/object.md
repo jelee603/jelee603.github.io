@@ -4,6 +4,7 @@ title: 'Javascript Object 이야기'
 date: 2019-08-21
 categories:
   - JavaScript
+toc: true
 thumbnail: '/images/object.png'
 comments: false
 ---
@@ -17,7 +18,7 @@ JSON.stringify(obj); // "[{"name":"first"},{"name":"second"},{"name":"third"}]
 ```
 
 이 방법은 리스트로 만들어진 오브젝트를 필터링할 때 쓰는 방법인데 중복도 제거할 수 있어서 많이 사용한다.
-
+<!-- more -->
 ```js
 const obj = [
   { name: 'first', value: 1 },

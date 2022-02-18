@@ -4,6 +4,7 @@ title: 'Local & Session Storage'
 date: 2019-11-01
 categories:
   - HTML/CSS
+toc: true
 comments: false
 thumbnail: '/images/storage.png'
 ---
@@ -12,6 +13,7 @@ thumbnail: '/images/storage.png'
 
 로컬 스토리지는 사용자가 지우지 않으면 브라우저에 계속 남아있다. (지속적으로 필요한 데이터)
 세션 스토리지는 윈도우나 브라우저 탭을 닫을 경우 제거된다. (일회성 데이터)
+<!-- more -->
 세션 이전에 쿠키가 있었고, 쿠키는 만료 기한이 있는 key-value 저장소이다.
 (참고) [zerocho 블로그][zerocho]
 

@@ -4,13 +4,14 @@ title: 'Canvas로 그래프 그리기'
 date: 2019-06-10
 categories:
   - HTML/CSS
+toc: true
 comments: false
 thumbnail: '/images/canvas.png'
 ---
 
 Grid 내부에 그래프를 그려야하는데 캔버스와 SVG, DIV 방법이 있을 수 있는데 어느 것을 골라야할지 망설여졌다.
 분명 성능 이슈가 있겠지? 그래서 성능면에서 어떤 차이가 있는지부터 먼저 찾아보기로 했다.
-
+<!-- more -->
 ---
 
 #### SVG 와 Canvas의 장단점

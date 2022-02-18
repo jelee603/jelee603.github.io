@@ -3,6 +3,7 @@ title: 썸네일 이미지 생성
 date: 2021-11-10 17:55:44
 categories:
   - Lab
+toc: true
 comments: false
 thumbnail: '/images/create-thumbnail.png'
 ---
@@ -10,6 +11,7 @@ thumbnail: '/images/create-thumbnail.png'
 블로그엔 썸네일(thumbnail) 이미지도 같이 추가해야하는데 매번 그림을 찾는것도 그 그림의 픽셀이 깨지는 것도 번거로워서 글자와 배경만 바뀌는 심플한 이미지로 대체해봤습니다.
 
 아래는 그 썸네일 이미지를 생성할 수 있는 페이지입니다.
+<!-- more -->
 텍스트를 입력하고, 색상을 선택하면 이미지를 다운 받을 수 있고, 색상값은 미리 대중화 된 걸로 설정해두었습니다.
 
 <iframe src="https://jelee603.github.io/code/create-thumbnail.html" style="width: 100vh; height: 30vh"></iframe>

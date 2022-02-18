@@ -5,6 +5,7 @@ date: 2019-08-28
 categories:
   - JavaScript
 thumbnail: '/images/promise.png'
+toc: true
 comments: false
 ---
 
@@ -14,6 +15,7 @@ comments: false
 [pangyo][pangyo]님의 블로그에 정리가 잘 되어있다.
 Promise 메서드를 호출하면 pending 상태가 되고 then 일 때, 실행한다.
 프로미스는 덕 타이핑의 실제 사례이다.
+<!-- more -->
 어떤 객체에 then() 메서드가 있으면 무조건 이 객체는 데너블(Thenable) 하다고 간주하고 프로미스라 판단한다.
 
 ```js

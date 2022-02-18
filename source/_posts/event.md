@@ -4,6 +4,7 @@ title: 'Javascript Event 이야기'
 date: 2019-08-22
 categories:
   - JavaScript
+toc: true
 thumbnail: /images/event.png
 comments: false
 ---
@@ -12,7 +13,7 @@ comments: false
 
 전체 화면에서 히든 페이지가 필요해져서 window 객체에 keyup 이벤트를 등록하는 방법으로 문제를 해결한 경우가 있는데,
 이 이벤트를 제거해줄 필요가 있는지에 대해서 고민이 되었다.
-
+<!-- more -->
 #### 이벤트 리스너의 this 는 어떻게 인지할까?
 
 this 를 잘 바꿔줄 때, 필요한 메서드가 call, apply, bind 이다.

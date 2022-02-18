@@ -4,12 +4,14 @@ title: TSConfig 설정방법
 date: 2022-01-14 16:14:08
 categories:
   - Option
+toc: true
 comments: false
 thumbnail: '/images/typescript-config.png'
 ---
 
 타입스크립트로 전환하면, config 파일을 생성해서 프로퍼티를 추가하게 되는데요,
 기본 리액트 버전으로 설치하면 가장 먼저 만나게 되는 오류가 있습니다.
+<!-- more -->
 
 > <span style='color:red'> Could not find a declaration file for module 'react'.
 > ...

@@ -2,12 +2,16 @@
 layout: source/_posts
 title: React Native
 date: 2021-09-29 10:15:57
+toc: true
 comments: false
 categories:
   - JavaScript
 tags:
 thumbnail: '/images/react-native.png'
 ---
+
+리액트 네이티브로 앱을 개발하면서 만나게 된 버그들을 기록합니다. 
+<!-- more -->
 
 > Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports. <br/>
 > Check the render method of `App`.

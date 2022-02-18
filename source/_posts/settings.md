@@ -4,6 +4,7 @@ title: '개발환경 세팅하기'
 date: 2019-09-26
 categories:
   - Option
+toc: true
 comments: false
 thumbnail: '/images/settings.png'
 ---
@@ -11,6 +12,8 @@ thumbnail: '/images/settings.png'
 #### 작업환경 세팅하기
 
 ##### (2021.10.26) VSCode 2021.10.26 작업환경 세팅
+
+<!-- more -->
 
 - Material Theme
 - Material Theme Icons

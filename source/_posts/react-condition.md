@@ -5,12 +5,13 @@ date: 2021-10-03 18:38:26
 categories:
   - JavaScript
 tags:
+toc: true
 comments: false
 thumbnail: '/images/react-condition.png'
 ---
 
 [조건부 렌더링](https://ko.reactjs.org/docs/conditional-rendering.html)
-
+<!-- more -->
 ```
 render() {
   const isLoggedIn = this.state.isLoggedIn;

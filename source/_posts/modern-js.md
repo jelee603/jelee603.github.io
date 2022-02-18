@@ -1,5 +1,6 @@
 ---
 title: 모던 자바스크립트 새로운 기능
+toc: true
 comments: false
 categories:
   - JavaScript
@@ -9,7 +10,7 @@ date: 2022-01-27 23:47:36
 
 ES2016 ~ ES2020 까지 자바스크립트의 많은 변화가 있었습니다. 
 [모던자바스립트 핵심가이드](http://www.yes24.com/Product/Goods/101478466)책이 너무 잘 정리되어있어 책을 보는 것을 추천합니다. 여기엔 자주 사용하는 몇가지 문법만 정리해봅니다.
-
+<!-- more -->
 #### JavaScript
 
 [Object.fromEntries()](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries)

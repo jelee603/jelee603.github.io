@@ -3,6 +3,7 @@ title: HTML <span> 요소
 date: 2021-11-12 15:08:11
 categories:
   - HTML/CSS
+toc: true
 comments: false
 thumbnail: '/images/html-span.png'
 ---
@@ -11,6 +12,7 @@ thumbnail: '/images/html-span.png'
 
 인라인은 전체 문단이 끊기지 않고 하나로 그려집니다. 문서의 흐름에서 줄바꿈을 강제하진 않는거죠.
 반면에 블록 요소는 줄바꿈을 할 수 있습니다. 그럼에도 간단한 문장은 span 만 사용해서 개행을 하고 싶은 경우가 생기죠.
+<!-- more -->
 
 ---
 

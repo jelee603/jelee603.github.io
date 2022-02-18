@@ -4,11 +4,14 @@ title: 'Sass(SCSS) 알아가기'
 date: 2020-01-22
 categories:
   - HTML/CSS
+toc: true
 comments: false
 thumbnail: '/images/sass.png'
 ---
 
 > sass 사용하면, 변수로 사용한 상태에서 스타일을 재사용할 수 있다.
+
+<!-- more -->
 
 ```js
 yarn add node-sass --save

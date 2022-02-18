@@ -4,6 +4,7 @@ title: 'NPM'
 date: 2019-08-09
 categories:
   - Option
+toc: true
 comments: false
 thumbnail: '/images/npm.png'
 ---
@@ -11,7 +12,7 @@ thumbnail: '/images/npm.png'
 ![image](/images/npm.png)
 
 [Node Package Manager](<https://ko.wikipedia.org/wiki/Npm_(%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4)>) 라 하며, 자바스크립트 라이브러리를 모아놓은 패키지 관리자입니다.
-
+<!-- more -->
 #### NPM 설정
 
 ```

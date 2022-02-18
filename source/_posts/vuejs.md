@@ -5,6 +5,7 @@ date: 2019-08-14
 categories:
   - JavaScript
 thumbnail: /images/vue-js.png
+toc: true
 comments: false
 ---
 
@@ -12,6 +13,8 @@ MVC 패턴이 도입되면서 Controller 에서 데이터 작업들에 대한 �
 Vue 는 MVVM 패턴으로 중간에 ViewModel 객체를 두고 데이터에 대한 의존성을 분리하기 위해 사용한 패턴이다.
 같은 데이터인데 몇가지 조합해서 가공이 필요한 경우에 View Model 부분에서 수정을 하게끔 정해져있다.
 (Dom listener, Directives, Data Binding 등등..)
+
+<!-- more -->
 
 - 렌더링은 React 랑 유사하고 Virtual DOM 을 사용해서 가볍고 빠름.
 - 양방향 데이터 바인딩 (Vue 인스턴스와 Template) 이 모두 데이터에 접근할 수 있음. (v-model)

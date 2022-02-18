@@ -4,6 +4,7 @@ date: 2021-12-28 14:57:17
 tags:
 categories:
   - JavaScript
+toc: true
 comments: false
 thumbnail: '/images/react-runtime-error.png'
 ---
@@ -14,6 +15,7 @@ thumbnail: '/images/react-runtime-error.png'
 
 먼저 어떤 버전의 문제인지, React 와 Eslint 에서 권장하는 버전을 확인하러 가봅니다.
 
+<!-- more -->
 1. 공식 홈페이지 권장사항
    https://reactjs.org/docs/create-a-new-react-app.html
 
