@@ -2,7 +2,7 @@
 title: Yarn
 date: 2021-10-17 15:31:01
 categories:
-  - Option
+  - Tip
 tags:
 thumbnail: '/images/yarn.png'
 toc: true

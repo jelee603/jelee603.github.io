@@ -10,13 +10,13 @@ thumbnail: '/images/react-migration.png'
 
 리액트에서 타입스크립트를 지원하고 있어, 간단하게 설치가 가능하지만 기존 프로젝트에 마이그레이션 방법으로 설치를 해보고자 한다.
 <!-- more -->
-##### 1. [React-TypeScript](https://reactjs.org/docs/static-type-checking.html#typescript) 적용 방법:
+### [React-TypeScript](https://reactjs.org/docs/static-type-checking.html#typescript) 적용 방법
 
 ```js
 npx create-react-app my-app --template typescript
 ```
 
-##### 2. 기존 리액트 프로젝트에 타입스크립트로 마이그레이션 방법: <br/>
+### 기존 리액트 프로젝트에 타입스크립트로 마이그레이션 방법
 
 [Create React App](https://reactjs.org/docs/create-a-new-react-app.html) 의 순서대로 설치한다.
 

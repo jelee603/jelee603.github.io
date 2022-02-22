@@ -42,12 +42,12 @@ head:
 navbar:
   menu:
     # Home: /
-    Steady: /steady
+    Plan: /plan
     HTML/CSS: /categories/HTML-CSS
     JavaScript: /categories/JavaScript
     Lab: /categories/Lab
-    Option: /categories/Option
-    Archives: /archives
+    Tip: /categories/Tip
+    # Archives: /archives
     # Categories: /categories
   links:
     Download on GitHub:
@@ -122,7 +122,7 @@ widgets:
       Bulma: https://bulma.io
   - position: none
     type: categories
-  - position: right
+  - position: left
     type: recent_posts
   - position: none
     type: archives
@@ -132,7 +132,7 @@ widgets:
     type: subscribe_email
     description:
     feedburner_id: ''
-  - position: right
+  - position: left
     type: adsense
     client_id: 'ca-pub-7250093750072260'
     slot_id: '4932064801'

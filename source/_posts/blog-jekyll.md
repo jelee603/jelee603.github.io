@@ -8,11 +8,11 @@ toc: true
 comments: false
 thumbnail: '/images/blog-jekyll.png'
 ---
+##### Jekyll 프레임워크를 이용해 블로그를 작성하고, github에 자동 deploy 까지
+<!-- more -->
 
 <img src='/images/blog-jekyll.png' width='300'>
 
-##### Jekyll 프레임워크를 이용해 블로그를 작성하고, github에 자동 deploy 까지
-<!-- more -->
 #### 환경설정하기
 
 Jekyll은 markdown(\*.md) 파일을 생성하면 웹페이지로 서비스를 할 수 있는 정적 사이트 생성기이다.

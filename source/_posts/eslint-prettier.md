@@ -2,7 +2,7 @@
 title: VSCode 에서 ESLint와 Prettier 설정방법
 date: 2022-01-15 17:05:58
 categories:
-  - Option
+  - Tip
 toc: true
 comments: false
 thumbnail: '/images/eslint-prettier.png'

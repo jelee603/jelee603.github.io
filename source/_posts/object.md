@@ -10,7 +10,7 @@ comments: false
 ---
 
 object 를 string 으로 바꾸는 방법은 `JSON.stringify()`를 사용한다.
-
+<!-- more -->
 ```js
 const obj = [{ name: 'first' }, { name: 'second' }, { name: 'third' }];
 
@@ -18,7 +18,7 @@ JSON.stringify(obj); // "[{"name":"first"},{"name":"second"},{"name":"third"}]
 ```
 
 이 방법은 리스트로 만들어진 오브젝트를 필터링할 때 쓰는 방법인데 중복도 제거할 수 있어서 많이 사용한다.
-<!-- more -->
+
 ```js
 const obj = [
   { name: 'first', value: 1 },

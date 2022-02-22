@@ -210,9 +210,9 @@ module.exports = class extends Component {
               </a>
             ) : null}
             {/* Share button */}
-            {!index ? (
+            {/* {!index ? (
               <Share config={config} page={page} helper={helper} />
-            ) : null}
+            ) : null} */}
           </article>
         </div>
         {/* Donate button */}

@@ -10,9 +10,11 @@ thumbnail: '/images/html-span.png'
 
 [`<span>`](https://developer.mozilla.org/ko/docs/Web/HTML/Element/span) 은 구문 컨텐츠를 위한 문장을 묶을 때 사용하는 [인라인 요소](https://developer.mozilla.org/ko/docs/Web/HTML/Inline_elements)입니다.
 
+
+<!-- more -->ㄴ
+
 인라인은 전체 문단이 끊기지 않고 하나로 그려집니다. 문서의 흐름에서 줄바꿈을 강제하진 않는거죠.
 반면에 블록 요소는 줄바꿈을 할 수 있습니다. 그럼에도 간단한 문장은 span 만 사용해서 개행을 하고 싶은 경우가 생기죠.
-<!-- more -->
 
 ---
 

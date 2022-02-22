@@ -9,11 +9,9 @@ comments: false
 thumbnail: '/images/blog-hexo.png'
 ---
 
-![blog](/images/blog-hexo.png)
-
-##### Hexo 프레임워크를 이용해 블로그를 작성하고, github에 자동 deploy 까지
+> Hexo 프레임워크를 이용해 블로그를 작성하고, github에 자동 deploy 까지
 <!-- more -->
-## 1. 설치하기
+## 설치하기
 
 ```
 npm install hexo-cli -g
@@ -23,7 +21,7 @@ npm run server
 https://hexo.io/
 https://github.com/ppoffice/hexo-theme-hueman
 
-## 2. github 연동하기
+### github 연동하기
 
 **Project > Settigns > GitHub Pages**
 Branch: main
@@ -48,7 +46,7 @@ HEXO_DEPLOY_TOKEN 이름으로 토큰을 등록한다.
 
 \***\*주기적으로 Actions 토큰을 업데이트 해준다.** <br/> \***\*Mac 에서는 cmd + space > keychain 접근에서 github.com 은 모두 삭제해준 후에 IDE에서 토큰을 재등록해준다.**
 
-## 3. github deploy 등록하기
+### github deploy 등록하기
 
 **Project > Actions**
 workflow 를 자동으로 생성할 수 있게 많이 제공하지만, 일단 'and set up a workflow yourself' 를 클릭해서 개별 스크립트를 작성해준다.
@@ -107,7 +105,7 @@ Actions 실행되는 스크립트는 config 파일의 deploy 변수를 제대로
 
 위와 같이 작성하고, push 를 하게 되면, build 가 시작되고 정상적으로 완료되면, 블로그에 반영이 된다!
 
-## 4. Generate 포매터 변경
+### Generate 포매터 변경
 
 `scaffolds > post.md`에 필요한 포맷을 넣어두면 파일이 생성될 때, 자동으로 들어간다. 
 
@@ -131,7 +129,7 @@ date: { { date } }
     "editor.formatOnSave": false,
 }
 ```
-## 5. 글쓰기 (마크다운)
+## 글쓰기 (마크다운)
 
 - post 파일 생성 방법
 ```
@@ -149,7 +147,7 @@ hexo server --draft
 알파벳은 반드시 소문자만 가능
 띄어쓰기는 -(하이픈)으로 구분
 
-## Reference
+#### Reference
 
 - https://hexo.io/ko/docs/writing.html
 - https://www.w3schools.io/file/markdown-cheatsheet

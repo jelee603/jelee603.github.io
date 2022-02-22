@@ -3,7 +3,7 @@ layout: post
 title: '단축키 모음'
 date: 2020-01-09
 categories:
-  - Option
+  - Tip
 toc: true
 comments: false
 thumbnail: '/images/vscode.png'

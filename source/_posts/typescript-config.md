@@ -3,7 +3,7 @@ layout: _posts
 title: TSConfig 설정방법
 date: 2022-01-14 16:14:08
 categories:
-  - Option
+  - Tip
 toc: true
 comments: false
 thumbnail: '/images/typescript-config.png'
