@@ -65,7 +65,7 @@ plugins:
 theme: icarus
 deploy:
   type: git
-  repo: https://__GITHUB_TOKEN__@github.com/jelee603/jelee603.github.io.git
+  repo: https://__HEXO_DEPLOY_TOKEN__@github.com/jelee603/jelee603.github.io.git
   branch: main
 robotstxt:
   useragent: '*'
