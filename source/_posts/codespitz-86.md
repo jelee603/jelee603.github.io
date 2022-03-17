@@ -10,7 +10,7 @@ date: 2022-01-27 21:11:37
 
 [코드스피츠 86 - 객체지향 자바스크립트](https://www.youtube.com/watch?v=E9NZ0YEZrYU&list=PLBNdLLaRx_rIRXCp9tKsg7qDQmAX19ocw) 강의를 정리해봅니다. 
 
-#### 프로그래밍의 기준을 어디에 둘까요?
+### 프로그래밍의 기준을 어디에 둘까요?
 
 Value Context: 메모리 주소에 관계없이 값이 같다고 보면 같은 것이라 보는 관점 (값 기반)
 
