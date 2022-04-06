@@ -68,9 +68,3 @@ thumbnail: '/images/vscode.png'
 - 터미널에서 `code .` 로 프로젝트를 열기 => Shell Command
 - 프로젝트 매니저에 추가하기 => Project Manager: Save Project
 
-#### Mac 단축키
-
-`cmd + option + esc` : 응용 프로그램 강제 종료
-`cmd + space` : 스포트라이트 검색 - (활성 상태 보기)
-`cmd + w` : 크롬 텝 닫기
-`cmd + y` : 크롬 브라우저 방문기록 보기
