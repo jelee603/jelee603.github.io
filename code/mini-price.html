@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style lang="text/css">
+        .main {
+            display: flex; 
+            flex-direction: column; 
+            width: 200px;
+        }
+
+        input {
+            margin: 2px;
+            min-height: 25px;
+        }
+        
+        button {
+            margin: 2px;
+            min-height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <input type="text" id ="item" placeholder="상품명" value="" />
+        <input type="text" id ="price" placeholder="가격" value="" />
+        <input type="text" id ="date" placeholder="날짜(YYYYMMDD)" value=""/>
+        <div>
+            <button type="button" onclick="handleSave()">저장</button>
+            <button type="button" onclick="handleDownload()">다운로드</button>
+        </div>
+    </div>
+    <script type="text/javascript">
+        const $item = document.getElementById('item');
+        const $price = document.getElementById('price');
+        const $date = document.getElementById('date');
+        const dataset = [];
+
+        const getValues = () => {
+            const values = {
+                item: $item.value,
+                price: Number($price.value),
+                date: formatDate($date.value),
+            }
+
+            return values;
+        }
+
+        const formatDate = (date) => {
+            if (date.length === 8) {
+                const year = date.slice(0, 4);
+                const month = date.slice(4, 6);
+                const day = date.slice(6, 8)
+
+                return new Date(year, month -1, day).getTime();
+            }
+            return new Date().getTime();
+        }
+
+        const handleSave = () => {
+            console.log('handleSave', getValues());
+
+            const values = getValues();
+            dataset.push(values);
+        }
+
+        const handleDownload = () => {
+            const originData = {dataset};
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(new Blob([JSON.stringify(originData, null, 2)], {type: 'text/plan'}));
+            a.setAttribute('download', 'data.txt');
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        } 
+    </script>
+</body>
+</html>

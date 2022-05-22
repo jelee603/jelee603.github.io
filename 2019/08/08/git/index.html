@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Git 이야기 - jelee</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="jelee"><meta name="msapplication-TileImage" content="img/jelee/favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="jelee"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="안 쓰면 잊어버리는 Git 명령어Git은 만들고 나면 크게 문제가 없고, 충돌나지 않으면 별 문제없이 편하지만, 가끔 발생하는 문제에 대해서는 조치 방법을 위해 정리해둘 필요가 있다."><meta property="og:type" content="blog"><meta property="og:title" content="Git 이야기"><meta property="og:url" content="https://jelee603.github.io/2019/08/08/git/"><meta property="og:site_name" content="jelee"><meta property="og:description" content="안 쓰면 잊어버리는 Git 명령어Git은 만들고 나면 크게 문제가 없고, 충돌나지 않으면 별 문제없이 편하지만, 가끔 발생하는 문제에 대해서는 조치 방법을 위해 정리해둘 필요가 있다."><meta property="og:locale" content="ko_KR"><meta property="og:image" content="https://jelee603.github.io/images/git.png"><meta property="article:published_time" content="2019-08-08T00:00:00.000Z"><meta property="article:modified_time" content="2022-05-22T14:43:23.730Z"><meta property="article:author" content="Jieun Lee"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/images/git.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://jelee603.github.io/2019/08/08/git/"},"headline":"Git 이야기","image":["https://jelee603.github.io/images/git.png"],"datePublished":"2019-08-08T00:00:00.000Z","dateModified":"2022-05-22T14:43:23.730Z","author":{"@type":"Person","name":"Jieun Lee"},"publisher":{"@type":"Organization","name":"jelee","logo":{"@type":"ImageObject","url":"https://jelee603.github.io/2019/08/08/git/img/jelee/logo.png"}},"description":"안 쓰면 잊어버리는 Git 명령어Git은 만들고 나면 크게 문제가 없고, 충돌나지 않으면 별 문제없이 편하지만, 가끔 발생하는 문제에 대해서는 조치 방법을 위해 정리해둘 필요가 있다."}</script><link rel="canonical" href="https://jelee603.github.io/2019/08/08/git/"><link rel="icon" href="/img/jelee/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><script data-ad-client="ca-pub-7250093750072260" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" async></script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7250093750072260" crossorigin="anonymous"></script><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+          Array
+              .from(document.querySelectorAll('.tab-content'))
+              .forEach($tab => {
+                  $tab.classList.add('is-hidden');
+              });
+          Array
+              .from(document.querySelectorAll('.tabs li'))
+              .forEach($tab => {
+                  $tab.classList.remove('is-active');
+              });
+          const $activeTab = document.querySelector(location.hash);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+          const $tabMenu = document.querySelector(`a[href="${location.hash}"]`);
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/rss2.xml" title="jelee" type="application/rss+xml">
+</head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/jelee/logo.png" alt="jelee" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/plan">Plan</a><a class="navbar-item" href="/categories/HTML-CSS">HTML/CSS</a><a class="navbar-item" href="/categories/JavaScript">JavaScript</a><a class="navbar-item" href="/categories/Lab">Lab</a><a class="navbar-item" href="/categories/Tip">Tip</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/jelee603"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="카탈로그" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="검색" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-image"><span class="image is-7by3"><img class="fill" src="/images/git.png" alt="Git 이야기"></span></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">2019-08-08&nbsp;게시 됨</span><span class="level-item"><a class="link-muted" href="/categories/Option/">Option</a></span></div></div><h1 class="title is-3 is-size-4-mobile">Git 이야기</h1><div class="content"><h4 id="안-쓰면-잊어버리는-Git-명령어"><a href="#안-쓰면-잊어버리는-Git-명령어" class="headerlink" title="안 쓰면 잊어버리는 Git 명령어"></a>안 쓰면 잊어버리는 Git 명령어</h4><p>Git은 만들고 나면 크게 문제가 없고, 충돌나지 않으면 별 문제없이 편하지만, 가끔 발생하는 문제에 대해서는 조치 방법을 위해 정리해둘 필요가 있다.</p>
+<span id="more"></span>
+<p><strong>Git First</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// git clone 할때, 레포가 없다하면.. 주소를 변경해주자..</span><br><span class="line">https://깃ID@github.com/레포주소 git clone XXX git init git add README.md git</span><br><span class="line">commit -m &#x27;first commit&#x27; git push origin main</span><br></pre></td></tr></table></figure>
+
+<p><strong>Git Branch</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b develop(브랜치명) git add . git commit -m &#x27;xxx&#x27; git push origin</span><br><span class="line">develop // hotfix git checkout main git checkout -b hotfix/YYYYMMDD</span><br></pre></td></tr></table></figure>
+
+<p>gitignore 파일을 만들고 추후에 파일들을 삭제하고 싶을땐, 항상 캐시문제로 stage 에 올라간 파일을 삭제하기가 어려웠다.<br><a target="_blank" rel="noopener" href="https://brunch.co.kr/@hopeless/9">hopeless</a> 블로그에서 보면 제외할 폴더나 파일을 cached 된걸 삭제해줘야한다고 한다.</p>
+<p><strong>Git Ignore</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// .gitignore 파일에 제외할 폴더 추가 ex) .idea/ git rm -r --cached . git add .</span><br><span class="line">git commit -m &#x27;ignore 수정&#x27;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Git Rebase</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git rebase -i HEAD~2 // (직전 커밋한 갯수 포함) 병합할 갯수를 지정 pick -&gt; s //</span><br><span class="line">pick 을 squash (s) 로 변경 :wq</span><br></pre></td></tr></table></figure>
+
+<p><strong>Git Delete</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -d feature/dev-1 git push origin -d feature/dev-1</span><br></pre></td></tr></table></figure>
+
+<p><strong>Git Conflict</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 1. IDE 를 활용한 해결 방법 Webstorm : VCS &gt; Git &gt; Resolve Confilicts</span><br><span class="line">Terminal: git merge --continue :qa // 2. 수동 해결 방법 // HEAD ~ === 영역이</span><br><span class="line">원본이므로 수정하고, 다시 commit 해준다. git add . git commit -m &#x27;confilct</span><br><span class="line">resolved&#x27;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Git Cherry Pick</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout release git cherry-pick #135bc</span><br></pre></td></tr></table></figure>
+
+<p><strong>Git Merge</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git checkout A git merge B (Fast-forward : 합칠때 하나로 만든다.) git merge</span><br><span class="line">--no-ff B (합칠때 merge 커밋을 만든다) // 충돌난 파일 목록을 확인한다. git</span><br><span class="line">status // git merge 해결방법 &lt;&lt;&lt;&lt;&lt;&lt; HEAD # 현재 checkout 한 A 브랜치의 상태</span><br><span class="line">///// # 구분자 &gt;&gt;&gt;&gt;&gt;&gt; B # 병합하려는 대상 B mereg conflic 수정 후 add, commit</span><br><span class="line">진행하면 정상적으로 merge commit이 진행된다.</span><br></pre></td></tr></table></figure>
+
+<p><strong>Git Merge 취소하기</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge --abort</span><br></pre></td></tr></table></figure>
+
+<p><strong>Git Reset</strong><br>해당 커밋을 push 했지만 되돌리고 싶을때 사용한다. (한번에 점프고하고 싶을때, 사용하지만 가급적이면 사용하지 않는다)</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard HEAD^</span><br></pre></td></tr></table></figure>
+
+<p><strong>Git Revert</strong><br>해당 커밋만 취소하고 싶을 때 사용한다. WebStorm IDE 에서는 Revert 기능을 제공하고 있다. (우클릭 - Git - Revert)</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git revert &lt;되돌릴 커밋&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Git Permission denied (Window10)</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 로컬에 저장된 계정이 있으면, 새 계정으로 다시 로그인을 해줘야한다. git config</span><br><span class="line">--global user.name git config --global user.email</span><br></pre></td></tr></table></figure>
+
+<p><strong>Git 취약점 해결방법</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm audit fix</span><br></pre></td></tr></table></figure>
+
+</div></article></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2019/08/09/npm/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">NPM</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2019/08/07/blog-jekyll/"><span class="level-item">Jekyll을 이용한 github 블로그 생성하기</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><div class="column column-right is-4-tablet is-4-desktop is-4-widescreen  order-3 is-sticky"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">카탈로그</h3><ul class="menu-list"><li><a class="level is-mobile" href="#안-쓰면-잊어버리는-Git-명령어"><span class="level-left"><span class="level-item">1</span><span class="level-item">안 쓰면 잊어버리는 Git 명령어</span></span></a></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/jelee/logo.png" alt="jelee" height="28"></a><p class="is-size-7"><span>&copy; 2022 Jieun Lee</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("ko");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="맨 위로" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="입력 하세요..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"입력 하세요...","untitled":"(제목 없음)","posts":"포스트","pages":"페이지","categories":"카테고리","tags":"태그"});
+        });</script></body></html>
