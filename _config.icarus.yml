@@ -122,7 +122,7 @@ widgets:
       Bulma: https://bulma.io
   - position: none
     type: categories
-  - position: left
+  - position: none
     type: recent_posts
   - position: none
     type: archives
@@ -132,7 +132,7 @@ widgets:
     type: subscribe_email
     description:
     feedburner_id: ''
-  - position: left
+  - position: none
     type: adsense
     client_id: 'ca-pub-7250093750072260'
     slot_id: '4932064801'
