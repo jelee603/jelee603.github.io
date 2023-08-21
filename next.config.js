@@ -4,7 +4,8 @@ const nextConfig = {
     styledComponents: true,
   },
   images: {
-    domain: ['jelee603.github.io'],
+    loader: 'imgix',
+    path: 'https://jelee603.github.io',
   },
 };
 
