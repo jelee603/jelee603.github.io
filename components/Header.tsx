@@ -63,8 +63,6 @@ const Wrapper = styled.header`
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  /* font-size: 2rem; */
-  /* line-height: 3.5em; */
 `;
 
 const Nav = styled.nav`
