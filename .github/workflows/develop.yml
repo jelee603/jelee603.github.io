@@ -1,35 +1,20 @@
-# This is a basic workflow to help you get started with Actions
+name: GitHub pages Deploy
 
-name: CI
-
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the develop branch
   push:
     branches: [develop]
   pull_request:
     branches: [develop]
 
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - name: Checkout source
-        uses: actions/checkout@v2
-      - name: Use Node.js 16
-        uses: actions/setup-node@v2
-        with:
-          node-version: 16
-          cache: 'npm'
-      # - name: Before install
-      #   run: npm i -g hexo
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+
       - name: Before script
         env:
           GITHUB_TOKEN: ${{ secrets.HEXO_DEPLOY_TOKEN  }}
@@ -37,15 +22,13 @@ jobs:
           git config --global user.email "jelee603@gmail.com"
           git config --global user.name "jelee603"
           sed -i "s/__GITHUB_TOKEN__/${GITHUB_TOKEN}/" _config.yml
-      # - name: Theme install
-      #   run: |
-      #     git submodule update --init --remote --recursive
-      - name: NPM install
+
+      - name: Install and Build 🔧
         run: |
-          npm install
-      - name: deploy
-        run: |
-          npm build
-          # hexo clean
-          # hexo generate
-          # hexo deploy
+          yarn install
+          yarn build && touch ./out/.nojekyll
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: out
