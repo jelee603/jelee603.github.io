@@ -28,8 +28,8 @@ jobs:
         with:
           node-version: 16
           cache: 'npm'
-      - name: Before install
-        run: npm i -g hexo
+      # - name: Before install
+      #   run: npm i -g hexo
       - name: Before script
         env:
           GITHUB_TOKEN: ${{ secrets.HEXO_DEPLOY_TOKEN  }}
@@ -43,8 +43,9 @@ jobs:
       - name: NPM install
         run: |
           npm install
-      - name: Hexo deploy
+      - name: deploy
         run: |
-          hexo clean
-          hexo generate
-          hexo deploy
+          npm build
+          # hexo clean
+          # hexo generate
+          # hexo deploy
