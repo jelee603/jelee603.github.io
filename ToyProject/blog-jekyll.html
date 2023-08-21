@@ -1,0 +1,86 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="viewport-fit=cover"/><meta name="next-head-count" content="2"/><link rel="preload" href="/_next/static/css/6eca03e35c9c9eae.css" as="style"/><link rel="stylesheet" href="/_next/static/css/6eca03e35c9c9eae.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-78c92fac7aa8fdd8.js"></script><script src="/_next/static/chunks/webpack-d38be8d96a62f950.js" defer=""></script><script src="/_next/static/chunks/framework-63157d71ad419e09.js" defer=""></script><script src="/_next/static/chunks/main-63b5e73f15fce3bf.js" defer=""></script><script src="/_next/static/chunks/pages/_app-220f73948b70f663.js" defer=""></script><script src="/_next/static/chunks/23-1e1b6cd9f6a2e676.js" defer=""></script><script src="/_next/static/chunks/pages/ToyProject/%5Bslug%5D-3a0b0357d2b99d28.js" defer=""></script><script src="/_next/static/n1F0CVZ8gd7T38i1_wAcz/_buildManifest.js" defer=""></script><script src="/_next/static/n1F0CVZ8gd7T38i1_wAcz/_ssgManifest.js" defer=""></script></head><body><div id="__next"><div class="sc-15c0e3ea-0 dVIBKG"><header class="sc-45b68ef7-0 ieAueO"><nav class="sc-45b68ef7-1 cDSFRs"><div class="sc-45b68ef7-2 iKGhce"><a href="/">Home</a></div><div class="sc-45b68ef7-2 iKGhce"><a href="/React/react-condition">React</a></div><div class="sc-45b68ef7-2 iKGhce"><a href="/Vue/vuejs">Vue</a></div><div class="sc-45b68ef7-2 iKGhce"><a href="/JavaScript/es6">JavaScript</a></div><div class="sc-45b68ef7-2 iKGhce"><a href="/TypeScript/typescript">TypeScript</a></div><div class="sc-45b68ef7-2 iKGhce"><a href="/HTML_CSS/browser-operation">HTML/CSS</a></div><div class="sc-45b68ef7-2 iKGhce"><a href="/ToyProject">Toy Project</a></div><a href="/profile"><div class="sc-45b68ef7-3 TXhNy"></div></a></nav></header><main class="sc-15c0e3ea-1 beiqXP"><section class="sc-4cda4792-0 hKTavi"><h1 class="sc-4cda4792-1 fufkvd">Jekyll을 이용한 github 블로그 생성하기</h1><h6>2019-08-07</h6><article class="sc-4cda4792-2 bwOmow"><h5>Jekyll 프레임워크를 이용해 블로그를 작성하고, github에 자동 deploy 까지</h5>
+<p>&#x3C;img src='/images/blog-jekyll.png width='300'></p>
+<h4>환경설정하기</h4>
+<p>Jekyll은 markdown(*.md) 파일을 생성하면 웹페이지로 서비스를 할 수 있는 정적 사이트 생성기이다.</p>
+<p>Ruby를 환경에서 동작하기 때문에 윈도우에도 Ruby를 설치 해야한다.
+RubyInstaller for Windows 를 설치하는데 (Devkit 가 포함된 버전)으로 설치하면 된다.
+Ruby+Devkit 2.5.5-1 (x64) 로 설치를 진행했다.</p>
+<p><a href="https://rubyinstaller.org/downloads/">Ruby Installer</a></p>
+<hr>
+<h4>사이트 생성하기</h4>
+<p><a href="https://jekyllrb-ko.github.io/docs/windows/">Jekyll 공식사이트(한글 번역)</a></p>
+<pre><code>// jekyll 설치
+gem install jekyll bundler
+
+// 사이트 생성
+jekyll new my-awesome-site
+cd my-awesome-site
+
+// jekyll 실행 (window)
+my-awesome-site $jekyll serve --watch
+
+// jekyll 실행 (mac)
+bundle exec jekyll serve --watch
+</code></pre>
+<hr>
+<h4>글 작성하기</h4>
+<p>마크다운 파일명과 상단 텍스트는 규칙대로 만들어주고 저장을 하게 되면 home 에 리스트가 나타난다.</p>
+<pre><code>_post / yyyy - mm - dd - title.md;
+</code></pre>
+<hr>
+<h4>테마 적용하기</h4>
+<p>제공하는 테마 중에서 댓글도 없고, 심플한 디자인인 'jekyll-theme-clean-blog' 가 이 테마를 적용해보았다.</p>
+<pre><code>// install
+gem "jekyll-theme-clean-blog"
+
+// _config.yml
+theme: jekyll-theme-clean-blog
+</code></pre>
+<p>새로 적용하면 아주 이쁘게 잘 보이는데.. 영문일 때 폰트만 이뻐서.. 한글 폰트는 다른걸 사용하고 싶어졌다.</p>
+<hr>
+<h4>폰트 적용하기</h4>
+<p>Jekyll의 수많은 테마는 변경없이 사용할 수 있도록 제공되지만..
+블로그 테마를 변경하고 싶지 않고.. 커스텀하게 적용할 방법을 찾게 될 수 밖에 없는거 같다.</p>
+<p>그래서 <a href="https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll">Clean Blog Jekyll</a> 사이트에서 소스를 받아 분석을 시작했다.</p>
+<p>우선 스타일 관련부분을 모두 가져와서 내 프로젝트에 그대로 덮어씌우고, 빌드를 했더니 _site 에 로컬 파일들이 들어갔다.</p>
+<pre><code>// 개별로 가져온 파일
+_sass / styles.scss;
+assets / vendor / startbootstrap - clean - blog;
+assets / main.css;
+</code></pre>
+<p>폰트는 구글에서 기본 제공한다는 폰트 중에 이쁜 나눔고딕체를 import 해서 사용했다.</p>
+<pre><code>// _sass/styles.scss
+/* Import Google Web Font */
+@import url(http://fonts.googleapis.com/css?family=Nanum+Gothic:400,700);
+
+/* Style Blog Font */
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure {
+  margin-bottom: 15px;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+</code></pre>
+<hr>
+<h4>Code Block 스타일 적용하기</h4>
+<p>폰트를 넣고 보니.. 코드 블럭이 이쁘지가 않았다.
+마크다운 문서에 소스코드가 저렇게 안 이쁘다니.. 다시 스타일을 찾기 시작했다.</p>
+<p><a href="https://github.com/eungbean/Atom-OneDarkTheme-4-Jekyll">OneDarkTheme</a>에 <code>syntax-one-dark.css</code> 을 가져왔다.
+assets/css/syntax.css 에 스타일을 적용하고, import 해서 사용했다.</p>
+<pre><code>// _sass/styles.scss
+/* Import Highlight */
+@import "../assets/css/syntax.css";
+</code></pre>
+<p>테마 요소의 다른 부분은 건드리지 않았고, 스타일만 앞으로 계속 커스텀하게 바꿔봐야겠다.</p>
+<hr>
+<h4>Git Repository 블로그 적용하기</h4>
+<p>Repository에 등록하면 프로젝트 명(git_id.github.io) 로 등록을 하면 바로 깃허브에서 확인을 할 수 있다.
+기본 jekyll 만 설치하면 바로 확인이 가능하다고 하는데..
+공식으로 지정된 테마만 등록이 가능하다고.. 커스텀 테마의 경우엔 404 ERROR 가 발생했다.</p>
+<p>결국엔 필요한 파일의 일부가 아니라 전부를 내 프로젝트에 추가했다.
+그리고 시작된 jekyll 공부..</p>
+<p>jekyll 에서 사용되는 문법은 Ruby로 작성된 Liquid 템플릿 언어이다.
+<a href="https://goodgid.github.io/What-is-Liquid-Grammer/">goodGid</a> 님의 블로그가 정리되어있고, 이 언어를 사용해서 html을 만들고
+layout 탬플릿 파일이 동적 파일들(*.md)을 로드해서 정적파일로 변환해준다.</p>
+<hr>
+<h4>git auto build jekyll 무시하기</h4>
+<p>.nojekyll 빈 파일을 root 에 생성한다.</p>
+</article></section></main></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"post":{"title":"Jekyll을 이용한 github 블로그 생성하기","slug":"blog-jekyll","date":"2019-08-07","content":"\u003ch5\u003eJekyll 프레임워크를 이용해 블로그를 작성하고, github에 자동 deploy 까지\u003c/h5\u003e\n\u003cp\u003e\u0026#x3C;img src='/images/blog-jekyll.png width='300'\u003e\u003c/p\u003e\n\u003ch4\u003e환경설정하기\u003c/h4\u003e\n\u003cp\u003eJekyll은 markdown(*.md) 파일을 생성하면 웹페이지로 서비스를 할 수 있는 정적 사이트 생성기이다.\u003c/p\u003e\n\u003cp\u003eRuby를 환경에서 동작하기 때문에 윈도우에도 Ruby를 설치 해야한다.\nRubyInstaller for Windows 를 설치하는데 (Devkit 가 포함된 버전)으로 설치하면 된다.\nRuby+Devkit 2.5.5-1 (x64) 로 설치를 진행했다.\u003c/p\u003e\n\u003cp\u003e\u003ca href=\"https://rubyinstaller.org/downloads/\"\u003eRuby Installer\u003c/a\u003e\u003c/p\u003e\n\u003chr\u003e\n\u003ch4\u003e사이트 생성하기\u003c/h4\u003e\n\u003cp\u003e\u003ca href=\"https://jekyllrb-ko.github.io/docs/windows/\"\u003eJekyll 공식사이트(한글 번역)\u003c/a\u003e\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e// jekyll 설치\ngem install jekyll bundler\n\n// 사이트 생성\njekyll new my-awesome-site\ncd my-awesome-site\n\n// jekyll 실행 (window)\nmy-awesome-site $jekyll serve --watch\n\n// jekyll 실행 (mac)\nbundle exec jekyll serve --watch\n\u003c/code\u003e\u003c/pre\u003e\n\u003chr\u003e\n\u003ch4\u003e글 작성하기\u003c/h4\u003e\n\u003cp\u003e마크다운 파일명과 상단 텍스트는 규칙대로 만들어주고 저장을 하게 되면 home 에 리스트가 나타난다.\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e_post / yyyy - mm - dd - title.md;\n\u003c/code\u003e\u003c/pre\u003e\n\u003chr\u003e\n\u003ch4\u003e테마 적용하기\u003c/h4\u003e\n\u003cp\u003e제공하는 테마 중에서 댓글도 없고, 심플한 디자인인 'jekyll-theme-clean-blog' 가 이 테마를 적용해보았다.\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e// install\ngem \"jekyll-theme-clean-blog\"\n\n// _config.yml\ntheme: jekyll-theme-clean-blog\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e새로 적용하면 아주 이쁘게 잘 보이는데.. 영문일 때 폰트만 이뻐서.. 한글 폰트는 다른걸 사용하고 싶어졌다.\u003c/p\u003e\n\u003chr\u003e\n\u003ch4\u003e폰트 적용하기\u003c/h4\u003e\n\u003cp\u003eJekyll의 수많은 테마는 변경없이 사용할 수 있도록 제공되지만..\n블로그 테마를 변경하고 싶지 않고.. 커스텀하게 적용할 방법을 찾게 될 수 밖에 없는거 같다.\u003c/p\u003e\n\u003cp\u003e그래서 \u003ca href=\"https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll\"\u003eClean Blog Jekyll\u003c/a\u003e 사이트에서 소스를 받아 분석을 시작했다.\u003c/p\u003e\n\u003cp\u003e우선 스타일 관련부분을 모두 가져와서 내 프로젝트에 그대로 덮어씌우고, 빌드를 했더니 _site 에 로컬 파일들이 들어갔다.\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e// 개별로 가져온 파일\n_sass / styles.scss;\nassets / vendor / startbootstrap - clean - blog;\nassets / main.css;\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e폰트는 구글에서 기본 제공한다는 폰트 중에 이쁜 나눔고딕체를 import 해서 사용했다.\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e// _sass/styles.scss\n/* Import Google Web Font */\n@import url(http://fonts.googleapis.com/css?family=Nanum+Gothic:400,700);\n\n/* Style Blog Font */\nh1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure {\n  margin-bottom: 15px;\n  font-family: 'Nanum Gothic', sans-serif;\n}\n\u003c/code\u003e\u003c/pre\u003e\n\u003chr\u003e\n\u003ch4\u003eCode Block 스타일 적용하기\u003c/h4\u003e\n\u003cp\u003e폰트를 넣고 보니.. 코드 블럭이 이쁘지가 않았다.\n마크다운 문서에 소스코드가 저렇게 안 이쁘다니.. 다시 스타일을 찾기 시작했다.\u003c/p\u003e\n\u003cp\u003e\u003ca href=\"https://github.com/eungbean/Atom-OneDarkTheme-4-Jekyll\"\u003eOneDarkTheme\u003c/a\u003e에 \u003ccode\u003esyntax-one-dark.css\u003c/code\u003e 을 가져왔다.\nassets/css/syntax.css 에 스타일을 적용하고, import 해서 사용했다.\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e// _sass/styles.scss\n/* Import Highlight */\n@import \"../assets/css/syntax.css\";\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e테마 요소의 다른 부분은 건드리지 않았고, 스타일만 앞으로 계속 커스텀하게 바꿔봐야겠다.\u003c/p\u003e\n\u003chr\u003e\n\u003ch4\u003eGit Repository 블로그 적용하기\u003c/h4\u003e\n\u003cp\u003eRepository에 등록하면 프로젝트 명(git_id.github.io) 로 등록을 하면 바로 깃허브에서 확인을 할 수 있다.\n기본 jekyll 만 설치하면 바로 확인이 가능하다고 하는데..\n공식으로 지정된 테마만 등록이 가능하다고.. 커스텀 테마의 경우엔 404 ERROR 가 발생했다.\u003c/p\u003e\n\u003cp\u003e결국엔 필요한 파일의 일부가 아니라 전부를 내 프로젝트에 추가했다.\n그리고 시작된 jekyll 공부..\u003c/p\u003e\n\u003cp\u003ejekyll 에서 사용되는 문법은 Ruby로 작성된 Liquid 템플릿 언어이다.\n\u003ca href=\"https://goodgid.github.io/What-is-Liquid-Grammer/\"\u003egoodGid\u003c/a\u003e 님의 블로그가 정리되어있고, 이 언어를 사용해서 html을 만들고\nlayout 탬플릿 파일이 동적 파일들(*.md)을 로드해서 정적파일로 변환해준다.\u003c/p\u003e\n\u003chr\u003e\n\u003ch4\u003egit auto build jekyll 무시하기\u003c/h4\u003e\n\u003cp\u003e.nojekyll 빈 파일을 root 에 생성한다.\u003c/p\u003e\n","category":"ToyProject"},"posts":[{"slug":"hello-world","title":"Hello","date":"2023-08-16"},{"slug":"shortcut-mac","title":"Mac을 편하게 사용하는 방법 7가지","date":"2022-04-06 23:00:14","coverImage":"/images/cover/shortcut-mac.png","category":"Tip"},{"slug":"react-native","title":"React Native","date":"2022-03-17 14:00:00","coverImage":"/images/cover/react-native.png","category":"React"},{"slug":"modern-js","title":"모던 자바스크립트 새로운 기능","date":"2022-01-27 23:47:36","coverImage":"/images/cover/modern-js.png","category":"JavaScript"},{"slug":"codespitz-86","title":"코드스피츠 [객체지향 자바스크립트] 돌아보기","date":"2022-01-27 21:11:37","coverImage":"/images/cover/codespitz.png","category":"JavaScript"},{"slug":"eslint-prettier","title":"VSCode 에서 ESLint와 Prettier 설정방법","date":"2022-01-15 17:05:58","coverImage":"/images/cover/eslint-prettier.png","category":"Tip"},{"slug":"typescript-config","title":"TSConfig 설정방법","date":"2022-01-14 16:14:08","coverImage":"/images/cover/typescript-config.png","category":"TypeScript"},{"slug":"react-cypress","title":"리액트 타입스크립트에 Cypress 적용하기","date":"2022-01-14 13:58:02","coverImage":"/images/cover/react-cypress.png","category":"React"},{"slug":"react-runtime-error","title":"JS 런타임 오류 (React)","date":"2021-12-28 14:57:17","coverImage":"/images/cover/react-runtime-error.png","category":"React"},{"slug":"browser-operation","title":"브라우저 동작 원리","date":"2021-12-01 21:59:43","coverImage":"/images/cover/browser-operation.png","category":"HTML_CSS"},{"slug":"react-redux","title":"React Redux","date":"2021-11-26 13:45:56","coverImage":"/images/cover/react-redux.png","category":"React"},{"slug":"css-selectors","title":"CSS 선택자","date":"2021-11-12 15:12:23","coverImage":"/images/cover/css-selectors.png","category":"HTML_CSS"},{"slug":"html-span","title":"HTML \u003cspan\u003e 요소","date":"2021-11-12 15:08:11","coverImage":"/images/cover/html-span.png","category":"HTML_CSS"},{"slug":"create-thumbnail","title":"썸네일 이미지 생성","date":"2021-11-10 17:55:44","coverImage":"/images/cover/create-thumbnail.png","category":"ToyProject"},{"slug":"react-migration","title":"리액트에 타입스크립트 적용하기","date":"2021-11-05 00:22:39","coverImage":"/images/cover/react-migration.png","category":"React"},{"slug":"react-vac","title":"React VAC Pattern","date":"2021-11-01 16:57:17","coverImage":"/images/cover/react-vac.png","category":"React"},{"slug":"typescript","title":"TypeScript 스터디","date":"2021-11-01 14:27:36","coverImage":"/images/cover/typescript.png","category":"TypeScript"},{"slug":"vanilla","title":"Vanilla JS 다뤄보기","date":"2021-10-30 23:20:00","coverImage":"/images/cover/vanilla.png","category":"JavaScript"},{"slug":"yarn","title":"Yarn","date":"2021-10-17 15:31:01","coverImage":"/images/cover/yarn.png","category":"JavaScript"},{"slug":"port","title":"Mac에서 Port 종료하기","date":"2021-10-10 23:31:07","coverImage":"/images/cover/port.png","category":"Tip"},{"slug":"react-condition","title":"React 조건부 렌더링","date":"2021-10-03 18:38:26","coverImage":"/images/cover/react-condition.png","category":"React"},{"slug":"blog-hexo","title":"Hexo를 이용한 github 블로그 생성하기","date":"2021-09-24","coverImage":"/images/cover/blog-hexo.png","category":"ToyProject"},{"slug":"good-image","title":"good-image","date":"2021-09-13 12:59:37","coverImage":"/images/cover/study.png"},{"slug":"es6","title":"ES6 문법","date":"2020-02-04","coverImage":"/images/cover/es6.png","category":"JavaScript"},{"slug":"sass","title":"Sass(SCSS) 알아가기","date":"2020-01-22","coverImage":"/images/cover/sass.png","category":"HTML_CSS"},{"slug":"shortcut","title":"단축키 모음","date":"2020-01-09","coverImage":"/images/cover/vscode.png","category":"Tip"},{"slug":"storage","title":"Local \u0026 Session Storage","date":"2019-11-01","coverImage":"/images/cover/storage.png","category":"HTML_CSS"},{"slug":"testing-vue","title":"Vue.js 2.x 테스트 적용기","date":"2019-10-17","coverImage":"/images/cover/testing-vue.png","category":"Vue"},{"slug":"graphql","title":"Graphql 적용기","date":"2019-10-16","coverImage":"/images/cover/graphql.png","category":"JavaScript"},{"slug":"blob","title":"Load Image File","date":"2019-10-10","coverImage":"/images/cover/blob.png","category":"JavaScript"},{"slug":"d3","title":"D3 필요한 메서드 정리해보자","date":"2019-10-01","coverImage":"/images/cover/d3.png","category":"JavaScript"},{"slug":"settings","title":"개발환경 세팅하기","date":"2019-09-26","coverImage":"/images/cover/settings.png","category":"Tip"},{"slug":"pattern","title":"Javascript 디자인패턴 이야기","date":"2019-09-11","coverImage":"/images/cover/pattern.png","category":"JavaScript"},{"slug":"promise","title":"Javascript Promise 이야기","date":"2019-08-28","coverImage":"/images/cover/promise.png","category":"JavaScript"},{"slug":"event","title":"Javascript Event 이야기","date":"2019-08-22","coverImage":"/images/cover/event.png","category":"JavaScript"},{"slug":"object","title":"Javascript Object 이야기","date":"2019-08-21","coverImage":"/images/cover/object.png","category":"JavaScript"},{"slug":"browser","title":"Browser 이야기","date":"2019-08-19","coverImage":"/images/cover/browser.png","category":"HTML_CSS"},{"slug":"array","title":"Javascript Array 이야기","date":"2019-08-18","coverImage":"/images/cover/array.png","category":"JavaScript"},{"slug":"css-grid-flex","title":"CSS Grid 와 Flex 사용법","date":"2019-08-16","coverImage":"/images/cover/css-grid-flex.png","category":"HTML_CSS"},{"slug":"vuejs","title":"Vue 이야기","date":"2019-08-14","coverImage":"/images/cover/vue-js.png","category":"Vue"},{"slug":"npm","title":"NPM","date":"2019-08-09","coverImage":"/images/cover/npm.png","category":"JavaScript"},{"slug":"git","title":"Git 이야기","date":"2019-08-08","coverImage":"/images/cover/git.png","category":"Git"},{"slug":"blog-jekyll","title":"Jekyll을 이용한 github 블로그 생성하기","date":"2019-08-07","coverImage":"/images/cover/blog-jekyll.png","category":"ToyProject"},{"slug":"canvas","title":"Canvas로 그래프 그리기","date":"2019-06-10","coverImage":"/images/cover/canvas.png","category":"HTML_CSS"}]},"__N_SSG":true},"page":"/ToyProject/[slug]","query":{"slug":"blog-jekyll"},"buildId":"n1F0CVZ8gd7T38i1_wAcz","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>
