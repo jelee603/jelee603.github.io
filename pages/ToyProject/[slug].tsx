@@ -28,11 +28,11 @@ const Title = styled.h1`
   width: 100%;
   text-align: center;
   color: black;
-  line-height: 2.8rem;
   font-size: 4rem;
 `;
 const Article = styled.article`
-  padding: 0 8rem;
+  padding: 0 2rem;
+  width: 100%;
 `;
 
 export async function getStaticProps({

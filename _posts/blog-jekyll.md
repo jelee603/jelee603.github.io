@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Jekyll을 이용한 github 블로그 생성하기'
+title: 'Jekyll을 이용한 github 블로그 만들기'
 date: "2019-08-07"
 category: ToyProject
 toc: true

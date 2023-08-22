@@ -11,7 +11,12 @@ slug: shortcut
 
 유용한 단축키를 정리합니다.
 
-#### VSCode 단축키 (Window 단축키)
+## 이모지 단축키
+1. 편집 > 이모티콘 
+2. Control-Command-스페이스
+
+
+## VSCode 단축키 (Mac 단축키)
 
 <!-- more -->
 
@@ -22,7 +27,7 @@ slug: shortcut
 - `cmd + p` : 파일 찾기
 - `cmd + j` : 터미널 창 열기
 
-#### Snippets 활용
+## Snippets 활용
 :`html:5` html 자동완성
 
 ```html
@@ -40,7 +45,7 @@ slug: shortcut
 
 ![자동완성 템플릿](/images/post/react-snippets.png)
 
-#### 페이지 셋업에서 설정하기
+## 페이지 셋업에서 설정하기
 : json 파일열기 => open settings (json)
 
 ```

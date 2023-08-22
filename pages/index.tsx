@@ -51,6 +51,10 @@ const Card = styled.div`
   background-color: white;
   border-radius: 15px;
   margin-bottom: 2%;
+
+  @media screen and (max-width: 500px) {
+    flex-basis: 100%;
+  }
 `;
 
 const CardLink = styled(Link)`

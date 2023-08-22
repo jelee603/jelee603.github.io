@@ -19,6 +19,37 @@ slug: typescript
 여러가지 타입을 이용해서 새 타입을 작성하기 위한 방법으로 유니언과 제네릭이 있습니다.
 
 유니언은 여러 타입 중 하나라고 선언하는 것입니다. ('|' 을 사용)
+```
+// category.ts
+export type PostCategory =
+  | 'JavaScript'
+  | 'TypeScript'
+  | 'React';
+
+// page.ts
+import {PostCategory} from "./category";
+
+const category: PostCategory = 'TypeScript';
+console.log(category);
+```
+
+### union type 을 쓰는 이유는 뭘까?🤔
+- js 파일로 트랜스파일링 될 때, 타입은 사라지므로 코드가 줄어든다. 
+- enum 보다 선언 방법이 간단하다.
+```
+export enum PostCategory {
+  JavaScript = 'JavaScript',
+  TypeScript = 'TypeScript'
+  React = 'React'
+}
+
+// page.ts
+import {PostCategory} from "./category";
+
+const category: PostCategory = PostCategory.TypeScript;
+console.log(category);
+```
+
 제네릭은 타입에 변수를 제공하는 방법입니다. 제네릭이 있는 배열은 배열 안의 값을 설명할 수 있습니다.
 
 ```js

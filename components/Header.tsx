@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Link from 'next/link';
+import Menu from '@mui/icons-material/Menu';
 
 type LinkType = {
   href: string;
@@ -20,11 +21,11 @@ const Links: LinkType[] = [
   },
   {
     href: '/JavaScript/es6',
-    title: 'JavaScript',
+    title: 'JS',
   },
   {
     href: '/TypeScript/typescript',
-    title: 'TypeScript',
+    title: 'TS',
   },
   {
     href: '/HTML_CSS/browser-operation',
@@ -45,6 +46,9 @@ const Header = () => {
             <Link href={href}>{title}</Link>
           </NavItem>
         ))}
+        {/* <MenuIcon>
+          <Menu fontSize="large" />
+        </MenuIcon> */}
         <Link href="/profile">
           <Icon></Icon>
         </Link>
@@ -92,4 +96,5 @@ const Icon = styled.div`
   cursor: pointer;
 `;
 
+const MenuIcon = styled.div``;
 export default Header;

@@ -13,19 +13,21 @@ const PostLayout = ({ posts, category, children }: PostLayoutProps) => {
   return (
     <Container>
       <Header />
-      <Menu>
+      <Aside>
         <SideBar posts={posts} category={category} />
-      </Menu>
+      </Aside>
+      <div>ttt</div>
       <Main>{children}</Main>
     </Container>
   );
 };
 
 const Container = styled.div`
+  width: 100vw;
   height: 100vh;
 `;
 
-const Menu = styled.aside`
+const Aside = styled.aside`
   position: fixed;
   box-sizing: border-box;
   padding: 0;
@@ -33,9 +35,17 @@ const Menu = styled.aside`
   overflow-y: auto;
   margin: 0;
   height: inherit;
+
+  @media screen and (max-width: 500px) {
+    display: none;
+  }
 `;
 
 const Main = styled.main`
   padding-left: 36rem;
+
+  @media screen and (max-width: 500px) {
+    padding: 0;
+  }
 `;
 export default PostLayout;
