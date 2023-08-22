@@ -1,1 +1,0 @@
-{"pageProps":{"post":{"title":"Yarn","slug":"yarn","date":"2021-10-17 15:31:01","content":"<h4>전역에 설치된 모듈을 확인하는 방법:</h4>\n<pre><code>yarn global list\n</code></pre>\n","category":"JavaScript"}},"__N_SSG":true}
