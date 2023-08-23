@@ -31,7 +31,7 @@ const Title = styled.h1`
   font-size: 4rem;
 `;
 const Article = styled.article`
-  padding: 0 2rem;
+  padding: 0 4rem;
   width: 100%;
 `;
 

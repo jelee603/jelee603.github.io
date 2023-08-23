@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'CSS Grid 와 Flex 사용법'
+title: 'Grid 와 Flex 사용법'
 date: "2019-08-16"
 category: HTML_CSS
 toc: true
@@ -9,7 +9,7 @@ coverImage: /images/cover/css-grid-flex.png
 slug: css-grid-flex
 ---
 
-##### Grid 사용할 때, 중첩된 그리드는 어떻게 나눌까?
+## Grid 사용할 때, 중첩된 그리드는 어떻게 나눌까?
 
 [Grid](https://developer.mozilla.org/ko/docs/Web/CSS/grid) 는 중첩이 필요할 땐, 항상 grid 로 재분할이 필요하다.
 <!-- more -->

@@ -14,7 +14,7 @@ slug: react-condition
 <!-- more -->
 ```js
 render() {
-  const isLoggedIn = this.state.isLoggedIn;
+const isLoggedIn = this.state.isLoggedIn;
   return (
     <div>
       {isLoggedIn ? (

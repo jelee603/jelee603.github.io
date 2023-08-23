@@ -2,20 +2,27 @@ import { ReactNode, useState, MouseEvent } from 'react';
 import Header from '@/components/Header';
 import styled from 'styled-components';
 import SideMenu from '@/components/SideMenu';
+import ModalPortal from '@/components/ModalPortal';
 
 interface DefaultLayoutProps {
   children: ReactNode;
 }
 const DefaultLayout = ({ children }: DefaultLayoutProps) => {
-  const [menuToggle, setMenuToggle] = useState(false);
-  const handleMenuClick = () => {
-    setMenuToggle(!menuToggle);
+  const [modalOpen, setModalOpen] = useState(false);
+  const handleModal = () => {
+    setModalOpen(!modalOpen);
+    document.body.style.overflow = modalOpen ? 'auto' : 'hidden';
   };
   return (
     <Container>
-      <Header onClick={handleMenuClick} />
+      <Header onClick={handleModal} />
       <Main>
-        <SideMenu show={menuToggle} />
+        {modalOpen && (
+          <ModalPortal>
+            <SideMenu isOpen={modalOpen} onClose={handleModal} />
+          </ModalPortal>
+        )}
+
         {children}
       </Main>
     </Container>
@@ -23,7 +30,6 @@ const DefaultLayout = ({ children }: DefaultLayoutProps) => {
 };
 
 const Container = styled.div`
-  width: 100vw;
   height: 100vh;
 `;
 

@@ -14,6 +14,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
       </Head>
       <Component {...pageProps} />
+      <div id="modal"></div>
     </>
   );
 }

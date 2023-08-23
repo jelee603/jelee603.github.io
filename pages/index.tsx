@@ -38,7 +38,7 @@ const Main = styled.main`
 const Section = styled.section`
   display: flex;
   flex-wrap: wrap-reverse;
-  /* margin: 0 20rem; */
+  margin: 0 20px;
   gap: 2%;
 `;
 

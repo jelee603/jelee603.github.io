@@ -1,9 +1,9 @@
 import { ReactNode, useState } from 'react';
 import Header from '@/components/Header';
-import PostSideBar from '@/components/PostSideBar';
 import { PostCategory, PostType } from '@/interfaces/post';
 import styled from 'styled-components';
 import SideMenu from '@/components/SideMenu';
+import ModalPortal from '@/components/ModalPortal';
 
 interface PostLayoutProps {
   children: ReactNode;
@@ -11,25 +11,29 @@ interface PostLayoutProps {
   category: PostCategory;
 }
 const PostLayout = ({ posts, category, children }: PostLayoutProps) => {
-  const [menuToggle, setMenuToggle] = useState(false);
-  const handleMenuClick = () => {
-    setMenuToggle(!menuToggle);
+  const [modalOpen, setModalOpen] = useState(false);
+  const handleModal = () => {
+    setModalOpen(!modalOpen);
+    document.body.style.overflow = modalOpen ? 'auto' : 'hidden';
   };
 
   return (
     <Container>
-      <Header onClick={handleMenuClick} />
-      <Aside>
+      <Header onClick={handleModal} />
+      {/* <Aside>
         <PostSideBar posts={posts} category={category} />
-      </Aside>
-      <SideMenu show={menuToggle} />
+      </Aside> */}
+      {modalOpen && (
+        <ModalPortal>
+          <SideMenu isOpen={modalOpen} onClose={handleModal} />
+        </ModalPortal>
+      )}
       <Main>{children}</Main>
     </Container>
   );
 };
 
 const Container = styled.div`
-  width: 100vw;
   height: 100vh;
 `;
 
@@ -48,10 +52,10 @@ const Aside = styled.aside`
 `;
 
 const Main = styled.main`
-  padding-left: 36rem;
+  /* padding-left: 36rem; */
 
-  @media screen and (max-width: 500px) {
+  /* @media screen and (max-width: 500px) {
     padding: 0;
-  }
+  } */
 `;
 export default PostLayout;

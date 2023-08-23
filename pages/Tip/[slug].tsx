@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import type { PostType } from '@/interfaces/post';
 import { getAllPosts, getPostBySlug } from '@/lib/api';
 import markdownToHtml from '@/lib/markdownToHtml';
-import { useRouter } from 'next/router';
 import { NextPage } from 'next';
 import PostLayout from '@/layout/PostLayout';
 
@@ -11,12 +10,11 @@ const Post: NextPage<{ posts: PostType[]; post: PostType }> = ({
   posts,
   post,
 }) => {
-  const router = useRouter();
   return (
     <PostLayout posts={posts} category={category}>
       <Section>
         <Title>{post.title}</Title>
-        <h6>{post.date}</h6>
+        <Date>{post.date}</Date>
         <Article dangerouslySetInnerHTML={{ __html: post.content }} />
       </Section>
     </PostLayout>
@@ -27,7 +25,6 @@ const Section = styled.section`
   padding-top: 10rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
   flex: 1;
 `;
 const Title = styled.h1`
@@ -37,8 +34,12 @@ const Title = styled.h1`
   line-height: 2.8rem;
   font-size: 4rem;
 `;
+const Date = styled.h5`
+  width: 100%;
+  text-align: center;
+`;
 const Article = styled.article`
-  padding: 0 8rem;
+  padding: 0 4rem;
 `;
 
 export async function getStaticProps({

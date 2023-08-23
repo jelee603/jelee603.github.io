@@ -74,7 +74,7 @@ const Nav = styled.nav`
 const Section = styled.section`
   display: flex;
   flex-wrap: wrap;
-  margin: 0 20rem;
+  margin: 0 20px;
   gap: 2%;
 `;
 
