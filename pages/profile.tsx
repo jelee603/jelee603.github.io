@@ -6,7 +6,7 @@ import { WorkType } from '@/interfaces/works';
 import data from '@/mocks/profile.json';
 import data_ect from '@/mocks/profile_etc.json';
 import { Button } from '@/components/Button';
-import Header from '@/components/Header';
+import DefaultLayout from '@/layout/DefaultLayout';
 
 const Profile = () => {
   const [showMore, setShowMore] = useState(false);
@@ -14,8 +14,7 @@ const Profile = () => {
     setShowMore(!showMore);
   };
   return (
-    <>
-      <Header />
+    <DefaultLayout>
       <Section>
         <TimeLineContainer>
           <TimeLine />
@@ -42,7 +41,7 @@ const Profile = () => {
             return <Card value={value} key={index} />;
           })}
       </Section>
-    </>
+    </DefaultLayout>
   );
 };
 

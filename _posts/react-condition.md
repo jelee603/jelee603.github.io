@@ -12,7 +12,7 @@ slug: react-condition
 
 [조건부 렌더링](https://ko.reactjs.org/docs/conditional-rendering.html)
 <!-- more -->
-```
+```js
 render() {
   const isLoggedIn = this.state.isLoggedIn;
   return (
@@ -33,7 +33,7 @@ jsx 에서는 [map](https://developer.mozilla.org/ko/docs/Web/JavaScript/Referen
 
 반복문
 
-```
+```js
 const todoItems = todos.map((todo, index) =>
   // Only do this if items have no stable IDs
   <li key={index}>
