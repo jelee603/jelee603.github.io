@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Link from 'next/link';
 import Menu from '@mui/icons-material/Menu';
+import { MouseEvent } from 'react';
 
 type LinkType = {
   href: string;
@@ -35,24 +36,32 @@ const Links: LinkType[] = [
     href: '/ToyProject',
     title: 'Toy Project',
   },
+  {
+    href: '/profile',
+    title: 'About',
+  },
 ];
 
-const Header = () => {
+interface HeaderProps {
+  onClick: () => void;
+}
+
+const Header = ({ onClick }: HeaderProps) => {
   return (
     <Wrapper>
-      <Nav>
+      <Link href="/">
+        <Icon></Icon>
+      </Link>
+      {/* <Nav>
         {Links.map(({ href, title }, index) => (
           <NavItem key={index}>
             <Link href={href}>{title}</Link>
           </NavItem>
         ))}
-        {/* <MenuIcon>
-          <Menu fontSize="large" />
-        </MenuIcon> */}
-        <Link href="/profile">
-          <Icon></Icon>
-        </Link>
-      </Nav>
+      </Nav> */}
+      <MenuIcon onClick={onClick}>
+        <Menu fontSize="large" />
+      </MenuIcon>
     </Wrapper>
   );
 };
@@ -66,7 +75,7 @@ const Wrapper = styled.header`
   z-index: 100;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-between;
 `;
 
 const Nav = styled.nav`
@@ -96,5 +105,8 @@ const Icon = styled.div`
   cursor: pointer;
 `;
 
-const MenuIcon = styled.div``;
+const MenuIcon = styled.div`
+  padding: 2rem;
+  cursor: pointer;
+`;
 export default Header;

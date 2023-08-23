@@ -2,11 +2,11 @@ import { PostCategory, PostType } from '@/interfaces/post';
 import Link from 'next/link';
 import styled from 'styled-components';
 
-interface SideBarType {
+interface PostSideBarType {
   posts: PostType[];
   category: PostCategory;
 }
-const SideBar = ({ posts, category }: SideBarType) => {
+const PostSideBar = ({ posts, category }: PostSideBarType) => {
   return (
     <Items>
       {posts
@@ -38,4 +38,4 @@ const Item = styled.li`
   }
 `;
 
-export default SideBar;
+export default PostSideBar;

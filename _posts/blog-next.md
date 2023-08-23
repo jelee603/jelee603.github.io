@@ -101,7 +101,7 @@ const PostLayout = ({ posts, category, children }: PostLayoutProps) => {
     <Container>
       <Header />
       <Aside>
-        <SideBar posts={posts} category={category} />
+        <PostSideBar posts={posts} category={category} />
       </Aside>
       <div>ttt</div>
       <Main>{children}</Main>

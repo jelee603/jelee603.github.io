@@ -4,27 +4,25 @@ import Header from '../components/Header';
 import { NextPage } from 'next';
 import { getAllPosts } from '../lib/api';
 import { PostType } from '@/interfaces/post';
+import DefaultLayout from '@/layout/DefaultLayout';
 
 const category = 'Tip';
 const Home: NextPage<{ posts: PostType[] }> = ({ posts }) => {
   return (
-    <>
-      <Header />
-      <Main>
-        <Section>
-          {posts
-            .filter((v) => v.category == category)
-            .map((post, index) => (
-              <Card key={index}>
-                <CardLink href={`/${post.category}/${post.slug}`}>
-                  <CreateDate>{post.date}</CreateDate>
-                  <ContentTitle>{post.title}</ContentTitle>
-                </CardLink>
-              </Card>
-            ))}
-        </Section>
-      </Main>
-    </>
+    <DefaultLayout>
+      <Section>
+        {posts
+          .filter((v) => v.category == category)
+          .map((post, index) => (
+            <Card key={index}>
+              <CardLink href={`/${post.category}/${post.slug}`}>
+                <CreateDate>{post.date}</CreateDate>
+                <ContentTitle>{post.title}</ContentTitle>
+              </CardLink>
+            </Card>
+          ))}
+      </Section>
+    </DefaultLayout>
   );
 };
 
@@ -40,7 +38,7 @@ const Main = styled.main`
 const Section = styled.section`
   display: flex;
   flex-wrap: wrap-reverse;
-  margin: 0 20rem;
+  /* margin: 0 20rem; */
   gap: 2%;
 `;
 

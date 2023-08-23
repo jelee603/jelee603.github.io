@@ -1,8 +1,9 @@
-import { ReactNode } from 'react';
+import { ReactNode, useState } from 'react';
 import Header from '@/components/Header';
-import SideBar from '@/components/SideBar';
+import PostSideBar from '@/components/PostSideBar';
 import { PostCategory, PostType } from '@/interfaces/post';
 import styled from 'styled-components';
+import SideMenu from '@/components/SideMenu';
 
 interface PostLayoutProps {
   children: ReactNode;
@@ -10,13 +11,18 @@ interface PostLayoutProps {
   category: PostCategory;
 }
 const PostLayout = ({ posts, category, children }: PostLayoutProps) => {
+  const [menuToggle, setMenuToggle] = useState(false);
+  const handleMenuClick = () => {
+    setMenuToggle(!menuToggle);
+  };
+
   return (
     <Container>
-      <Header />
+      <Header onClick={handleMenuClick} />
       <Aside>
-        <SideBar posts={posts} category={category} />
+        <PostSideBar posts={posts} category={category} />
       </Aside>
-      <div>ttt</div>
+      <SideMenu show={menuToggle} />
       <Main>{children}</Main>
     </Container>
   );
