@@ -1,6 +1,7 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import '../styles/globals.css';
+import '../styles/prism.css';
 import { getAllPosts } from '@/lib/api';
 
 function MyApp({ Component, pageProps }: AppProps) {
