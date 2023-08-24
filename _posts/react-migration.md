@@ -1,5 +1,5 @@
 ---
-title: 리액트에 타입스크립트 적용하기
+title: React 기존 프로젝트에 타입스크립트 마이그레이션
 date: "2021-11-05 00:22:39"
 category: React
 toc: true

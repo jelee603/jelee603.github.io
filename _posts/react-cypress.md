@@ -1,6 +1,6 @@
 ---
 layout: _posts
-title: 리액트 타입스크립트에 Cypress 적용하기
+title: React에 Cypress 적용하기
 date: "2022-01-14 13:58:02"
 category: React
 toc: true

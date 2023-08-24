@@ -1,5 +1,5 @@
 ---
-title: React Redux
+title: React와 Redux
 date: "2021-11-26 13:45:56"
 toc: true
 comments: false
