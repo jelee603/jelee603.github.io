@@ -4,7 +4,7 @@ title: '로드맵'
 date: "2021-09-24 14:39:08"
 category: ToyProject
 tags:
-coverImage: /images/cover/blog_default.png
+coverImage: /images/cover/default.png
 slug: load-map
 ---
 ### 개발자의 마음가짐

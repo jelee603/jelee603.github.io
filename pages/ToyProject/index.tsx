@@ -43,33 +43,6 @@ const ToyProject: NextPage<{ posts: PostType[] }> = ({ posts }) => {
   );
 };
 
-const Main = styled.main`
-  padding-top: 10rem;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
-
-const Nav = styled.nav`
-  width: 100%;
-  height: 40px;
-  text-align: center;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-  margin: 10px;
-
-  button {
-    line-height: 2.5;
-    font-size: 15px;
-    border: 0;
-    color: black;
-    background: transparent;
-    cursor: pointer;
-  }
-`;
-
 const Section = styled.section`
   display: flex;
   flex-wrap: wrap;
@@ -98,6 +71,12 @@ const Card = styled.div`
 const CardLink = styled(Link)`
   text-decoration: none;
   color: black;
+
+  &:hover {
+    img {
+      transform: scale(1.02);
+    }
+  }
 `;
 
 const ContentTitle = styled.div`
