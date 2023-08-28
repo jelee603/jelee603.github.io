@@ -7,12 +7,14 @@ const nextConfig = {
     unoptimized: true,
   },
   async rewrites() {
-    return [
-      {
-        source: '/fonts/:path*',
-        destination: 'https://preheat-bbbd1.web.app/fonts/:path*',
-      },
-    ];
+    return {
+      fallback: [
+        {
+          source: '/fonts/:path*',
+          destination: 'https://preheat-bbbd1.web.app/fonts/:path*',
+        },
+      ],
+    };
   },
 };
 
