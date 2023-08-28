@@ -4,7 +4,7 @@ body {
   margin: 0;
   font-size: 62.5%;
   line-height: 1.5;
-  font-family: NanumGothic, -apple-system, sans-serif;
+  font-family: 'Nanum Gothic', -apple-system, sans-serif;
   background-color: #f7f7f7;
 }
 
@@ -30,11 +30,11 @@ body {
   }
 } */
 
-@font-face {
+/* @font-face {
   font-family: 'NanumGothic';
   font-weight: 100;
   src: url('/fonts/NanumGothic.ttf') format('truetype');
-}
+} */
 
 h1 {
   font-size: 3.5rem;

@@ -1,12 +1,12 @@
 ---
 layout: post
-title: '단축키 모음'
+title: 'VS Code 활용하기'
 date: "2020-01-09"
 category: Tip
 toc: true
 comments: false
 coverImage: /images/cover/vscode.png
-slug: shortcut
+slug: vscode
 ---
 
 유용한 단축키를 정리합니다.
@@ -43,7 +43,32 @@ slug: shortcut
 
   :`rfc` 리액트 템플릿 자동완성
 
-![자동완성 템플릿](/images/post/react-snippets.png)
+![자동완성 템플릿](/images/post/vscode_snippets_1.png)
+
+
+## Snippets 만들기
+Code > 기본설정 > 사용자 코드조각 구성
+
+마크다운 문서에 필요한 기본 포맷을 아래와 같이 만들어둔다. 
+
+```markdown
+  "Print to console": {
+    "prefix": "mb",
+    "body": [
+      "---",
+      "title: ${0}",
+      "date: $CURRENT_YEAR.$CURRENT_MONTH.$CURRENT_DATE",
+      "category: ${2}",
+      "coverImage: 'images/cover/${3}'",
+      "slug: ${4}",
+      "---"
+    ],
+    "description": "markdown blog"
+  }
+```
+- `mb` + Control-스페이스 
+
+![자동완성 템플릿](/images/post/vscode_snippets_2.png)
 
 ## 페이지 셋업에서 설정하기
 : json 파일열기 => open settings (json)
@@ -70,6 +95,8 @@ slug: shortcut
 }
 ```
 
+## 커맨드 단축키 지정하기
 - 터미널에서 `code .` 로 프로젝트를 열기 => Shell Command
 - 프로젝트 매니저에 추가하기 => Project Manager: Save Project
+
 
