@@ -73,8 +73,10 @@ const Wrapper = styled.header`
 const Icon = styled.div`
   width: 6rem;
   height: 6rem;
+  margin: 8px;
+  border: 1px solid #ccc;
   border-radius: 50%;
-  background-image: url(/images/me.jpeg);
+  background-image: url(/images/me.jpg);
   background-position: 25%;
   background-size: contain;
   cursor: pointer;
@@ -83,5 +85,7 @@ const Icon = styled.div`
 const MenuIcon = styled.div`
   padding: 2rem;
   cursor: pointer;
+  display: flex;
+  align-items: center;
 `;
 export default Header;

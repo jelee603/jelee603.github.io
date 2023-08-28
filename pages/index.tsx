@@ -55,7 +55,7 @@ const CardLink = styled(Link)`
   color: black;
 `;
 
-const ContentTitle = styled.div`
+const ContentTitle = styled.h1`
   height: 100px;
   line-height: 5;
   padding-left: 10px;
