@@ -26,7 +26,7 @@ slug: 'web-lighthouse'
 
 웹 주소가 서로 다르니, CORS 오류를 해결해야하는데 Next.js에서는 [Rewrite](https://nextjs.org/docs/pages/api-reference/next-config-js/rewrites)로 Proxy를 대체하고 있습니다. 
 
-그런데 [google font cdn](https://fonts.google.com/specimen/Nanum+Gothic?query=nanum)을 제공해주고 있어 더욱 안전한 방법으로 해결했습니다. 
+구글에서는 [google font cdn](https://fonts.google.com/specimen/Nanum+Gothic?query=nanum)을 제공해주고 있어 이 방법으로 해결했습니다. 
 
 ![폰트](/images/post/web_lighthouse_2.png)
 
@@ -54,3 +54,16 @@ return (
     </>
 )
 ```
+
+## 회고
+
+점수가 많이 개선되었습니다.
+
+|LCP| FID | CLS|
+|--|--|--|
+|서버 응답 시간 개선| 사용하지 않는 자바스크립트 분할| 이미지 크기 설정|
+|리소스 요청 최적화| 자바스크립트 실행 시간 단축| 광고를 위한 고정 공간 확보, 웹 폰트 대응|
+
+위와 같은 방법으로 성능 지표를 해결할 수 있다고 유튜브에서도 봤지만, 이미지 압축과 cdn 서버를 이용하는 것이 얼마나 중요한 일이었는지 새삼 알게 되었습니다. 웹 성능을 점수로 확인하고나니, 더 개선하고 싶은 마음도 생기고 가이드로 보여주는 항목들이 앞으로 개발할 때는 성능을 고려하면서 개발을 해야겠다는 생각이 듭니다.
+
+![성능측정(2)](/images/post/web_lighthouse_3.png)
