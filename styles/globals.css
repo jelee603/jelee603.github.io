@@ -33,8 +33,7 @@ body {
 @font-face {
   font-family: 'NanumGothic';
   font-weight: 100;
-  src: url('https://preheat-bbbd1.web.app/fonts/NanumGothic.ttf')
-    format('truetype');
+  src: url('/fonts/NanumGothic.ttf') format('truetype');
 }
 
 h1 {
