@@ -60,7 +60,7 @@ p {
 
 ul > li {
   margin-bottom: 0px;
-  margin-left: 1.6rem;
+  /* margin-left: 1.6rem; */
   font-size: 1.6rem;
 }
 

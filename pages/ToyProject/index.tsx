@@ -19,7 +19,7 @@ const ToyProject: NextPage<{ posts: PostType[] }> = ({ posts }) => {
                 <div
                   style={{
                     position: 'relative',
-                    height: '30rem',
+                    height: '20rem',
                     width: '100%',
                   }}
                 >
@@ -27,7 +27,6 @@ const ToyProject: NextPage<{ posts: PostType[] }> = ({ posts }) => {
                     src={post.coverImage}
                     alt=""
                     fill
-                    sizes="100rem 30rem"
                     style={{
                       borderRadius: '15px 15px 0 0',
                     }}
@@ -74,8 +73,13 @@ const Nav = styled.nav`
 const Section = styled.section`
   display: flex;
   flex-wrap: wrap;
-  margin: 0 20px;
+  margin: 0 20%;
   gap: 2%;
+
+  @media screen and (max-width: 500px) {
+    margin: 0 10px;
+    gap: 10px;
+  }
 `;
 
 const Card = styled.div`

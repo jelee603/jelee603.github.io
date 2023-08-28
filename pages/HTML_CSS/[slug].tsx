@@ -26,6 +26,11 @@ const Section = styled.section`
   display: flex;
   flex-direction: column;
   flex: 1;
+  margin: 0 20%;
+
+  @media screen and (max-width: 500px) {
+    margin: 0 5%;
+  }
 `;
 const Title = styled.h1`
   width: 100%;
@@ -38,9 +43,7 @@ const Date = styled.h5`
   width: 100%;
   text-align: center;
 `;
-const Article = styled.article`
-  padding: 0 4rem;
-`;
+const Article = styled.article``;
 
 export async function getStaticProps({
   params,

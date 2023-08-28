@@ -23,6 +23,11 @@ const Section = styled.section`
   flex-direction: column;
   align-items: center;
   flex: 1;
+  margin: 0 20%;
+
+  @media screen and (max-width: 500px) {
+    margin: 0 5%;
+  }
 `;
 const Title = styled.h1`
   width: 100%;
@@ -31,7 +36,6 @@ const Title = styled.h1`
   font-size: 4rem;
 `;
 const Article = styled.article`
-  padding: 0 4rem;
   width: 100%;
 `;
 

@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import styled from 'styled-components';
-import Header from '../components/Header';
 import { NextPage } from 'next';
 import { getAllPosts } from '../lib/api';
 import { PostType } from '@/interfaces/post';
@@ -26,20 +25,16 @@ const Home: NextPage<{ posts: PostType[] }> = ({ posts }) => {
   );
 };
 
-const Main = styled.main`
-  padding-top: 10rem;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
-
 const Section = styled.section`
   display: flex;
   flex-wrap: wrap-reverse;
-  margin: 0 20px;
+  margin: 0 20%;
   gap: 2%;
+
+  @media screen and (max-width: 500px) {
+    margin: 5%;
+    gap: 10px;
+  }
 `;
 
 const Card = styled.div`

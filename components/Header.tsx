@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import Link from 'next/link';
 import Menu from '@mui/icons-material/Menu';
-import { MouseEvent } from 'react';
 
 type LinkType = {
   href: string;
@@ -52,13 +51,6 @@ const Header = ({ onClick }: HeaderProps) => {
       <Link href="/">
         <Icon></Icon>
       </Link>
-      {/* <Nav>
-        {Links.map(({ href, title }, index) => (
-          <NavItem key={index}>
-            <Link href={href}>{title}</Link>
-          </NavItem>
-        ))}
-      </Nav> */}
       <MenuIcon onClick={onClick}>
         <Menu fontSize="large" />
       </MenuIcon>
@@ -70,29 +62,12 @@ const Wrapper = styled.header`
   width: 100%;
   position: fixed;
   height: 8rem;
-  background: white;
+  background: hsla(0, 0%, 100%, 0.8);
+  backdrop-filter: saturate(180%) blur(5px);
   border-bottom: 1px solid black;
-  z-index: 100;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-`;
-
-const Nav = styled.nav`
-  display: flex;
-  flex-direction: row;
-`;
-
-const NavItem = styled.div`
-  margin: 2rem 1rem;
-
-  a {
-    font-size: 1.5rem;
-    text-decoration: none;
-  }
-  a:hover {
-    border-bottom: 2px solid #46bd87;
-  }
 `;
 
 const Icon = styled.div`

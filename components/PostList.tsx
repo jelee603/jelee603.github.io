@@ -85,8 +85,10 @@ const SearchInput = styled.div`
 const Items = styled.ul`
   display: flex;
   flex-direction: column;
-  padding: 5rem 0;
-  min-width: 30rem;
+  padding: 1rem;
+  width: 100%;
+  padding: 0 20%;
+  /* min-width: 30rem; */
 `;
 
 const Item = styled.li`
@@ -94,7 +96,8 @@ const Item = styled.li`
   list-style-type: none;
   line-height: 2.5;
   padding: 0.8rem;
-  width: 40rem;
+  border-bottom: 1px solid #dadada;
+  /* width: 40rem; */
   a {
     text-decoration: none;
     font-weight: 200;

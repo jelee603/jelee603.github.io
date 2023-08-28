@@ -82,7 +82,7 @@ const WrapperSideMenu = styled.div`
   position: fixed;
   text-align: center;
   /* top: 0; */
-  top: 8rem;
+  top: 0;
   /* transform: translate(0);
   transition: transform 225ms cubic-bezier(0, 0, 0.2, 1) 0ms; */
   /* transition-duration: 0.3s;
@@ -92,7 +92,7 @@ const WrapperSideMenu = styled.div`
   transform: translateX(50%); */
   right: 0;
   width: 260px;
-  z-index: 10;
+  z-index: 100;
   border: 1px solid #ccc;
 `;
 
