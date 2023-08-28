@@ -1,7 +1,7 @@
 ---
-title: 
+title: '웹 성능 측정'
 date: 2023.08.28
-category: 
+category: '
 coverImage: 'images/cover/'
-slug: 
+slug: 'web-lighthouse'
 ---
