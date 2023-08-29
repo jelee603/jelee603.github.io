@@ -1,14 +1,21 @@
-import { Hidden } from '@mui/material';
-import { ReactNode } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 
 interface ModalPortalProps {
   children: ReactNode;
 }
 const ModalPortal = ({ children }: ModalPortalProps) => {
-  const el = document.getElementById('modal') as HTMLElement;
+  const [element, setElement] = useState<HTMLElement | null>(null);
 
-  return createPortal(children, el);
+  useEffect(() => {
+    setElement(document.getElementById('modal'));
+  }, []);
+
+  if (!element) {
+    return <></>;
+  }
+
+  return createPortal(children, element);
 };
 
 export default ModalPortal;

@@ -1,4 +1,4 @@
-import { ReactNode, useState } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 import Header from '@/components/Header';
 import { PostCategory, PostType } from '@/interfaces/post';
 import styled from 'styled-components';
@@ -12,9 +12,13 @@ interface PostLayoutProps {
 }
 const PostLayout = ({ posts, category, children }: PostLayoutProps) => {
   const [modalOpen, setModalOpen] = useState(false);
+
+  useEffect(() => {
+    document.body.style.overflowY = modalOpen ? 'hidden' : 'auto';
+  }, [modalOpen]);
+
   const handleModal = () => {
     setModalOpen(!modalOpen);
-    document.body.style.overflow = modalOpen ? 'auto' : 'hidden';
   };
 
   return (
@@ -23,11 +27,13 @@ const PostLayout = ({ posts, category, children }: PostLayoutProps) => {
       {/* <Aside>
         <PostSideBar posts={posts} category={category} />
       </Aside> */}
-      {modalOpen && (
+      {/* {modalOpen && ( */}
+      {
         <ModalPortal>
           <SideMenu isOpen={modalOpen} onClose={handleModal} />
         </ModalPortal>
-      )}
+      }
+      {/* )} */}
       <Main>{children}</Main>
     </Container>
   );

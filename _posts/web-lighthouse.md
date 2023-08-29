@@ -16,17 +16,17 @@ slug: 'web-lighthouse'
 하지만, 너무 쉽게 생각했었나봅니다. 아래로 읽다보면, 어디서 문제가 있는지 짚어줍니다.
 
 1. 이미지 압축
-2. 서드파티의 폰트 사용
+2. 웹 폰트 사용
 
 위 2가지의 문제가 해결해야할 과제였습니다. 
 
 헤더에 사용하는 이미지는 사실상 압축을 하면 60x60 사이즈라 충분히 압축을 하면 크기를 줄일 수 있을 거 같았습니다. 구글에서 만든 [Squoosh](https://squoosh.app) 웹에서 거의 원본 손상없이 압축할 수 있는 기술로 압축 가능하다고 하니, 이 사이트를 이용했습니다. 
 
-서드파티 폰트를 사용하기 위해서는 cdn 주소가 필요한데, 일단 개인 홈페이지로 사용하는 파이어베이스에 올려두고 그 파일을 호출하는 것으로 변경을 해봤습니다. 
+웹 폰트를 사용하기 위해서 ttf 파일을 내려받아 fonts/ 폴더에서 호출할 수 있도록 했었습니다. 상대주소를 갖고 오게되니, 빠를 거라 예상했었는데 오히려 많이 느렸습니다. 
 
-웹 주소가 서로 다르니, CORS 오류를 해결해야하는데 Next.js에서는 [Rewrite](https://nextjs.org/docs/pages/api-reference/next-config-js/rewrites)로 Proxy를 대체하고 있습니다. 
+결국 cdn 에서 가져오는 방법이 가장 빠른 방법이었습니다. cdn 주소에서 호출하려면, 도메인 주소가 달라지니, CORS 오류를 해결해야하는데 Next.js에서는 [Rewrite](https://nextjs.org/docs/pages/api-reference/next-config-js/rewrites)로 Proxy를 대체하고 있습니다. 
 
-구글에서는 [google font cdn](https://fonts.google.com/specimen/Nanum+Gothic?query=nanum)을 제공해주고 있어 이 방법으로 해결했습니다. 
+구글에서 제공하는 [google font cdn](https://fonts.google.com/specimen/Nanum+Gothic?query=nanum)을 이용해 호출할 수 있도록 처리했습니다. 이 방법은 Rewrite 를 사용하지 않아도 스크립트에서 cors 오류가 발생하지 않습니다. 
 
 ![폰트](/images/post/web_lighthouse_2.png)
 

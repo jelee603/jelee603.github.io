@@ -68,13 +68,13 @@ const Wrapper = styled.header`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  z-index: 3;
 `;
 
 const Icon = styled.div`
   width: 6rem;
   height: 6rem;
   margin: 8px;
-  border: 1px solid #ccc;
   border-radius: 50%;
   background-image: url(/images/me.jpg);
   background-position: 25%;

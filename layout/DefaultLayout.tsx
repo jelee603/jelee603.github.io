@@ -1,4 +1,4 @@
-import { ReactNode, useState, MouseEvent } from 'react';
+import { ReactNode, useState, MouseEvent, useEffect } from 'react';
 import Header from '@/components/Header';
 import styled from 'styled-components';
 import SideMenu from '@/components/SideMenu';
@@ -9,20 +9,25 @@ interface DefaultLayoutProps {
 }
 const DefaultLayout = ({ children }: DefaultLayoutProps) => {
   const [modalOpen, setModalOpen] = useState(false);
+
+  useEffect(() => {
+    document.body.style.overflowY = modalOpen ? 'hidden' : 'auto';
+  }, [modalOpen]);
+
   const handleModal = () => {
     setModalOpen(!modalOpen);
-    document.body.style.overflow = modalOpen ? 'auto' : 'hidden';
   };
   return (
     <Container>
       <Header onClick={handleModal} />
       <Main>
-        {modalOpen && (
+        {/* {modalOpen && ( */}
+        {
           <ModalPortal>
             <SideMenu isOpen={modalOpen} onClose={handleModal} />
           </ModalPortal>
-        )}
-
+        }
+        {/* )} */}
         {children}
       </Main>
     </Container>

@@ -36,7 +36,6 @@ const Title = styled.h1`
   width: 100%;
   text-align: center;
   color: black;
-  line-height: 2.8rem;
   font-size: 4rem;
 `;
 const Date = styled.h5`
