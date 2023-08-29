@@ -23,7 +23,7 @@ slug: blog-next
 
 - _post 폴더 내 파일 문서를 읽어와서 파싱 후에 보여준다.
 - 모바일에서도 지원하는 블로그를 만든다. 
-```
+```js
 // lib/api.ts
 getPostSlugs() {
     // fs 모듈을 이용해 _posts 안에 있는 파일들을 가져온다.
@@ -35,7 +35,7 @@ getPostBySlug() {
 }
 ```
 
-```
+```js
 // pages/_app.tsx
 getStaticProps() {
     posts = getAllPosts(['slug']);
@@ -91,7 +91,7 @@ export async function getStaticProps({ params,
 - 하지만, 위에 방법처럼 하는건 상당히 중복 작업이라 공통 레이아웃 페이지를 만들 필요가 생겼습니다.
 상세 페이지와 메인 페이지 레이아웃을 시멘틱 태그로 작업했습니다.
 
-```
+```js
 // PostLayout.tsx
 
 interface PostLayoutProps {
@@ -116,7 +116,10 @@ const PostLayout = ({ posts, category, children }: PostLayoutProps) => {
 ## 사용자 경험 개선
 
 ![데모1](/images/post/blog_next_1.png)
-- 카테고리 별로 다른 레이아웃으로 본문을 보여줍니다. 
+- 카테고리 별로 다른 레이아웃으로 본문을 보여줍니다. (첫번째 시도)
+
+![데모6](/images/post/blog_next_6.png)
+- 목록에 카테고리를 보여주고, 첫화면에 리스트를 보여줍니다. (두번째 시도) 
 
 
 ## 배포
@@ -135,7 +138,16 @@ next.js 에서 기본 사용하는 메서드를 구별 못하고 있는 것을 �
 
 ## 개선 사항
 
-- 모바일 사이즈일 땐, 메뉴 아이콘을 보여주고 클릭 시에만 메뉴 목록을 띄워준다.
-- 프로필에 경력기간 차트를 캔버스로 개발해서 모바일에서도 보이도록 지원한다.
-- 키워드 검색기능 추가
-- 코드블럭 색상과 이미지 사이즈 추가할 수 있도록 마크
+1. 모바일 사이즈일 땐, 메뉴 아이콘을 보여주고 클릭 시에만 메뉴 목록을 띄워준다. (2023.08.29)
+2. 프로필에 경력기간 차트를 캔버스로 개발해서 모바일에서도 보이도록 변경
+3. 키워드 검색기능 추가 (2023.08.24)
+
+![데모4](/images/post/blog_next_4.png "50%")
+
+4. 코드블럭 색상과 이미지 사이즈 추가할 수 있도록 마크다운 수정 (2023.08.23)
+
+![데모5](/images/post/blog_next_5.png)
+
+5. 상단 헤더에 블러효과 (2023.08.29)
+
+![데모7](/images/post/blog_next_7.png)

@@ -10,7 +10,7 @@ const Post: NextPage<{ posts: PostType[]; post: PostType }> = ({ post }) => {
     <DefaultLayout>
       <Section>
         <Title>{post.title}</Title>
-        <h6>{post.date}</h6>
+        <Date>{post.date}</Date>
         <Article dangerouslySetInnerHTML={{ __html: post.content }} />
       </Section>
     </DefaultLayout>
@@ -34,6 +34,10 @@ const Title = styled.h1`
   text-align: center;
   color: black;
   font-size: 4rem;
+`;
+const Date = styled.h5`
+  width: 100%;
+  text-align: center;
 `;
 const Article = styled.article`
   width: 100%;

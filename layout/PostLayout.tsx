@@ -24,16 +24,9 @@ const PostLayout = ({ posts, category, children }: PostLayoutProps) => {
   return (
     <Container>
       <Header onClick={handleModal} />
-      {/* <Aside>
-        <PostSideBar posts={posts} category={category} />
-      </Aside> */}
-      {/* {modalOpen && ( */}
-      {
-        <ModalPortal>
-          <SideMenu isOpen={modalOpen} onClose={handleModal} />
-        </ModalPortal>
-      }
-      {/* )} */}
+      <ModalPortal>
+        <SideMenu isOpen={modalOpen} onClose={handleModal} />
+      </ModalPortal>
       <Main>{children}</Main>
     </Container>
   );

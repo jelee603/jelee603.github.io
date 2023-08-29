@@ -2,45 +2,6 @@ import styled from 'styled-components';
 import Link from 'next/link';
 import Menu from '@mui/icons-material/Menu';
 
-type LinkType = {
-  href: string;
-  title: string;
-};
-const Links: LinkType[] = [
-  {
-    href: '/',
-    title: 'Home',
-  },
-  {
-    href: '/React/react-condition',
-    title: 'React',
-  },
-  {
-    href: '/Vue/vuejs',
-    title: 'Vue',
-  },
-  {
-    href: '/JavaScript/es6',
-    title: 'JS',
-  },
-  {
-    href: '/TypeScript/typescript',
-    title: 'TS',
-  },
-  {
-    href: '/HTML_CSS/browser-operation',
-    title: 'HTML/CSS',
-  },
-  {
-    href: '/ToyProject',
-    title: 'Toy Project',
-  },
-  {
-    href: '/profile',
-    title: 'About',
-  },
-];
-
 interface HeaderProps {
   onClick: () => void;
 }

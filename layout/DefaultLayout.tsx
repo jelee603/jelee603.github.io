@@ -21,13 +21,9 @@ const DefaultLayout = ({ children }: DefaultLayoutProps) => {
     <Container>
       <Header onClick={handleModal} />
       <Main>
-        {/* {modalOpen && ( */}
-        {
-          <ModalPortal>
-            <SideMenu isOpen={modalOpen} onClose={handleModal} />
-          </ModalPortal>
-        }
-        {/* )} */}
+        <ModalPortal>
+          <SideMenu isOpen={modalOpen} onClose={handleModal} />
+        </ModalPortal>
         {children}
       </Main>
     </Container>
