@@ -6,8 +6,6 @@ body {
   line-height: 1.5;
   font-family: 'Nanum Gothic', -apple-system, sans-serif;
   background-color: #f7f7f7;
-  overflow-y: auto;
-  overflow-x: hidden;
 }
 
 * {

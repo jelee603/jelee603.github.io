@@ -43,7 +43,7 @@ interface SideMenuProps {
 const SideMenu = ({ isOpen, onClose }: SideMenuProps) => {
   return (
     <>
-      <WrapperSideMenu style={{ right: `${isOpen ? '0vw' : '-100vw'}` }}>
+      <WrapperSideMenu $isOpen={isOpen}>
         <Exit onClick={onClose}>
           <div></div>
           <div></div>
@@ -78,27 +78,17 @@ const Modal = styled.div`
   transition: 0.1s;
 `;
 
-const WrapperSideMenu = styled.div`
-  right: -100vw;
+const WrapperSideMenu = styled.div<{ $isOpen: boolean }>`
+  right: ${(props) => (props.$isOpen ? 0 : '-100vw')};
   top: 0;
   background-color: #fff;
   border-right: 1px solid #ddd;
   height: 100%;
   transition: 0.3s;
   transition-delay: 0.1s;
-  /* margin-right: -261px; */
 
-  position: absolute;
+  position: fixed;
   text-align: center;
-  /* top: 0; */
-  /* top: 0; */
-  /* transform: translate(0);
-  transition: transform 225ms cubic-bezier(0, 0, 0.2, 1) 0ms; */
-  /* transition-duration: 0.3s;
-  transition-timing-function: ease-in; */
-  /* transition: 0.5s; */
-  /* transition: all 0.25s ease;
-  transform: translateX(50%); */
   width: 260px;
   z-index: 100;
   border: 1px solid #ccc;

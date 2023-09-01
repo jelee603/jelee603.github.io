@@ -14,7 +14,7 @@ const PostLayout = ({ posts, category, children }: PostLayoutProps) => {
   const [modalOpen, setModalOpen] = useState(false);
 
   useEffect(() => {
-    document.body.style.overflowY = modalOpen ? 'hidden' : 'auto';
+    document.body.style.overflow = modalOpen ? 'hidden' : 'auto';
   }, [modalOpen]);
 
   const handleModal = () => {
@@ -34,20 +34,6 @@ const PostLayout = ({ posts, category, children }: PostLayoutProps) => {
 
 const Container = styled.div`
   height: 100vh;
-`;
-
-const Aside = styled.aside`
-  position: fixed;
-  box-sizing: border-box;
-  padding: 0;
-  background: white;
-  overflow-y: auto;
-  margin: 0;
-  height: inherit;
-
-  @media screen and (max-width: 500px) {
-    display: none;
-  }
 `;
 
 const Main = styled.main`

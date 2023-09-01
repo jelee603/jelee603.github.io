@@ -11,7 +11,7 @@ const DefaultLayout = ({ children }: DefaultLayoutProps) => {
   const [modalOpen, setModalOpen] = useState(false);
 
   useEffect(() => {
-    document.body.style.overflowY = modalOpen ? 'hidden' : 'auto';
+    document.body.style.overflow = modalOpen ? 'hidden' : 'auto';
   }, [modalOpen]);
 
   const handleModal = () => {

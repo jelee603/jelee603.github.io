@@ -47,7 +47,6 @@ const Profile = () => {
 
 const Section = styled.section`
   height: 100%;
-  overflow-y: auto;
   padding-top: 10rem;
 `;
 
