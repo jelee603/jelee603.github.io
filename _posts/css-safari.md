@@ -1,7 +1,7 @@
 ---
 title: 사파리 브라우저에서의 스크롤바 동작 없애기
 date: 2023.09.01
-category: 
+category: HTML_CSS
 coverImage: 'images/cover/default.png'
 slug: css-safari 
 ---

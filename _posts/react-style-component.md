@@ -1,8 +1,8 @@
 ---
-title: React에서 스타일 컴포넌트 다루기 
+title: React 스타일 컴포넌트 다루기 
 date: 2023.09.01
-category: 
-coverImage: 'images/cover/'
+category: React
+coverImage: 'images/cover/default.png'
 slug: react-style-component
 ---
 

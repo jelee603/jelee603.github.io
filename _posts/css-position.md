@@ -1,8 +1,8 @@
 ---
 title: CSS Position absolute vs fixed 
 date: 2023.09.01
-category: 
-coverImage: 'images/cover/'
+category: HTML_CSS
+coverImage: 'images/cover/default.png'
 slug: css-position
 ---
 

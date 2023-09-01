@@ -1,5 +1,5 @@
 ---
-title: React에서 만난 오류들
+title: React 환경세팅에서 만난 오류들
 date: "2021-12-28 14:57:17"
 tags:
 category: React
