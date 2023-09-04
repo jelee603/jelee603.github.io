@@ -15,34 +15,34 @@ slug: load-map
 - 동료 개발자와 편하게 의사소통을 하기 위해 ESLint 와 Prettier 로 코딩 스타일을 맞춰둔다. 
 
 - ESLint
- ㄴ 자바스크립트 코드를 에러가 덜 나는 방향으로 작성하도록 도와주는 문법 보조 도구 
- ㄴ var -> const 로 변경해주거나 띄어쓰기 맞춰준다. 
- ㄴ TSLint가 있었지만, 몇가지 [아키텍쳐 문제](https://github.com/Microsoft/typescript/issues/29288#:~:text=Back%20to%20top-,Linting,-Semantic%20rules%20in)가 있어서 현재는 ESLint를 편집해서 사용한다.  
+  - 자바스크립트 코드를 에러가 덜 나는 방향으로 작성하도록 도와주는 문법 보조 도구 
+  - var -> const 로 변경해주거나 띄어쓰기 맞춰준다. 
+  - TSLint가 있었지만, 몇가지 [아키텍쳐 문제](https://github.com/Microsoft/typescript/issues/29288#:~:text=Back%20to%20top-,Linting,-Semantic%20rules%20in)가 있어서 현재는 ESLint를 편집해서 사용한다.  
 - Prettier 
- ㄴ 팀 단위 코딩 컨벤션을 맞추어 개인화해서 사용합니다. 
- ㄴ 옵션 설정해서 사용합니다.(1라인의 문자길이, 세미콜론, 탭 기타 포매팅 설정)
+  - 팀 단위 코딩 컨벤션을 맞추어 개인화해서 사용합니다. 
+  - 옵션 설정해서 사용합니다.(1라인의 문자길이, 세미콜론, 탭 기타 포매팅 설정)
 
 ---
 ### 자바스크립트
 
 - 원시레퍼 타입, 참조 타입
 - 변수/스코프/메모리
-  ㄴ 클로저, 재귀
+  - 클로저, 재귀
 - [디자인 패턴](#디자인-패턴) `프론트엔드 개발자를 위한 자바스크립트 프로그래밍` [(예제코드)](https://github.com/jelee603/study/tree/main/pattern)
-  ㄴ [팩터리 패턴](#팩터리-패턴)
-  ㄴ [생성자 패턴](#생성자-패턴)
-  ㄴ [프로토타입 패턴](#프로토타입-패턴)
-  ㄴ [동적 생성자](#동적-생성자)
-  ㄴ [기생 생성자](#기생-생성자)
-  ㄴ [방탄 생성자](#방탄-생성자)
+  - [팩터리 패턴](#팩터리-패턴)
+  - [생성자 패턴](#생성자-패턴)
+  - [프로토타입 패턴](#프로토타입-패턴)
+  - [동적 생성자](#동적-생성자)
+  - [기생 생성자](#기생-생성자)
+  - [방탄 생성자](#방탄-생성자)
 
 - EcmaScript 6
-  ㄴ [Destructuring](#Destructuring)
-  ㄴ [Async & Await](#Async-&-Await)
-  ㄴ proxy, map, set
-  ㄴ 구조체, 배열
-  ㄴ 스트릭트 모드
-  ㄴ 배열 메서드: [reduce](#reduce), map, filter, forEach, every, some
+  - [Destructuring](#Destructuring)
+  - [Async & Await](#Async-&-Await)
+  - proxy, map, set
+  - 구조체, 배열
+  - 스트릭트 모드
+  - 배열 메서드: [reduce](#reduce), map, filter, forEach, every, some
 - [TypeScript](#TypeScript)
 - [Babel](#Babel)
 
@@ -84,9 +84,9 @@ acc: 누적치, current: 순회하는 아이템
 
 #### Babel
 
-[공식문서](https://babeljs.io/docs/en/)
-최신버전의 자바스크립트 파일을 구버전 브라우저에서 인식할 수 있게 트랜스파일해주는 역할을 한다. 
-타입스크립트의 프리셋(플러그인의 집합), 옵션들의 집합을 따로 설치해줘야한다. 바벨쪽에서의 라이러리를 제공한다. 
+> [공식문서](https://babeljs.io/docs/en/)
+> 최신버전의 자바스크립트 파일을 구버전 브라우저에서 인식할 수 있게 트랜스파일해주는 역할을 한다. 
+> 타입스크립트의 프리셋(플러그인의 집합), 옵션들의 집합을 따로 설치해줘야한다. 바벨쪽에서의 라이러리를 제공한다. 
 ---
 ### 디자인 패턴
 
@@ -180,13 +180,13 @@ ex) 네이티브 참조 타입이 프로토타입 패턴으로 구현되어있�
 #### 웹 API 이벤트
 
 - 이벤트 흐름
-  ㄴ 캡쳐링
-  ㄴ 버블링
+  - 캡쳐링
+  - 버블링
 
 - 이벤트 핸들러
-  ㄴ DOM 레벨 0 핸들러
-  ㄴ DOM 레벨 2 핸들러
-  ㄴ 크로스 브라우징 핸들러
+  - DOM 레벨 0 핸들러
+  - DOM 레벨 2 핸들러
+  - 크로스 브라우징 핸들러
 
 - 이벤트 위임
 
@@ -261,9 +261,9 @@ DOM 레벨 2의 차기 표준안입니다.
 - 함수 추출
 - 전역 객체 API 간소화
 - OOP (계층구조, 상속구조)
-  ㄴ 디자인 원리 `Head First`
+  - 디자인 원리 `Head First`
 - FP (함수형)
-  ㄴ 함수 커링, 함수 바인딩, 메모제이션
+  - 함수 커링, 함수 바인딩, 메모제이션
 
 
 ---
@@ -271,8 +271,8 @@ DOM 레벨 2의 차기 표준안입니다.
 
 
 - 애니메이션
-  ㄴ 캔버스: 2D Context
-  ㄴ window: requestAnimation
+  - 캔버스: 2D Context
+  - window: requestAnimation
 
 ---
 ### TDD
