@@ -13,12 +13,12 @@ const Home: NextPage<{ posts: PostType[] }> = ({ posts }) => {
         {posts
           .filter((v) => v.category == category)
           .map((post, index) => (
-            <Card key={index}>
-              <CardLink href={`/${post.category}/${post.slug}`}>
+            <CardLink href={`/${post.category}/${post.slug}`} key={index}>
+              <Card>
                 <CreateDate>{post.date}</CreateDate>
                 <ContentTitle>{post.title}</ContentTitle>
-              </CardLink>
-            </Card>
+              </Card>
+            </CardLink>
           ))}
       </Section>
     </DefaultLayout>
@@ -37,22 +37,27 @@ const Section = styled.section`
   }
 `;
 
-const Card = styled.div`
+const Card = styled.div``;
+
+const CardLink = styled(Link)`
+  text-decoration: none;
+  color: black;
   flex-basis: 32%;
   display: flex;
   flex-direction: column;
   background-color: white;
   border-radius: 15px;
+  border: 1px solid #ccc;
   margin-bottom: 2%;
+
+  &:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    transition: box-shadow 0.2s ease;
+  }
 
   @media screen and (max-width: 500px) {
     flex-basis: 100%;
   }
-`;
-
-const CardLink = styled(Link)`
-  text-decoration: none;
-  color: black;
 `;
 
 const ContentTitle = styled.h1`

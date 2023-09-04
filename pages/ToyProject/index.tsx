@@ -61,6 +61,7 @@ const Card = styled.div`
   flex-direction: column;
   background-color: white;
   border-radius: 15px;
+  border: 1px solid #ccc;
   margin-bottom: 2%;
 
   @media screen and (max-width: 500px) {
@@ -73,8 +74,13 @@ const CardLink = styled(Link)`
   color: black;
 
   &:hover {
-    img {
+    /* img {
       transform: scale(1.02);
+    } */
+    &:hover {
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+      transition: box-shadow 0.2s ease;
+      border-radius: 15px;
     }
   }
 `;
