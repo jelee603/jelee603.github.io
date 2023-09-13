@@ -7,19 +7,20 @@ import DefaultLayout from '@/layout/DefaultLayout';
 
 const category = 'Tip';
 const Home: NextPage<{ posts: PostType[] }> = ({ posts }) => {
+  const list = posts
+    .filter((v) => v.category == category)
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
   return (
     <DefaultLayout>
       <Section>
-        {posts
-          .filter((v) => v.category == category)
-          .map((post, index) => (
-            <CardLink href={`/${post.category}/${post.slug}`} key={index}>
-              <Card>
-                <CreateDate>{post.date}</CreateDate>
-                <ContentTitle>{post.title}</ContentTitle>
-              </Card>
-            </CardLink>
-          ))}
+        {list.map((post, index) => (
+          <CardLink href={`/${post.category}/${post.slug}`} key={index}>
+            <Card>
+              <CreateDate>{post.date}</CreateDate>
+              <ContentTitle>{post.title}</ContentTitle>
+            </Card>
+          </CardLink>
+        ))}
       </Section>
     </DefaultLayout>
   );
@@ -27,7 +28,7 @@ const Home: NextPage<{ posts: PostType[] }> = ({ posts }) => {
 
 const Section = styled.section`
   display: flex;
-  flex-wrap: wrap-reverse;
+  flex-wrap: wrap;
   margin: 0 20%;
   gap: 2%;
 
