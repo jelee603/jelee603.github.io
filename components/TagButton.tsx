@@ -1,18 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
-interface LabelProps {
+interface TagButtonProps {
   onClick: () => void;
   children: React.ReactNode;
   backgroundColor?: string;
   color?: string;
 }
 
-function Label({
+export function TagButton({
   onClick,
   children,
-  backgroundColor = '#fae69e',
+  backgroundColor = '#61dafb',
   color = 'black',
-}: LabelProps) {
+}: TagButtonProps) {
   return (
     <Button onClick={onClick} $backgroundColor={backgroundColor} color={color}>
       {children}
@@ -20,7 +20,7 @@ function Label({
   );
 }
 
-const Button = styled.button<{ $backgroundColor: string }>`
+const Button = styled.button<{ color: string; $backgroundColor: string }>`
   border: none;
   border-radius: 15px;
   color: ${(props) => props.color};
@@ -33,5 +33,3 @@ const Button = styled.button<{ $backgroundColor: string }>`
   font-weight: bold;
   margin-right: 5px;
 `;
-
-export default Label;

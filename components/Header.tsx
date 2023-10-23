@@ -1,20 +1,27 @@
 import styled from 'styled-components';
 import Link from 'next/link';
 import Menu from '@mui/icons-material/Menu';
+import Search from '@mui/icons-material/Search';
 
 interface HeaderProps {
-  onClick: () => void;
+  handleClickMenu: () => void;
+  handleClickSearch: () => void;
 }
 
-const Header = ({ onClick }: HeaderProps) => {
+const Header = ({ handleClickSearch, handleClickMenu }: HeaderProps) => {
   return (
     <Wrapper>
       <Link href="/">
         <Icon></Icon>
       </Link>
-      <MenuIcon onClick={onClick}>
-        <Menu fontSize="large" />
-      </MenuIcon>
+      <Buttons>
+        <MenuIcon onClick={handleClickSearch}>
+          <Search fontSize="large" />
+        </MenuIcon>
+        <MenuIcon onClick={handleClickMenu}>
+          <Menu fontSize="large" />
+        </MenuIcon>
+      </Buttons>
     </Wrapper>
   );
 };
@@ -44,9 +51,16 @@ const Icon = styled.div`
 `;
 
 const MenuIcon = styled.div`
-  padding: 2rem;
+  /* padding: 12px; */
   cursor: pointer;
   display: flex;
   align-items: center;
+`;
+
+const Buttons = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 20px;
 `;
 export default Header;

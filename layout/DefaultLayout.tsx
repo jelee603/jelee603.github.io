@@ -3,6 +3,7 @@ import Header from '@/components/Header';
 import styled from 'styled-components';
 import SideMenu from '@/components/SideMenu';
 import ModalPortal from '@/components/ModalPortal';
+import { Router, useRouter } from 'next/router';
 
 interface DefaultLayoutProps {
   children: ReactNode;
@@ -17,9 +18,14 @@ const DefaultLayout = ({ children }: DefaultLayoutProps) => {
   const handleModal = () => {
     setModalOpen(!modalOpen);
   };
+
+  const router = useRouter();
+  const handleSearch = () => {
+    router.push('/Search');
+  };
   return (
     <Container>
-      <Header onClick={handleModal} />
+      <Header handleClickMenu={handleModal} handleClickSearch={handleSearch} />
       <Main>
         <ModalPortal>
           <SideMenu isOpen={modalOpen} onClose={handleModal} />

@@ -4,6 +4,7 @@ import { PostCategory, PostType } from '@/interfaces/post';
 import styled from 'styled-components';
 import SideMenu from '@/components/SideMenu';
 import ModalPortal from '@/components/ModalPortal';
+import { useRouter } from 'next/router';
 
 interface PostLayoutProps {
   children: ReactNode;
@@ -21,9 +22,14 @@ const PostLayout = ({ posts, category, children }: PostLayoutProps) => {
     setModalOpen(!modalOpen);
   };
 
+  const router = useRouter();
+  const handleSearch = () => {
+    router.push('/Search');
+  };
+
   return (
     <Container>
-      <Header onClick={handleModal} />
+      <Header handleClickMenu={handleModal} handleClickSearch={handleSearch} />
       <ModalPortal>
         <SideMenu isOpen={modalOpen} onClose={handleModal} />
       </ModalPortal>

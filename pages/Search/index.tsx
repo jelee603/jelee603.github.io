@@ -4,6 +4,8 @@ import Link from 'next/link';
 import styled from 'styled-components';
 import Search from '@mui/icons-material/Search';
 import DefaultLayout from '@/layout/DefaultLayout';
+import { getAllPosts } from '@/lib/api';
+import { TagButton } from '@/components/TagButton';
 
 interface PostListProps {
   posts: PostType[];
@@ -11,17 +13,38 @@ interface PostListProps {
 }
 
 const PostList = ({ posts, category }: PostListProps) => {
+  const [keyword, setKeyword] = useState('');
+  const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      setKeyword(e.currentTarget.value);
+    }
+  };
   return (
     <DefaultLayout>
       <Section>
+        <SearchInput>
+          <div>
+            <Search fontSize="large" />
+          </div>
+          <input
+            type="string"
+            onKeyDown={handleKeyDown}
+            placeholder="Search..."
+          />
+        </SearchInput>
         <Items>
-          {posts
-            .filter((v) => v.category == category)
-            .map((post, index) => (
-              <Item key={index}>
-                <Link href={`/${category}/${post.slug}`}>{post.title}</Link>
-              </Item>
-            ))}
+          {keyword !== '' &&
+            posts
+              .filter((v) => v.content.includes(keyword))
+              .map((post, index) => (
+                <Item key={index}>
+                  <Link href={`/${post.category}/${post.slug}`}>
+                    {post.title}
+                    &nbsp;
+                    <TagButton children={post.category} onClick={() => {}} />
+                  </Link>
+                </Item>
+              ))}
         </Items>
       </Section>
     </DefaultLayout>
@@ -84,5 +107,22 @@ const Item = styled.li`
     font-weight: 200;
   }
 `;
+
+export async function getStaticProps() {
+  const posts = getAllPosts([
+    'slug',
+    'title',
+    'date',
+    'coverImage',
+    'category',
+    'content',
+  ]);
+
+  return {
+    props: {
+      posts,
+    },
+  };
+}
 
 export default PostList;

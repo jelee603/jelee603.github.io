@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Label from '../Label';
+import { TagButton as Label } from '../TagButton';
 import { WorkType } from '../../interfaces/works';
 import { getLabelColor } from '../../utils/Utils';
 import { Fragment } from 'react';
