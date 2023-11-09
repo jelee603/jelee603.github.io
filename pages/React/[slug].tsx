@@ -12,11 +12,13 @@ const Post: NextPage<{ posts: PostType[]; post: PostType }> = ({
   post,
 }) => {
   const router = useRouter();
+  const imageURL = `../${post.coverImage}`;
   return (
     <PostLayout posts={posts} category={category}>
       <Section>
         <Title>{post.title}</Title>
         <Date>{post.date}</Date>
+        <img src={imageURL} />
         <Article dangerouslySetInnerHTML={{ __html: post.content }} />
       </Section>
     </PostLayout>
@@ -64,6 +66,7 @@ export async function getStaticProps({
     'content',
     'fileName',
     'category',
+    'coverImage',
   ]);
   const content = await markdownToHtml(post.content || '');
   const posts = getAllPosts([
