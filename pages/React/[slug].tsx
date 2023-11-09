@@ -40,7 +40,6 @@ const Title = styled.h1`
   width: 100%;
   text-align: center;
   color: black;
-  font-size: 4rem;
 `;
 const Date = styled.h5`
   width: 100%;

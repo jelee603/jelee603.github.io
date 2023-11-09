@@ -37,42 +37,47 @@ body {
 } */
 
 h1 {
-  font-size: 3.3rem;
+  line-height: 1.7;
+  font-size: 20px;
 }
 
 h2 {
-  font-size: 3.2rem;
   border-bottom: 0.2rem solid rgba(23, 42, 58, 0.1);
+  line-height: 1.7;
+  font-size: 18px;
 }
 
 h3 {
-  font-size: 2.8rem;
+  line-height: 1.7;
+  font-size: 18px;
 }
 
 h4 {
-  font-size: 2.2rem;
+  line-height: 1.7;
+  font-size: 16px;
 }
 
 h5 {
-  font-size: 1.5rem;
+  line-height: 1.7;
+  font-size: 14px;
 }
 
 p {
-  font-size: 12px;
-  line-height: 2.8rem;
+  font-size: 18px;
+  line-height: 1.7;
 }
 
 ul > li {
   margin-bottom: 0px;
-  font-size: 1.6rem;
+  font-size: 18px;
   text-overflow: ellipsis;
   word-wrap: break-word;
 }
 
 ol > li {
-  line-height: 2.8rem;
+  font-size: 18px;
+  line-height: 1.7;
   margin-left: 1.6rem;
-  font-size: 1.6rem;
 }
 
 pre {
@@ -84,14 +89,14 @@ pre {
   padding: 5px;
 }
 
-pre > code {
+/* pre > code {
   border-radius: 0.8rem;
   word-wrap: break-word;
   font-weight: 300;
-  font-size: 12px;
+  font-size: 16px;
   font-family: 'Nanum Gothic', -apple-system, sans-serif;
   line-height: 2;
-}
+} */
 
 blockquote {
   line-height: 2.4rem;
@@ -115,12 +120,12 @@ table {
 
 th {
   font-weight: bold;
-  font-size: 1.3rem;
+  font-size: 16px;
   border-bottom: 2px solid black;
 }
 
 td {
-  font-size: 1.3rem;
+  font-size: 16px;
   height: 36px;
   border-bottom: 1px solid black;
   width: 2%;

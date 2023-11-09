@@ -6,7 +6,7 @@ pre[class*='language-'] {
   background: 0 0;
   text-shadow: 0 1px #fff;
   font-family: NanumGothic, -apple-system, sans-serif;
-  font-size: 1.2rem;
+  font-size: 14px;
   /* font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace; */
   /* font-size: 1em; */
   text-align: left;
