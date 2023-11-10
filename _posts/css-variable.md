@@ -65,3 +65,64 @@ CSS 표기법을 사용해 정의하고 var() 함수를 사용해서 접근할 �
 // 인라인 스타일에서 변수 얻기
 element.style.getPropertyValue("--my-var");
 ```
+
+## Styled-Component 응용
+
+- 상수화 설정
+```js
+
+// constants.js
+export const COLORS = {
+  text: 'black';
+  background: 'white',
+}
+
+// jsx
+import {COLORS} from "../constants";
+
+const Buttons = styled.button`background: ${COLORS.background}`
+```
+
+- theme 설정 
+
+```js
+
+// jsx
+
+import { ThemeProvider } from "styled-components";
+import {COLORS} from "../constants";
+
+const App = ({children}) => {
+  return (<ThemeProvider theme={{color: COLORS}}>
+            {children}
+          </ThemeProvider>)
+}
+const Buttons = styled.button`background: ${(props) => props.theme.background}`
+```
+
+- css variable 설정
+
+```js
+// GlobalStyles.js
+import { createGlobalStyle } from 'styled-components';
+
+export const GlobalStyles = createGlobalStyle`html {
+  --bg-element: white;
+}`;
+
+
+// jsx
+const App = ({children}) => {
+  return (
+    <>
+      <GlobalStyles />
+      {children}
+    </>
+  )
+}
+
+const Buttons = styled.button`background: ${(props) => var(--bg-element)}`
+```
+
+## 참고
+- [CSS Variables for React Devs](https://www.joshwcomeau.com/css/css-variables-for-react-devs/)

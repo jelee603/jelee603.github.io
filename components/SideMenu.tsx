@@ -141,7 +141,7 @@ const NavItem = styled.div`
   &:hover {
     width: inherit;
     color: black;
-    background-color: #ddebfc;
+    background-color: var(--bg-element2);
     opacity: 0.6;
   }
 `;

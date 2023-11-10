@@ -3,6 +3,7 @@ import Head from 'next/head';
 import '../styles/globals.css';
 import '../styles/prism.css';
 import { getAllPosts } from '@/lib/api';
+import { GlobalStyles } from '../styles/styles';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -13,6 +14,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0 ,minimum-scale=1.0, width=device-width, viewport-fit=cover"
         />
       </Head>
+      <GlobalStyles />
       <Component {...pageProps} />
       <div id="modal"></div>
     </>
