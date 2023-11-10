@@ -81,12 +81,9 @@ ol > li {
 }
 
 pre {
-  /* background-color: #fbfcfd; */
-  background-color: #fbf8f3;
-  /* padding-left: 0.5em; */
-  /* color: gray; */
+  background-color: #f6f8fa;
   overflow: auto;
-  padding: 5px;
+  padding: 0.8rem 2rem 1.2rem;
 }
 
 /* pre > code {
