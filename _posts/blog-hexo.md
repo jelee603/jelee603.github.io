@@ -148,7 +148,7 @@ hexo server --draft
 알파벳은 반드시 소문자만 가능
 띄어쓰기는 -(하이픈)으로 구분
 
-#### Reference
+## 참고
 
 - https://hexo.io/ko/docs/writing.html
 - https://www.w3schools.io/file/markdown-cheatsheet

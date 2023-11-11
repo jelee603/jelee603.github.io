@@ -137,7 +137,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 const store = createStore(rootReducer, composeWithDevTools());
 ```
 
-## Reference
+## 참고
 
 - https://ko.redux.js.org/recipes/usage-with-typescript/
 - https://velog.io/@velopert/use-typescript-and-redux-like-a-pro

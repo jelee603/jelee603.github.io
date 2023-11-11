@@ -128,6 +128,6 @@ Cypress 컴포넌트 테스트 러너는 jsdom 기반의 테스팅 환경(예를
 
 블로그의 코드는 [여기](https://github.com/lmiller1990/cypress-react-template)에서 볼 수 있습니다.
 
-## Reference
+## 참고
 
 - https://www.cypress.io/blog/2021/04/06/cypress-component-testing-react

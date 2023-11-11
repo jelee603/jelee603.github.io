@@ -111,6 +111,6 @@ console.log(leeName); // Lee Jieun Joseph Jerry
 
 타입스크립트 3.8 이후 비공개 필드를 만들기 위해 자바스크립트의 `#` 문법을 사용할 수 있습니다.
 
-## Reference
+## 참고
 
 - https://typescript-kr.github.io
