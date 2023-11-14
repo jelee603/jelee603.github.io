@@ -1,5 +1,5 @@
 ---
-title: '컨퍼런스 정리 - 왜 나는 React를 사랑하는가 (1)'
+title: '컨퍼런스 정리(1) - 왜 나는 React를 사랑하는가'
 date: 2023.11.09
 category: React
 coverImage: 'images/cover/react-flex.png'
