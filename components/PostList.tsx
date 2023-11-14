@@ -69,7 +69,10 @@ const Items = styled.ul`
   padding: 1rem;
   width: 100%;
   padding: 0 20%;
-  /* min-width: 30rem; */
+
+  @media screen and (max-width: 500px) {
+    padding: 0 5%;
+  }
 `;
 
 const Item = styled.li`
@@ -78,7 +81,6 @@ const Item = styled.li`
   line-height: 2.5;
   padding: 0.8rem;
   border-bottom: 1px solid #dadada;
-  /* width: 40rem; */
   a {
     text-decoration: none;
     font-weight: 200;
