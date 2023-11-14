@@ -68,6 +68,7 @@ const SectionTop = styled.section`
 
     & > :nth-child(1) {
       height: fit-content;
+      width: 100%;
     }
   }
 `;
@@ -110,6 +111,7 @@ const Card = styled.div<{ $backgroundColor: string }>`
 
 const CardLink = styled(Link)`
   text-decoration: none;
+  width: 100%;
 
   &:hover {
     background-color: var(--bg-element2);
