@@ -80,14 +80,8 @@ const Section = styled.section`
   gap: 2%;
 
   & > div {
-    /* min-width: 300px; */
-    /* flex: 1; */
     margin-bottom: 2%;
   }
-
-  /* & > :nth-child(even) {
-    margin: 0 2%;
-  } */
 
   @media screen and (max-width: 500px) {
     margin: 5%;
@@ -106,6 +100,7 @@ const Card = styled.div<{ $backgroundColor: string }>`
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+  min-width: 300px;
 
   & > span {
     color: gray;
@@ -115,11 +110,6 @@ const Card = styled.div<{ $backgroundColor: string }>`
 
 const CardLink = styled(Link)`
   text-decoration: none;
-  min-width: 300px;
-  /* min-width: 32%; */
-  flex: 1;
-  height: 180px;
-  margin-bottom: 2%;
 
   &:hover {
     background-color: var(--bg-element2);
