@@ -1,7 +1,7 @@
 ---
 title: 자주쓰는 리액트 방법
 date: 2024.02.17
-category: 
+category: React
 coverImage: 'images/cover/default.png'
 slug: react-study
 ---
