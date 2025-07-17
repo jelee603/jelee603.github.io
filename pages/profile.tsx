@@ -1,12 +1,12 @@
-import { useState } from 'react';
-import styled from 'styled-components';
-import Card from '@/components/profile/Card';
-import TimeLine from '@/components/profile/TimeLine';
-import { WorkType } from '@/interfaces/works';
-import data from '@/mocks/profile.json';
-import data_ect from '@/mocks/profile_etc.json';
-import { Button } from '@/components/Button';
-import DefaultLayout from '@/layout/DefaultLayout';
+import { useState } from "react";
+import styled from "styled-components";
+import Card from "@/components/profile/Card";
+import TimeLine from "@/components/profile/TimeLine";
+import { WorkType } from "@/interfaces/works";
+import data from "@/mocks/profile.json";
+import data_ect from "@/mocks/profile_etc.json";
+import { CustomButton } from "@/components/Button";
+import DefaultLayout from "@/layout/DefaultLayout";
 
 const Profile = () => {
   const [showMore, setShowMore] = useState(false);
@@ -32,9 +32,14 @@ const Profile = () => {
           return <Card value={value} key={index} />;
         })}
         <div
-          style={{ width: '100%', textAlign: 'center', marginBottom: '20px' }}
+          style={{
+            textAlign: "center",
+            margin: "10px 20px",
+          }}
         >
-          {!showMore && <Button onClick={onMoreClick} label="더보기" />}
+          {!showMore && (
+            <CustomButton onClick={onMoreClick} label="더보기" size="large" />
+          )}
         </div>
         {showMore &&
           data_ect.map((value: WorkType, index: number) => {
